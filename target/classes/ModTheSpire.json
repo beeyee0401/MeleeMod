@@ -1,0 +1,10 @@
+{
+  "modid": "falcon",
+  "name": "Falcon Mod",
+  "author_list": ["Bee"],
+  "description": "Add Captain Falcon as a character",
+  "version": "0.1",
+  "sts_version": "03-29-2018",
+  "mts_version": "2.6.0",
+  "dependencies": ["basemod"]
+}
