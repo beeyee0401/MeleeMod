@@ -1,0 +1,6 @@
+target/**
+
+# editor files
+*.iml
+.idea/*
+src/main/main.iml

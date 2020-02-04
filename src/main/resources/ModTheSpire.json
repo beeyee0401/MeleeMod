@@ -1,8 +1,8 @@
 {
-  "modid": "falcon",
-  "name": "Falcon Mod",
+  "modid": "melee",
+  "name": "Melee Mod",
   "author_list": ["Bee"],
-  "description": "Add Captain Falcon as a character",
+  "description": "A Slay the Spire mod to add Super Smash Bros. Melee mechanics as cards and characters as playable classes",
   "version": "0.1",
   "sts_version": "03-29-2018",
   "mts_version": "2.6.0",
