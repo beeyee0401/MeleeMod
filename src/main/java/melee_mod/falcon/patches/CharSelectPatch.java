@@ -1,4 +1,4 @@
-package falcon_mod.falcon.patches;
+package melee_mod.falcon.patches;
 
 import java.lang.reflect.Field;
 

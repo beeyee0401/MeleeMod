@@ -1,4 +1,4 @@
-package falcon_mod.falcon.cards.keyword_card_helpers;
+package melee_mod.falcon.cards.keyword_card_helpers;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import falcon_mod.falcon.powers.ComboPointPower;
+import melee_mod.falcon.powers.ComboPointPower;
 import globals.Constants;
 
 public class FinisherCardHelper {

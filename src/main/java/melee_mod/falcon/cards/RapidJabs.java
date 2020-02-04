@@ -1,4 +1,4 @@
-package falcon_mod.falcon.cards;
+package melee_mod.falcon.cards;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import falcon_mod.FalconCharacterMod;
-import falcon_mod.falcon.patches.AbstractCardEnum;
+import melee_mod.FalconCharacterMod;
+import melee_mod.falcon.patches.AbstractCardEnum;
 import globals.Constants;
 
 public class RapidJabs extends CustomCard {

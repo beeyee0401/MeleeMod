@@ -1,4 +1,4 @@
-package falcon_mod.falcon.powers;
+package melee_mod.falcon.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
-import falcon_mod.FalconCharacterMod;
+import melee_mod.FalconCharacterMod;
 import globals.Constants;
 
 import static globals.Constants.Powers.ANGEL_PLATFORM;

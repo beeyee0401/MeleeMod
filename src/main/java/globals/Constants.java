@@ -45,8 +45,8 @@ public class Constants {
         public static final String BURN = "Burn";
         public static final String COMBO_FINISHER = "ComboFinisher";
         public static final String COMBO_POINTS = "ComboPoints";
-        public static final String LCANCELLING = "LCancelling";
-        public static final String LCANCELED = "LCancelling";
+        public static final String LCANCELING = "LCanceling";
+        public static final String LCANCELED = "LCanceled";
         public static final String ANGEL_PLATFORM = "AngelPlatform";
         public static final String PERCENT = "Percent";
         public static final String EDGE_CANCELLING = "EdgeCancelling";

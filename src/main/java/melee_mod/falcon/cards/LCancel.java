@@ -1,4 +1,4 @@
-package falcon_mod.falcon.cards;
+package melee_mod.falcon.cards;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -8,9 +8,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import falcon_mod.FalconCharacterMod;
-import falcon_mod.falcon.patches.AbstractCardEnum;
-import falcon_mod.falcon.powers.LCancellingPower;
+import melee_mod.FalconCharacterMod;
+import melee_mod.falcon.patches.AbstractCardEnum;
+import melee_mod.falcon.powers.LCancelingPower;
 import globals.Constants;
 
 public class LCancel extends CustomCard {
@@ -27,7 +27,7 @@ public class LCancel extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LCancellingPower(p, 1)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LCancelingPower(p, 1)));
     }
 
     public AbstractCard makeCopy() {

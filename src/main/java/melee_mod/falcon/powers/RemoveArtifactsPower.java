@@ -1,4 +1,4 @@
-package falcon_mod.falcon.powers;
+package melee_mod.falcon.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import falcon_mod.FalconCharacterMod;
+import melee_mod.FalconCharacterMod;
 
 public class RemoveArtifactsPower extends AbstractPower {
     public static final String POWER_ID = "RemoveArtifacts";

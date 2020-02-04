@@ -1,4 +1,4 @@
-package falcon_mod.falcon.cards;
+package melee_mod.falcon.cards;
 
 public class Walljump {
 }

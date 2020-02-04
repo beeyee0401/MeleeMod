@@ -1,4 +1,4 @@
-package falcon_mod.falcon.characters;
+package melee_mod.falcon.characters;
 
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
@@ -17,10 +17,10 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import falcon_mod.FalconCharacterMod;
-import falcon_mod.falcon.cards.Knee;
-import falcon_mod.falcon.patches.AbstractCardEnum;
-import falcon_mod.falcon.relics.AirWobbling;
+import melee_mod.FalconCharacterMod;
+import melee_mod.falcon.cards.Knee;
+import melee_mod.falcon.patches.AbstractCardEnum;
+import melee_mod.falcon.relics.AirWobbling;
 import globals.Constants;
 //import fruitymod.SeekerMod;
 //import fruitymod.seeker.cards.AstralHaze;

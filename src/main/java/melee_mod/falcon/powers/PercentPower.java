@@ -1,4 +1,4 @@
-package falcon_mod.falcon.powers;
+package melee_mod.falcon.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import falcon_mod.FalconCharacterMod;
+import melee_mod.FalconCharacterMod;
 import globals.Constants;
 
 import static globals.Constants.Powers.PERCENT;

@@ -1,4 +1,4 @@
-package falcon_mod.falcon.cards;
+package melee_mod.falcon.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -11,9 +11,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
-import falcon_mod.FalconCharacterMod;
-import falcon_mod.falcon.patches.AbstractCardEnum;
-import falcon_mod.falcon.powers.RemoveArtifactsPower;
+import melee_mod.FalconCharacterMod;
+import melee_mod.falcon.patches.AbstractCardEnum;
+import melee_mod.falcon.powers.RemoveArtifactsPower;
 import globals.Constants;
 
 public class Roll extends CustomCard {

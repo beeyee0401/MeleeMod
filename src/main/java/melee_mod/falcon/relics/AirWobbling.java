@@ -1,4 +1,4 @@
-package falcon_mod.falcon.relics;
+package melee_mod.falcon.relics;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -6,8 +6,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import basemod.abstracts.CustomRelic;
-import falcon_mod.FalconCharacterMod;
-import falcon_mod.falcon.powers.AirWobblingPower;
+import melee_mod.FalconCharacterMod;
+import melee_mod.falcon.powers.AirWobblingPower;
 
 public class AirWobbling extends CustomRelic {
     public static final String ID = "AirWobbling";

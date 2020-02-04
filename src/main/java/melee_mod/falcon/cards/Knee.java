@@ -1,4 +1,4 @@
-package falcon_mod.falcon.cards;
+package melee_mod.falcon.cards;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -7,15 +7,15 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
-import falcon_mod.FalconCharacterMod;
-import falcon_mod.falcon.cards.keyword_card_helpers.ComboCardHelper;
-import falcon_mod.falcon.cards.keyword_card_helpers.FinisherCardHelper;
-import falcon_mod.falcon.patches.AbstractCardEnum;
-import falcon_mod.falcon.patches.CustomTags;
-import falcon_mod.falcon.powers.ComboPointPower;
+import melee_mod.FalconCharacterMod;
+import melee_mod.falcon.cards.keyword_card_helpers.ComboCardHelper;
+import melee_mod.falcon.cards.keyword_card_helpers.FinisherCardHelper;
+import melee_mod.falcon.patches.AbstractCardEnum;
+import melee_mod.falcon.patches.CustomTags;
+import melee_mod.falcon.powers.ComboPointPower;
 import globals.Constants;
 
-import static falcon_mod.falcon.patches.CustomTags.AERIAL;
+import static melee_mod.falcon.patches.CustomTags.AERIAL;
 
 public class Knee extends CustomCard {
     public static final String ID = Constants.CardNames.KNEE;

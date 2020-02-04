@@ -1,10 +1,10 @@
-package falcon_mod;
+package melee_mod;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import basemod.ModLabel;
-import falcon_mod.falcon.CharacterMod;
+import melee_mod.falcon.CharacterMod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

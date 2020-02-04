@@ -1,4 +1,4 @@
-package falcon_mod.falcon.cards;
+package melee_mod.falcon.cards;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.LoseDexterityPower;
-import falcon_mod.FalconCharacterMod;
-import falcon_mod.falcon.patches.AbstractCardEnum;
+import melee_mod.FalconCharacterMod;
+import melee_mod.falcon.patches.AbstractCardEnum;
 import globals.Constants;
 
 public class ShieldDrop extends CustomCard {

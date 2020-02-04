@@ -1,4 +1,4 @@
-package falcon_mod;
+package melee_mod;
 
 import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
@@ -24,12 +24,12 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 //import fruitymod.seeker.relics.*;
 //import fruitymod.tranquil.characters.TheTranquil;
 //import fruitymod.tranquil.patches.TheTranquilEnum;
-import falcon_mod.falcon.CharacterMod;
-import falcon_mod.falcon.cards.*;
-import falcon_mod.falcon.characters.CaptainFalcon;
-import falcon_mod.falcon.patches.AbstractCardEnum;
-import falcon_mod.falcon.patches.FalconEnum;
-import falcon_mod.falcon.relics.AirWobbling;
+import melee_mod.falcon.CharacterMod;
+import melee_mod.falcon.cards.*;
+import melee_mod.falcon.characters.CaptainFalcon;
+import melee_mod.falcon.patches.AbstractCardEnum;
+import melee_mod.falcon.patches.FalconEnum;
+import melee_mod.falcon.relics.AirWobbling;
 import globals.Constants;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

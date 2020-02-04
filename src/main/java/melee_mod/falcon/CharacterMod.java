@@ -1,4 +1,4 @@
-package falcon_mod.falcon;
+package melee_mod.falcon;
 
 import basemod.interfaces.*;
 

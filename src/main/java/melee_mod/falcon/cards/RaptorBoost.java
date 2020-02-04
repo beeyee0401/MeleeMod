@@ -1,4 +1,4 @@
-package falcon_mod.falcon.cards;
+package melee_mod.falcon.cards;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -12,10 +12,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import falcon_mod.FalconCharacterMod;
-import falcon_mod.falcon.cards.keyword_card_helpers.ComboCardHelper;
-import falcon_mod.falcon.patches.AbstractCardEnum;
-import falcon_mod.falcon.powers.BurnPower;
+import melee_mod.FalconCharacterMod;
+import melee_mod.falcon.cards.keyword_card_helpers.ComboCardHelper;
+import melee_mod.falcon.patches.AbstractCardEnum;
+import melee_mod.falcon.powers.BurnPower;
 import globals.Constants;
 
 public class RaptorBoost extends CustomCard {

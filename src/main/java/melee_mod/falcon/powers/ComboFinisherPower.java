@@ -1,4 +1,4 @@
-package falcon_mod.falcon.powers;
+package melee_mod.falcon.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -8,8 +8,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import falcon_mod.FalconCharacterMod;
-import falcon_mod.falcon.cards.keyword_card_helpers.ComboCardHelper;
+import melee_mod.FalconCharacterMod;
+import melee_mod.falcon.cards.keyword_card_helpers.ComboCardHelper;
 import globals.Constants;
 
 public class ComboFinisherPower extends AbstractPower {

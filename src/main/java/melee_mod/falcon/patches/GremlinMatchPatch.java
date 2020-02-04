@@ -1,4 +1,4 @@
-package falcon_mod.falcon.patches;
+package melee_mod.falcon.patches;
 
 import java.util.ArrayList;
 
@@ -7,8 +7,8 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-import falcon_mod.falcon.cards.Knee;
-import falcon_mod.falcon.characters.CaptainFalcon;
+import melee_mod.falcon.cards.Knee;
+import melee_mod.falcon.characters.CaptainFalcon;
 
 @SpirePatch(cls="com.megacrit.cardcrawl.events.shrines.GremlinMatchGame", method="initializeCards")
 public class GremlinMatchPatch {

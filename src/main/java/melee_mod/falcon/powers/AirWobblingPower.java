@@ -1,4 +1,4 @@
-package falcon_mod.falcon.powers;
+package melee_mod.falcon.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
@@ -7,10 +7,10 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-import falcon_mod.FalconCharacterMod;
+import melee_mod.FalconCharacterMod;
 import globals.Constants;
 
-import static falcon_mod.falcon.patches.CustomTags.AERIAL;
+import static melee_mod.falcon.patches.CustomTags.AERIAL;
 
 public class AirWobblingPower
         extends AbstractPower {
