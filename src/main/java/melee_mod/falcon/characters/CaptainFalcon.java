@@ -84,12 +84,11 @@ public class CaptainFalcon extends CustomPlayer {
         retVal.add(Constants.CardNames.SHIELD);
         retVal.add(Constants.CardNames.KNEE);
 
-        retVal.add(Constants.CardNames.GENTLEMAN);
         retVal.add(Constants.CardNames.LOSE_STOCK);
         retVal.add(Constants.CardNames.LCANCEL);
-        retVal.add(Constants.CardNames.GET_UP_ATTACK);
         retVal.add(Constants.CardNames.TEAM_ATTACK_ON);
         retVal.add(Constants.CardNames.PHANTOM_HIT);
+        retVal.add(Constants.CardNames.UCF);
         return retVal;
     }
 

@@ -126,14 +126,18 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new Pause());
         cards.add(new PhantomHit());
         cards.add(new TeamAttackOn());
+        cards.add(new SweetSpot());
 
         // POWERS (11 for Silent)
         cards.add(new LCancel());
+        cards.add(new Taunt());
+        cards.add(new UCF());
 
         cards.add(new Jab());
         cards.add(new DownSmash());
         cards.add(new Gentleman());
         cards.add(new RapidJabs());
+        cards.add(new ShieldPoke());
 
         for(CustomCard card : cards) {
             BaseMod.addCard(card);

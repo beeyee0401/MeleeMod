@@ -104,12 +104,28 @@
     "DESCRIPTION": "Gain !B! Block."
   },
   "ShieldDrop": {
-    "NAME": "ShieldDrop",
-    "DESCRIPTION": "Gain !B! Block."
+    "NAME": "Shield Drop",
+    "DESCRIPTION": "Gain !B! Block. Gain !M! Dexterity that expires at the end of this turn"
+  },
+  "ShieldPoke": {
+    "NAME": "Shield Poke",
+    "DESCRIPTION": "Deal !D! damage that goes through Block"
+  },
+  "SweetSpot": {
+    "NAME": "Sweet Spot",
+    "DESCRIPTION": "Gain !B! Block. Draw !M! cards."
+  },
+  "Taunt": {
+    "NAME": "Taunt",
+    "DESCRIPTION": "Gain !M! Vulnerable. Gain 4 Strength. All enemies lose 1 Strength."
   },
   "TeamAttackOn": {
     "NAME": "Team Attack On",
     "DESCRIPTION": "If the target has attacking intent, it attacks another random enemy"
+  },
+  "UCF": {
+    "NAME": "UCF",
+    "DESCRIPTION": "At the start of each turn, add a Shield Drop with Ethereal to your hand."
   },
   "Dazed_P": {
     "NAME": "Dazed (Enigma)",
