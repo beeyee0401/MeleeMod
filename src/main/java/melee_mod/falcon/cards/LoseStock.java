@@ -3,6 +3,7 @@ package melee_mod.falcon.cards;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -37,6 +38,7 @@ public class LoseStock extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(p, info));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, 1)));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedPower(p, this.magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, Constants.Powers.PERCENT));
     }
 
     public AbstractCard makeCopy() {

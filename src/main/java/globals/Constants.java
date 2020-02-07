@@ -30,7 +30,11 @@ public class Constants {
         public static final String ROLL = "Roll";
         public static final String SHIELD = "Shield";
         public static final String SHIELD_DROP = "ShieldDrop";
+        public static final String SHIELD_POKE = "ShieldPoke";
+        public static final String SWEET_SPOT = "SweetSpot";
+        public static final String TAUNT = "Taunt";
         public static final String TEAM_ATTACK_ON = "TeamAttackOn";
+        public static final String UCF = "UCF";
     }
 
     public static class Keywords {
@@ -42,13 +46,16 @@ public class Constants {
 
     public static class Powers {
         public static final String AIR_WOBBLING = "AirWobbling";
+        public static final String ANGEL_PLATFORM = "AngelPlatform";
         public static final String BURN = "Burn";
         public static final String COMBO_FINISHER = "ComboFinisher";
         public static final String COMBO_POINTS = "ComboPoints";
+        public static final String EDGE_CANCELLING = "EdgeCancelling";
         public static final String LCANCELING = "LCanceling";
         public static final String LCANCELED = "LCanceled";
-        public static final String ANGEL_PLATFORM = "AngelPlatform";
         public static final String PERCENT = "Percent";
-        public static final String EDGE_CANCELLING = "EdgeCancelling";
+        public static final String UCF = "UCF";
+        public static final String UCF_ITS_TRUE = "UCFItsTrue";
     }
 }
+

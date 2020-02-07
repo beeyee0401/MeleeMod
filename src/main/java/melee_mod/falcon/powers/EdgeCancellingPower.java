@@ -2,22 +2,18 @@ package melee_mod.falcon.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import globals.Enums;
 import melee_mod.FalconCharacterMod;
-import melee_mod.falcon.patches.CustomTags;
-
-import java.util.ArrayList;
+import melee_mod.falcon.powers.helpers.CardCostHelper;
 
 import static globals.Constants.Powers.EDGE_CANCELLING;
 
 public class EdgeCancellingPower extends AbstractPower {
     public static final String POWER_ID = EDGE_CANCELLING;
     public static final String NAME = "Edge Cancelling";
-    public static final String DESCRIPTION = "Aerials cost 0 for the next ";
 
     public EdgeCancellingPower(AbstractCreature owner, int amount) {
         this.name = NAME;
@@ -37,23 +33,21 @@ public class EdgeCancellingPower extends AbstractPower {
 
     @Override
     public void atEndOfRound() {
+        if (this.amount == 1){
+            CardCostHelper.resetCardCosts(AbstractDungeon.player.hand.group);
+            CardCostHelper.resetCardCosts(AbstractDungeon.player.drawPile.group);
+            CardCostHelper.resetCardCosts(AbstractDungeon.player.discardPile.group);
+            CardCostHelper.resetCardCosts(AbstractDungeon.player.exhaustPile.group);
+        }
         AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this.ID, 1));
     }
 
     @Override
     public void onInitialApplication() {
-        setCardCosts(AbstractDungeon.player.hand.group);
-        setCardCosts(AbstractDungeon.player.drawPile.group);
-        setCardCosts(AbstractDungeon.player.discardPile.group);
-        setCardCosts(AbstractDungeon.player.exhaustPile.group);
-    }
-
-    private void setCardCosts(ArrayList<AbstractCard> cards){
-        for (AbstractCard c : cards) {
-            if (c.tags.contains(CustomTags.AERIAL)) {
-                c.costForTurn = c.cost - 1;
-                c.isCostModifiedForTurn = true;
-            }
-        }
+        int reduction = 1;
+        CardCostHelper.setCardCosts(AbstractDungeon.player.hand.group, Enums.CostAction.REDUCE, reduction);
+        CardCostHelper.setCardCosts(AbstractDungeon.player.drawPile.group, Enums.CostAction.REDUCE, reduction);
+        CardCostHelper.setCardCosts(AbstractDungeon.player.discardPile.group, Enums.CostAction.REDUCE, reduction);
+        CardCostHelper.setCardCosts(AbstractDungeon.player.exhaustPile.group,Enums.CostAction.REDUCE, reduction);
     }
 }

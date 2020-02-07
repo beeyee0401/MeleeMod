@@ -2,15 +2,18 @@ package melee_mod.falcon.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import melee_mod.FalconCharacterMod;
 import globals.Constants;
+import melee_mod.falcon.cards.PhantomHit;
 
 import static globals.Constants.Powers.PERCENT;
 
@@ -34,27 +37,20 @@ public class PercentPower extends AbstractPower {
     }
 
     @Override
-    public float atDamageReceive(float damage, com.megacrit.cardcrawl.cards.DamageInfo.DamageType damageType, com.megacrit.cardcrawl.cards.AbstractCard card){
-        if (card.keywords.contains(Constants.Keywords.FINISHER)){
-            damage += (damage * this.amount);
-            this.amount = 0;
+    public float atDamageReceive(float damage, DamageInfo.DamageType type) {
+        if (type == DamageInfo.DamageType.NORMAL) {
+            return (float) (damage * (1 + (this.amount / 100.0)));
+        } else {
+            return damage;
         }
-        return damage;
     }
 
     @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        System.out.println("on use card");
-    }
-
-    @Override
-    public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        System.out.println("on play card");
-    }
-
-    @Override
-    public int onAttacked(DamageInfo info, int damageAmount){
-        System.out.println("on attacked");
-        return damageAmount;
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
+        if (this.amount >= 100) {
+            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new AngelPlatformPower(this.owner, 1)));
+        }
     }
 }
