@@ -28,9 +28,9 @@ public class UCF extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster monster) {
-//        if (this.upgraded){
+        if (this.upgraded){
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new UCFItsTruePower(p, 1)));
-//        }
+        }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new UCFPower(p, 1)));
     }
 
@@ -45,7 +45,7 @@ public class UCF extends CustomCard {
             this.upgraded = true;
             this.name = "UCF: It's True";
             this.initializeTitle();
-            this.rawDescription = DESCRIPTION + "NL When an enemy dies, add a Phantom Hit to your Draw Pile";
+            this.rawDescription = DESCRIPTION + " NL When an enemy dies, add a Phantom Hit to your Draw Pile";
             this.initializeDescription();
         }
     }
