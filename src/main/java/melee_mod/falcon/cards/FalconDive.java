@@ -43,7 +43,7 @@ public class FalconDive extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeMagicNumber(UPGRADE_BURN);
-            this.rawDescription = "Gain !B! Block. Apply !M! Burn to the target";
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
     }

@@ -5,7 +5,10 @@ public class Constants {
     static public final String ASSETS_FOLDER = "img";
 
     public static class CardNames {
+        public static final String AIR_DODGE = "AirDodge";
+        public static final String AMSAH_TECH = "AmsahTech";
         public static final String BACK_AIR = "BackAir";
+        public static final String BLUE_FALCON = "BlueFalcon";
         public static final String DASH_DANCE = "DashDance";
         public static final String DI_MIX_UP = "DIMixUp";
         public static final String DOWN_AIR = "DownAir";
@@ -53,7 +56,9 @@ public class Constants {
         public static final String EDGE_CANCELLING = "EdgeCancelling";
         public static final String LCANCELING = "LCanceling";
         public static final String LCANCELED = "LCanceled";
+        public static final String LOSE_BUFFER = "LoseBuffer";
         public static final String PERCENT = "Percent";
+        public static final String REMOVE_ARTIFACTS = "RemoveArtifacts";
         public static final String UCF = "UCF";
         public static final String UCF_ITS_TRUE = "UCFItsTrue";
     }

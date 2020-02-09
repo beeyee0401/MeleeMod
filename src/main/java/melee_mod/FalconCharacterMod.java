@@ -94,7 +94,8 @@ public class FalconCharacterMod implements CharacterMod {
 
         List<CustomCard> cards = new ArrayList<CustomCard>();
 
-        // 28 attacks (15 atm)
+        // total 75 cards
+        // 28 attacks (17 atm)
 
         // AERIALS
         cards.add(new BackAir());
@@ -106,6 +107,7 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new DownTilt());
         cards.add(new ForwardTilt());
         cards.add(new GetUpAttack());
+        cards.add(new BlueFalcon());
 
         // BURNS
         cards.add(new FalconKick());
@@ -113,7 +115,9 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new ForwardSmash());
         cards.add(new RaptorBoost());
 
-        // SKILLS (36 for Silent)
+        // SKILLS (36 for Silent)(15)
+        cards.add(new AirDodge());
+        cards.add(new AmsahTech());
         cards.add(new DashDance());
         cards.add(new DIMixUp());
         cards.add(new EdgeCancel());

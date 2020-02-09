@@ -1,52 +1,54 @@
 package melee_mod.falcon.cards;
 
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.BufferPower;
 import globals.Constants;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.patches.AbstractCardEnum;
+import melee_mod.falcon.powers.LoseBufferPower;
+import melee_mod.falcon.powers.PercentPower;
 
-public class SweetSpot extends CustomCard {
-    private static final String ID = Constants.CardNames.SWEET_SPOT;
+public class AirDodge extends CustomCard {
+    private static final String ID = Constants.CardNames.AIR_DODGE;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    private static final int COST = 2;
-    private static final int BLOCK_AMT = 15;
-    private static final int DRAW = 1;
-    private static final int UPGRADE_DRAW = 1;
+    private static final int COST = 1;
+    private static final int BUFFER = 1;
+    private static final int PERCENT = 20;
+    private static final int UPGRADE_PERCENT = -10;
 
-    public SweetSpot() {
+    public AirDodge() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.FALCON_BLUE, CardRarity.COMMON, AbstractCard.CardTarget.SELF);
+                AbstractCardEnum.FALCON_BLUE, CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 
-        this.baseBlock = this.block = BLOCK_AMT;
-        this.baseMagicNumber = this.magicNumber = DRAW;
+        this.baseMagicNumber = this.magicNumber = PERCENT;
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new SweetSpot();
+        return new AirDodge();
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_DRAW);
+            upgradeMagicNumber(UPGRADE_PERCENT);
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BufferPower(p, BUFFER)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseBufferPower(p, BUFFER)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PercentPower(p, this.magicNumber)));
     }
 }

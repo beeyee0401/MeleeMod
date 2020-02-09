@@ -45,7 +45,7 @@ public class UCF extends CustomCard {
             this.upgraded = true;
             this.name = "UCF: It's True";
             this.initializeTitle();
-            this.rawDescription = DESCRIPTION + " NL When an enemy dies, add a Phantom Hit to your Draw Pile";
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
     }

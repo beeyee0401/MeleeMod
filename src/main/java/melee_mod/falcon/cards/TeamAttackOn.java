@@ -38,7 +38,7 @@ public class TeamAttackOn extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.rawDescription = "All enemies with attack intent attack another random enemy";
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();
             this.target = CardTarget.ALL_ENEMY;
         }

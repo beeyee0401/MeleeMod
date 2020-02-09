@@ -21,12 +21,15 @@ public class EdgeCancel extends CustomCard {
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 0;
+    private static final int DRAW = 1;
+    private static final int COST_REDUCTION = 1;
+    private static final int UPGRADE_ENERGY = 1;
 
     public EdgeCancel() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
                 AbstractCard.CardType.SKILL, AbstractCardEnum.FALCON_BLUE,
                 AbstractCard.CardRarity.RARE, CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber = COST_REDUCTION;
         this.exhaust = true;
     }
 
@@ -39,17 +42,17 @@ public class EdgeCancel extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.rawDescription = "Your Aerials cost !M! less [E] this turn. Draw a card. Gain !M! [E]. Exhaust.";
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
     }
 
     @Override
     public void use(AbstractPlayer player, AbstractMonster monster) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new EdgeCancellingPower(player, this.magicNumber)));
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(player, this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new EdgeCancellingPower(player, COST_REDUCTION)));
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(player, DRAW));
         if (this.upgraded){
-            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.magicNumber));
+            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(UPGRADE_ENERGY));
         }
     }
 }
