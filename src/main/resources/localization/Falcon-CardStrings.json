@@ -103,6 +103,10 @@
     "NAME": "Phantom Hit",
     "DESCRIPTION": "Gain !M! intangibility NL ALL enemies gain 1 intangibility NL Exhaust"
   },
+  "PowerShield": {
+    "NAME": "Power Shield",
+    "DESCRIPTION": "Whenever you gain Block, deal !M! damage to ALL enemies."
+  },
   "RapidJabs": {
     "NAME": "Rapid Jabs",
     "DESCRIPTION": "Deal !D! damage X * !M! times"
@@ -144,26 +148,5 @@
     "NAME": "UCF",
     "DESCRIPTION": "At the start of each turn, add a Shield Drop with Ethereal to your hand.",
     "UPGRADE_DESCRIPTION": "At the start of each turn, add a Shield Drop with Ethereal to your hand. NL When an enemy dies, add a Phantom Hit to your Draw Pile"
-  },
-  "Dazed_P": {
-    "NAME": "Dazed (Enigma)",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Deal !D! damage."
-  },
-  "AstralHaze": {
-    "NAME": "Astral Haze",
-    "DESCRIPTION": "Ethereal. The first time each enemy attacks you this turn, apply !M! Vulnerable and !M! Weak to it."
-  },
-  "Starburst": {
-    "NAME": "Starburst",
-    "DESCRIPTION": "Deal !D! damage twice to one enemy and once to ALL other enemies."
-  },
-  "Irradiate": {
-    "NAME": "Irradiate",
-    "DESCRIPTION": "Deal !D! damage and apply !M! Weak and !M! Vulnerable to ALL enemies."
-  },
-  "EssenceDart": {
-    "NAME": "Essence Dart",
-    "DESCRIPTION": "Can only be played if you have an Ethereal card in your hand. NL Deal !D! damage.",
-    "EXTENDED_DESCRIPTION": [ "I do not have an Ethereal card in my hand." ]
   }
 }

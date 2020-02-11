@@ -48,6 +48,7 @@ public class LoseStock extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            this.upgradeMagicNumber(UPGRADE_ENERGY_GAIN);
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

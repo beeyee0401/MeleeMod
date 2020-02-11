@@ -134,6 +134,7 @@ public class FalconCharacterMod implements CharacterMod {
 
         // POWERS (11 for Silent)
         cards.add(new LCancel());
+        cards.add(new PowerShield());
         cards.add(new Taunt());
         cards.add(new UCF());
 

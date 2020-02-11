@@ -10,11 +10,11 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.patches.CustomTags;
 
-import static globals.Constants.Powers.LCANCELED;
-import static globals.Constants.Powers.LCANCELING;
+import static globals.Constants.Powers.L_CANCELED;
+import static globals.Constants.Powers.L_CANCELING;
 
 public class LCancelingPower extends AbstractPower {
-    private static final String POWER_ID = LCANCELING;
+    private static final String POWER_ID = L_CANCELING;
     private static final String NAME = "Learned to L-Cancel";
     private static final String DESCRIPTION = "After using an Aerial, reduce the cost of your next card by 1 [E] if it's a non-Aerial";
     public LCancelingPower(AbstractCreature owner, int amount) {
@@ -34,7 +34,7 @@ public class LCancelingPower extends AbstractPower {
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.tags.contains(CustomTags.AERIAL) &&
-                !this.owner.hasPower(LCANCELED)){
+                !this.owner.hasPower(L_CANCELED)){
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(action.target, action.source, new LCanceledPower(action.target, 1)));
         }
     }

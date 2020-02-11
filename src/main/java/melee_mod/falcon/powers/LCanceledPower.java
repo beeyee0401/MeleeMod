@@ -12,10 +12,10 @@ import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.patches.CustomTags;
 import melee_mod.falcon.powers.helpers.CardCostHelper;
 
-import static globals.Constants.Powers.LCANCELED;
+import static globals.Constants.Powers.L_CANCELED;
 
 public class LCanceledPower extends AbstractPower {
-    private static final String POWER_ID = LCANCELED;
+    private static final String POWER_ID = L_CANCELED;
     private static final String NAME = "Just L-Canceled";
     private static final String DESCRIPTION = "Cost of your next non-Aerial card is reduced by 1 [E]";
 

@@ -28,6 +28,7 @@ public class Constants {
         public static final String NO_DI = "NoDI";
         public static final String PAUSE = "Pause";
         public static final String PHANTOM_HIT = "PhantomHit";
+        public static final String POWER_SHIELD = "PowerShield";
         public static final String RAPID_JABS = "RapidJabs";
         public static final String RAPTOR_BOOST = "RaptorBoost";
         public static final String ROLL = "Roll";
@@ -54,10 +55,11 @@ public class Constants {
         public static final String COMBO_FINISHER = "ComboFinisher";
         public static final String COMBO_POINTS = "ComboPoints";
         public static final String EDGE_CANCELLING = "EdgeCancelling";
-        public static final String LCANCELING = "LCanceling";
-        public static final String LCANCELED = "LCanceled";
+        public static final String L_CANCELING = "LCanceling";
+        public static final String L_CANCELED = "LCanceled";
         public static final String LOSE_BUFFER = "LoseBuffer";
         public static final String PERCENT = "Percent";
+        public static final String POWER_SHIELDING = "PowerShielding";
         public static final String REMOVE_ARTIFACTS = "RemoveArtifacts";
         public static final String UCF = "UCF";
         public static final String UCF_ITS_TRUE = "UCFItsTrue";
