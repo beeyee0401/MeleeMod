@@ -62,36 +62,26 @@ public class CaptainFalcon extends CustomPlayer {
         return null;
     }
 
-    @Override
-    public void applyEndOfTurnTriggers() {
-        for (AbstractPower p : this.powers) {
-            p.atEndOfTurn(true);
-        }
-        // make sure that cards that get changed to ethereal are
-        // always exhausted
-        AbstractDungeon.actionManager.addToBottom(new ExhaustAllEtherealAction());
-    }
-
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(Constants.CardNames.JAB);
-//        retVal.add(Constants.CardNames.JAB);
-//        retVal.add(Constants.CardNames.JAB);
-//        retVal.add(Constants.CardNames.JAB);
+        retVal.add(Constants.CardNames.JAB);
+        retVal.add(Constants.CardNames.JAB);
+        retVal.add(Constants.CardNames.JAB);
         retVal.add(Constants.CardNames.SHIELD);
-//        retVal.add(Constants.CardNames.SHIELD);
-//        retVal.add(Constants.CardNames.SHIELD);
-//        retVal.add(Constants.CardNames.SHIELD);
+        retVal.add(Constants.CardNames.SHIELD);
+        retVal.add(Constants.CardNames.SHIELD);
+        retVal.add(Constants.CardNames.SHIELD);
         retVal.add(Constants.CardNames.KNEE);
 
-//        retVal.add(Constants.CardNames.AIR_DODGE);
-        retVal.add(Constants.CardNames.BLUE_FALCON);
+        retVal.add(Constants.CardNames.UCF);
+        retVal.add(Constants.CardNames.SHIELD_DROP);
+//        retVal.add(Constants.CardNames.BLUE_FALCON);
         retVal.add(Constants.CardNames.GRAB);
 //        retVal.add(Constants.CardNames.AMSAH_TECH);
 //        retVal.add(Constants.CardNames.POWER_SHIELD);
         return retVal;
     }
-
 
     @Override
     public String getTitle(AbstractPlayer.PlayerClass playerClass) {

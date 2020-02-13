@@ -1,10 +1,14 @@
 package melee_mod.falcon.powers;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import globals.Constants;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.cards.ShieldDropTemp;
 
@@ -26,7 +30,7 @@ public class UCFPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = "Adds " + this.amount + " Shield " + (this.amount > 1 ? "Drops" : "Drop" ) + " with ethereal to your hand at the start of each turn";
+        this.description = "Adds a Shield Drop with ethereal to your hand at the start of each turn. When Shield Drop is played, draw " + this.amount + (this.amount > 1 ? " cards." : " card.");
     }
 
     @Override
@@ -34,6 +38,13 @@ public class UCFPower extends AbstractPower {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             this.flash();
             this.addToBot(new MakeTempCardInHandAction(new ShieldDropTemp(), this.amount, false));
+        }
+    }
+
+    @Override
+    public void onPlayCard(AbstractCard card, AbstractMonster m) {
+        if (card.cardID == Constants.CardNames.SHIELD_DROP) {
+            this.addToBot(new DrawCardAction(this.amount));
         }
     }
 }

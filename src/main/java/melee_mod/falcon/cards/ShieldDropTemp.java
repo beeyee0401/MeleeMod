@@ -17,7 +17,7 @@ public class ShieldDropTemp extends CustomCard {
     private static final String ID = Constants.CardNames.SHIELD_DROP;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
-    private static final String DESCRIPTION = cardStrings.DESCRIPTION + " NL Ethereal.";
+    private static final String DESCRIPTION = cardStrings.DESCRIPTION + " NL Ethereal NL Exhaust";
     private static final int COST = 1;
     private static final int BLOCK_AMT = 4;
     private static final int BASE_DEX = 2;
@@ -29,6 +29,7 @@ public class ShieldDropTemp extends CustomCard {
         this.block = this.baseBlock = BLOCK_AMT;
         this.magicNumber = this.baseMagicNumber = BASE_DEX;
         this.isEthereal = true;
+        this.exhaust = true;
     }
 
     @Override
