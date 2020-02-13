@@ -56,7 +56,7 @@
   },
   "ForwardSmash": {
     "NAME": "Forward Smash",
-    "DESCRIPTION": "Deal !D! damage. Apply !M! Burn to the target."
+    "DESCRIPTION": "Finisher NL Deal !D! damage. Apply !M! Burn to the target."
   },
   "ForwardTilt": {
     "NAME": "Forward Tilt",
@@ -64,11 +64,16 @@
   },
   "Gentleman": {
     "NAME": "Gentleman",
-    "DESCRIPTION": "Deal !D! damage 2 times, then deal !M! damage."
+    "DESCRIPTION": "Deal !D! damage 2 times, then deal !D! +2 damage."
   },
   "GetUpAttack": {
     "NAME": "Get Up Attack",
     "DESCRIPTION": "Deal !D! damage !M! times. Gain !D! Percent."
+  },
+  "Grab": {
+    "NAME": "Grab",
+    "DESCRIPTION": "Deal !D! damage. NL Combo",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Combo NL Choose a Finisher card from your draw pile and place it into your hand."
   },
   "Jab": {
     "NAME": "Jab",
@@ -78,7 +83,7 @@
     "NAME": "Knee",
     "DESCRIPTION": "Aerial NL Deal !D! damage NL If the target has 0 combo-points: Combo NL Otherwise: Finisher NL Exhaust"
   },
-  "LCancel": {
+  "L_Cancel": {
     "NAME": "Learn to L-Cancel",
     "DESCRIPTION": "Whenever you use an Aerial, reduce the cost of your next card by 1 [E] if it's a non-Aerial"
   },

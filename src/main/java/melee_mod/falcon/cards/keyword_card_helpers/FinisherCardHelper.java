@@ -21,12 +21,6 @@ public class FinisherCardHelper {
         return damage;
     }
 
-    public static void dealDamage(AbstractPlayer player, AbstractMonster monster, int damage, DamageType damageType) {
-        DamageInfo info = new DamageInfo(player, damage, damageType);
-        DamageAction action = new DamageAction(monster, info, AbstractGameAction.AttackEffect.SMASH);
-        AbstractDungeon.actionManager.addToBottom(action);
-    }
-
     public static void removeComboPoints(AbstractMonster monster) {
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(monster, monster, Constants.Powers.COMBO_POINTS));
     }

@@ -14,7 +14,6 @@ import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.patches.AbstractCardEnum;
 import globals.Constants;
 
-// This card has a jank implementation because you can't have multiple attack values
 public class Gentleman extends CustomCard {
     private static final String ID = Constants.CardNames.GENTLEMAN;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -22,7 +21,6 @@ public class Gentleman extends CustomCard {
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int WEAK_ATTACK_DAMAGE = 2;
-    private static final int STRONG_ATTACK_DAMAGE = 4;
     private static final int UPGRADE_DAMAGE = 1;
     private static final int WEAK_HITS = 2;
 
@@ -31,7 +29,6 @@ public class Gentleman extends CustomCard {
                 AbstractCardEnum.FALCON_BLUE, CardRarity.COMMON,
                 AbstractCard.CardTarget.ENEMY);
         this.damage = this.baseDamage = WEAK_ATTACK_DAMAGE;
-        this.magicNumber = this.baseMagicNumber = STRONG_ATTACK_DAMAGE;
     }
 
     @Override
@@ -44,18 +41,17 @@ public class Gentleman extends CustomCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_DAMAGE);
-            upgradeMagicNumber(UPGRADE_DAMAGE);
         }
     }
 
     @Override
     public void use(AbstractPlayer player, AbstractMonster monster) {
         for (int i = 0; i < WEAK_HITS; i++) {
-            DamageInfo info = new DamageInfo(player, damage, damageTypeForTurn);
+            DamageInfo info = new DamageInfo(player, this.damage, this.damageTypeForTurn);
             DamageAction action = new DamageAction(monster, info, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
             AbstractDungeon.actionManager.addToBottom(action);
         }
-        DamageInfo info = new DamageInfo(player, this.magicNumber, damageTypeForTurn);
+        DamageInfo info = new DamageInfo(player, this.damage + 2, this.damageTypeForTurn);
         DamageAction action = new DamageAction(monster, info, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         AbstractDungeon.actionManager.addToBottom(action);
     }

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import melee_mod.FalconCharacterMod;
+import melee_mod.falcon.cards.keyword_card_helpers.FinisherCardHelper;
 import melee_mod.falcon.patches.AbstractCardEnum;
 import melee_mod.falcon.powers.BurnPower;
 import globals.Constants;
@@ -49,9 +50,10 @@ public class ForwardSmash extends CustomCard {
 
     @Override
     public void use(AbstractPlayer player, AbstractMonster monster) {
-        DamageInfo info = new DamageInfo(player, damage, damageTypeForTurn);
-        DamageAction action = new DamageAction(monster, info, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        DamageInfo info = new DamageInfo(player, damage, damageType);
+        DamageAction action = new DamageAction(monster, info, AbstractGameAction.AttackEffect.SMASH);
         AbstractDungeon.actionManager.addToBottom(action);
+        FinisherCardHelper.removeComboPoints(monster);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, player, new BurnPower(monster, this.magicNumber)));
     }
 }

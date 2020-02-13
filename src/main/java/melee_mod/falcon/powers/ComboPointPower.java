@@ -32,14 +32,15 @@ public class ComboPointPower
         this.description = DESCRIPTION;
     }
 
+    @Override
     public float atDamageReceive(float damage, DamageInfo.DamageType damageType, AbstractCard card){
-        if (card.keywords.contains(Constants.Keywords.FINISHER)){
-            damage += (damage * this.amount);
-            this.amount = 0;
+        if (card.keywords.contains(Constants.Keywords.FINISHER) || card.keywords.contains(Constants.Keywords.FINISHER.toLowerCase())){
+            damage += damage * (this.amount * 0.25);
         }
         return damage;
     }
 
+    @Override
     public void atEndOfRound() {
         AbstractDungeon.actionManager
                 .addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner,

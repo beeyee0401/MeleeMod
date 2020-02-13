@@ -20,9 +20,10 @@ public class Constants {
         public static final String FORWARD_SMASH = "ForwardSmash";
         public static final String GENTLEMAN = "Gentleman";
         public static final String GET_UP_ATTACK = "GetUpAttack";
+        public static final String GRAB = "Grab";
         public static final String JAB = "Jab";
         public static final String KNEE = "Knee";
-        public static final String LCANCEL = "LCancel";
+        public static final String L_CANCEL = "L_Cancel";
         public static final String LOSE_STOCK = "LoseStock";
         public static final String NEUTRAL_AIR = "NeutralAir";
         public static final String NO_DI = "NoDI";

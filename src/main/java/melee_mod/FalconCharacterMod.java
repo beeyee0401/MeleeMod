@@ -143,6 +143,7 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new Gentleman());
         cards.add(new RapidJabs());
         cards.add(new ShieldPoke());
+        cards.add(new Grab());
 
         for(CustomCard card : cards) {
             BaseMod.addCard(card);
@@ -170,7 +171,7 @@ public class FalconCharacterMod implements CharacterMod {
         BaseMod.addKeyword(new String[] { Constants.Keywords.FINISHER.toLowerCase(), Constants.Keywords.FINISHER }, "Add 25% additional damage for each combo-point consumed");
         BaseMod.addKeyword(new String[] { Constants.Keywords.COMBO.toLowerCase(), Constants.Keywords.COMBO }, "Add a combo-point to the target");
         BaseMod.addKeyword(new String[] { Constants.Keywords.BURN.toLowerCase(), Constants.Keywords.BURN }, "Take damage equal to two times the Burn stacks at the end of the turn");
-        BaseMod.addKeyword(new String[] { Constants.Keywords.PERCENT.toLowerCase(), Constants.Keywords.PERCENT }, "Take X% additional damage");
+        BaseMod.addKeyword(new String[] { Constants.Keywords.PERCENT.toLowerCase(), Constants.Keywords.PERCENT }, "Take X% additional damage. At 100%, at the end of the turn, gain 1 intangible and remove all %");
     }
 
     //

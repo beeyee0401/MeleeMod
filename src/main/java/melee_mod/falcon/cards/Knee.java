@@ -1,8 +1,12 @@
 package melee_mod.falcon.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -49,13 +53,10 @@ public class Knee extends CustomCard {
     }
 
     @Override
-    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster monster, float tmp) {
-        return FinisherCardHelper.getFinisherDamage(tmp, monster);
-    }
-
-    @Override
     public void use(AbstractPlayer player, AbstractMonster monster) {
-        FinisherCardHelper.dealDamage(player, monster, this.damage, this.damageTypeForTurn);
+        DamageInfo info = new DamageInfo(player, damage, damageType);
+        DamageAction action = new DamageAction(monster, info, AbstractGameAction.AttackEffect.SMASH);
+        AbstractDungeon.actionManager.addToBottom(action);
         if (!monster.hasPower(ComboPointPower.POWER_ID)) {
             ComboCardHelper.addComboPoint(monster);
             if (player.hasPower(Constants.Powers.AIR_WOBBLING)){

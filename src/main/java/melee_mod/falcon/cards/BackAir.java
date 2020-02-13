@@ -50,12 +50,10 @@ public class BackAir extends CustomCard {
     }
 
     @Override
-    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster monster, float tmp) {
-        return FinisherCardHelper.getFinisherDamage(tmp, monster);
-    }
-
-    @Override
     public void use(AbstractPlayer player, AbstractMonster monster) {
-        ComboCardHelper.doBaseAction(player, monster, this);
+        DamageInfo info = new DamageInfo(player, this.damage, this.damageTypeForTurn);
+        DamageAction action = new DamageAction(monster, info, AbstractGameAction.AttackEffect.SMASH);
+        AbstractDungeon.actionManager.addToBottom(action);
+        FinisherCardHelper.removeComboPoints(monster);
     }
 }

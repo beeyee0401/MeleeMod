@@ -14,7 +14,7 @@ import melee_mod.falcon.powers.LCancelingPower;
 import globals.Constants;
 
 public class LCancel extends CustomCard {
-    private static final String ID = Constants.CardNames.LCANCEL;
+    private static final String ID = Constants.CardNames.L_CANCEL;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
