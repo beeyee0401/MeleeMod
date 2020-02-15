@@ -20,12 +20,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.cards.Knee;
 import melee_mod.falcon.patches.AbstractCardEnum;
-import melee_mod.falcon.relics.AirWobbling;
 import globals.Constants;
-//import fruitymod.SeekerMod;
-//import fruitymod.seeker.cards.AstralHaze;
-//import fruitymod.seeker.patches.AbstractCardEnum;
-//import fruitymod.seeker.relics.Arcanosphere;
 
 import java.util.ArrayList;
 
@@ -167,8 +162,11 @@ public class CaptainFalcon extends CustomPlayer {
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(AirWobbling.ID);
-        UnlockTracker.markRelicAsSeen(AirWobbling.ID);
+        retVal.add(Constants.Relics.AIR_WOBBLING);
+        retVal.add(Constants.Relics.LOSERS_MANG0);
+        retVal.add("Lizard Tail");
+        UnlockTracker.markRelicAsSeen(Constants.Relics.AIR_WOBBLING);
+        UnlockTracker.markRelicAsSeen(Constants.Relics.LOSERS_MANG0);
         return retVal;
     }
 

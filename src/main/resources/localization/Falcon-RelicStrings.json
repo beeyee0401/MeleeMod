@@ -1,9 +1,16 @@
 {
   "AirWobbling": {
     "NAME": "Air Wobbling",
-    "FLAVOR": "Falcon's OP and wobble you into a Rest",
+    "FLAVOR": "Falcon's OP and wobbles you into a Rest",
     "DESCRIPTIONS": [
       "Your #yAerial cards that add #yCombo-Points add one additional #yCombo-Point."
+    ]
+  },
+  "LosersMang0": {
+    "NAME": "Loser's Mang0",
+    "FLAVOR": "And now, he will try.",
+    "DESCRIPTIONS": [
+      "At the start of combat, gain -1 Strength and -1 Dexterity. If you die and resurrect, at the start of combat, gain +4 Strength and +4 Dexterity"
     ]
   },
   "PurpleSkull": {

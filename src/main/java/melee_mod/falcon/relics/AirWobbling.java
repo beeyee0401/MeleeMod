@@ -6,11 +6,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import basemod.abstracts.CustomRelic;
+import globals.Constants;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.powers.AirWobblingPower;
 
 public class AirWobbling extends CustomRelic {
-    public static final String ID = "AirWobbling";
+    private static final String ID = Constants.Relics.AIR_WOBBLING;
     private static final int COMBO_TO_ADD = 1;
 
     public AirWobbling() {

@@ -70,5 +70,11 @@ public class Constants {
         public static final String UCF = "UCF";
         public static final String UCF_ITS_TRUE = "UCFItsTrue";
     }
+
+    public static class Relics {
+        public static final String AIR_WOBBLING = "AirWobbling";
+        public static final String LOSERS_MANG0 = "LosersMang0";
+
+    }
 }
 

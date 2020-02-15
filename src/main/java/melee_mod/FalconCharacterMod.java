@@ -16,14 +16,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-//import fruitymod.seeker.actions.unique.ConvergenceAction;
-//import fruitymod.seeker.cards.*;
-//import fruitymod.seeker.characters.TheSeeker;
-//import fruitymod.seeker.patches.AbstractCardEnum;
-//import fruitymod.seeker.patches.TheSeekerEnum;
-//import fruitymod.seeker.relics.*;
-//import fruitymod.tranquil.characters.TheTranquil;
-//import fruitymod.tranquil.patches.TheTranquilEnum;
 import melee_mod.falcon.CharacterMod;
 import melee_mod.falcon.cards.*;
 import melee_mod.falcon.characters.CaptainFalcon;
@@ -31,6 +23,7 @@ import melee_mod.falcon.patches.AbstractCardEnum;
 import melee_mod.falcon.patches.FalconEnum;
 import melee_mod.falcon.relics.AirWobbling;
 import globals.Constants;
+import melee_mod.falcon.relics.LosersMang0;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -86,6 +79,7 @@ public class FalconCharacterMod implements CharacterMod {
     public void receiveEditRelics() {
         // Add relics
         BaseMod.addRelicToCustomPool(new AirWobbling(), AbstractCardEnum.FALCON_BLUE);
+        BaseMod.addRelicToCustomPool(new LosersMang0(), AbstractCardEnum.FALCON_BLUE);
     }
 
     @Override

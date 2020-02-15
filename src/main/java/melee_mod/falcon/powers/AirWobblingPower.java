@@ -14,9 +14,9 @@ import static melee_mod.falcon.patches.CustomTags.AERIAL;
 
 public class AirWobblingPower
         extends AbstractPower {
-    public static final String POWER_ID = Constants.Powers.AIR_WOBBLING;
-    public static final String NAME = "Air Wobbling";
-    public static final String DESCRIPTION = "Add an additional combo-point to each of your Aerial cards";
+    private static final String POWER_ID = Constants.Powers.AIR_WOBBLING;
+    private static final String NAME = "Air Wobbling";
+    private static final String DESCRIPTION = "Add an additional combo-point to each of your Aerial cards";
     public AirWobblingPower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
