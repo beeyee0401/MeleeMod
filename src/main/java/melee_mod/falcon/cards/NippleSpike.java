@@ -32,7 +32,6 @@ public class NippleSpike extends CustomCard {
                 AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
         this.damage = this.baseDamage = BASE_DAMAGE;
         this.tags.add(AERIAL);
-        this.exhaust = true;
     }
 
     @Override

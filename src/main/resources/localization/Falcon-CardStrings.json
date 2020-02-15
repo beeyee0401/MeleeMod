@@ -14,11 +14,11 @@
   },
   "BlueFalcon": {
     "NAME": "Blue Falcon",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies NL Apply !M! Percent to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! Percent to ALL enemies. NL Exhaust"
   },
   "DashDance": {
     "NAME": "Dash Dance",
-    "DESCRIPTION": "Gain !B! Block NL Draw !M! cards."
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! cards."
   },
   "DIMixUp": {
     "NAME": "DI Mix Up",
@@ -26,7 +26,7 @@
   },
   "DownAir": {
     "NAME": "Down Air",
-    "DESCRIPTION": "Combo NL Deal !D! damage NL Add additional combo-point. NL Exhaust"
+    "DESCRIPTION": "Combo NL Deal !D! damage. NL Add additional combo-point. NL Exhaust"
   },
   "DownSmash": {
     "NAME": "Down Smash",
@@ -85,7 +85,7 @@
   },
   "Knee": {
     "NAME": "Knee",
-    "DESCRIPTION": "Aerial NL Deal !D! damage NL If the target has 0 combo-points: Combo NL Otherwise: Finisher NL Exhaust"
+    "DESCRIPTION": "Aerial NL Deal !D! damage. NL If the target has 0 combo-points: Combo NL Otherwise: Finisher NL Exhaust"
   },
   "L_Cancel": {
     "NAME": "Learn to L-Cancel",
@@ -93,8 +93,8 @@
   },
   "LoseStock": {
     "NAME": "Lose Stock",
-    "DESCRIPTION": "Lose 6 health. Gain 1 intangibility NL Gain [E] next turn NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Lose 6 health. Gain 1 intangibility NL Gain [E][E] next turn NL Exhaust"
+    "DESCRIPTION": "Lose 6 health. Gain 1 intangibility. NL Gain [E] next turn NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Lose 6 health. Gain 1 intangibility. NL Gain [E][E] next turn NL Exhaust"
   },
   "NeutralAir": {
     "NAME": "Neutral Air",
@@ -114,7 +114,7 @@
   },
   "PhantomHit": {
     "NAME": "Phantom Hit",
-    "DESCRIPTION": "Gain !M! intangibility NL ALL enemies gain 1 intangibility NL Exhaust"
+    "DESCRIPTION": "Gain !M! intangibility. NL ALL enemies gain 1 intangibility. NL Exhaust"
   },
   "PowerShield": {
     "NAME": "Power Shield",
@@ -122,11 +122,11 @@
   },
   "RapidJabs": {
     "NAME": "Rapid Jabs",
-    "DESCRIPTION": "Deal !D! damage X times !M! times"
+    "DESCRIPTION": "Deal !D! damage (X ⋅ !M!) times"
   },
   "RaptorBoost": {
     "NAME": "Raptor Boost",
-    "DESCRIPTION": "Combo NL Deal !D! damage. Apply !M! Burn NL Gain 1 Vulnerable"
+    "DESCRIPTION": "Combo NL Deal !D! damage. Apply !M! Burn. NL Gain 1 Vulnerable."
   },
   "Roll": {
     "NAME": "Roll",
@@ -150,7 +150,7 @@
   },
   "SomebodyClipThat": {
     "NAME": "Somebody Clip That",
-    "DESCRIPTION": "Replay the cards played for this turn NL Exhaust NL Ethereal",
+    "DESCRIPTION": "Replay the cards played for this turn. NL Exhaust NL Ethereal",
     "UPGRADE_DESCRIPTION": "Replay the cards played for this turn NL Exhaust"
   },
   "SweetSpot": {
