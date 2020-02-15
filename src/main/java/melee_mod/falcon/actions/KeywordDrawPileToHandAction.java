@@ -1,12 +1,6 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package melee_mod.falcon.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
@@ -14,20 +8,23 @@ import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
 import java.util.Iterator;
 
 public class KeywordDrawPileToHandAction extends AbstractGameAction {
     private AbstractPlayer p;
     private CardType typeToCheck;
     private String keywordToCheck;
+    private String cardIdToExclude;
 
-    public KeywordDrawPileToHandAction(int amount, CardType type, String keyword) {
+    public KeywordDrawPileToHandAction(int amount, CardType type, String keyword, String exclusion) {
         this.p = AbstractDungeon.player;
         this.setValues(this.p, this.p, amount);
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_MED;
         this.typeToCheck = type;
         this.keywordToCheck = keyword;
+        this.cardIdToExclude = exclusion;
     }
 
     public void update() {
@@ -43,7 +40,7 @@ public class KeywordDrawPileToHandAction extends AbstractGameAction {
             AbstractCard card;
             while(var2.hasNext()) {
                 card = (AbstractCard)var2.next();
-                if (this.typeToCheck == card.type &&
+                if (this.typeToCheck == card.type && !cardIdToExclude.equals(card.cardID) &&
                         (card.keywords.contains(this.keywordToCheck) || card.keywords.contains(this.keywordToCheck.toLowerCase()))) {
                     tmp.addToRandomSpot(card);
                 }

@@ -13,10 +13,10 @@ import melee_mod.falcon.cards.keyword_card_helpers.ComboCardHelper;
 import melee_mod.falcon.patches.AbstractCardEnum;
 
 public class Grab extends CustomCard {
-    public static final String ID = Constants.CardNames.GRAB;
+    private static final String ID = Constants.CardNames.GRAB;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    private static final String NAME = cardStrings.NAME;
+    private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 0;
 
     public Grab() {
@@ -43,7 +43,7 @@ public class Grab extends CustomCard {
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         ComboCardHelper.addComboPoint(abstractMonster);
         if (this.upgraded){
-            this.addToBot(new KeywordDrawPileToHandAction(1, CardType.ATTACK, Constants.Keywords.FINISHER));
+            this.addToBot(new KeywordDrawPileToHandAction(1, CardType.ATTACK, Constants.Keywords.FINISHER, ID));
         }
     }
 }
