@@ -1,12 +1,12 @@
 {
   "AirDodge": {
     "NAME": "Air Dodge",
-    "DESCRIPTION": "The next time you would take damage this turn does no damage NL Gain !M! Percent."
+    "DESCRIPTION": "The next time you would take damage this turn does no damage. NL Gain !M! Percent."
   },
   "AmsahTech": {
     "NAME": "Amsah Tech",
     "DESCRIPTION": "Gain [E] NL Draw 2 cards NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Gain [E][E] NL Draw 2 cards NL Exhaust"
+    "UPGRADE_DESCRIPTION": "Gain [E][E] NL Draw 2 cards. NL Exhaust"
   },
   "BackAir": {
     "NAME": "Back Air",
@@ -22,7 +22,7 @@
   },
   "DIMixUp": {
     "NAME": "DI Mix Up",
-    "DESCRIPTION": "Your next Combo card becomes a Finisher and applies Percent NL Apply !M! Vulnerable to ALL enemies."
+    "DESCRIPTION": "Your next Combo card becomes a Finisher and applies Percent. NL Apply !M! Vulnerable to ALL enemies."
   },
   "DownAir": {
     "NAME": "Down Air",
@@ -39,12 +39,12 @@
   "EdgeCancel": {
     "NAME": "Edge Cancel",
     "DESCRIPTION": "Your Aerials cost 1 less [E] this turn. Draw a card. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Your Aerials cost !M! less [E] this turn. Draw a card. Gain [E]. Exhaust."
+    "UPGRADE_DESCRIPTION": "Your Aerials cost !M! less [E] this turn. Draw a card. Gain [E]. NL Exhaust."
   },
   "FalconDive": {
     "NAME": "Falcon Dive",
     "DESCRIPTION": "Gain !B! Block. Apply !M! Burn to the target. NL Gain 1 Weak.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. Apply !M! Burn to the target"
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Apply !M! Burn to the target"
   },
   "FalconKick": {
     "NAME": "Falcon Kick",
@@ -52,15 +52,15 @@
   },
   "FalconPunch": {
     "NAME": "Falcon Punch",
-    "DESCRIPTION": "Deal !D! damage. Apply !M! Burn to the target. Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Burn to the target. NL Exhaust."
   },
   "ForwardSmash": {
     "NAME": "Forward Smash",
-    "DESCRIPTION": "Finisher NL Deal !D! damage. Apply !M! Burn to the target."
+    "DESCRIPTION": "Finisher NL Deal !D! damage. NL Apply !M! Burn to the target."
   },
   "ForwardTilt": {
     "NAME": "Forward Tilt",
-    "DESCRIPTION": "Deal !D! damage. Apply !M! Percent to the target."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Percent to the target."
   },
   "Gentleman": {
     "NAME": "Gentleman",
@@ -68,7 +68,7 @@
   },
   "GetUpAttack": {
     "NAME": "Get Up Attack",
-    "DESCRIPTION": "Deal !D! damage !M! times. Gain !D! Percent."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Gain !D! Percent."
   },
   "Grab": {
     "NAME": "Grab",
@@ -77,7 +77,7 @@
   },
   "HaxDash": {
     "NAME": "Hax Dash",
-    "DESCRIPTION": "Gain 1 Dexterity that expires at the end of this turn NL Draw 1 card"
+    "DESCRIPTION": "Gain 1 Dexterity that expires at the end of this turn. NL Draw 1 card."
   },
   "Jab": {
     "NAME": "Jab",
@@ -98,7 +98,7 @@
   },
   "NeutralAir": {
     "NAME": "Neutral Air",
-    "DESCRIPTION": "Aerial NL Combo Deal !D! damage !M! times"
+    "DESCRIPTION": "Aerial NL Combo NL Deal !D! damage !M! times"
   },
   "NippleSpike": {
     "NAME": "Nipple Spike",
@@ -122,7 +122,7 @@
   },
   "RapidJabs": {
     "NAME": "Rapid Jabs",
-    "DESCRIPTION": "Deal !D! damage X * !M! times"
+    "DESCRIPTION": "Deal !D! damage X times !M! times"
   },
   "RaptorBoost": {
     "NAME": "Raptor Boost",

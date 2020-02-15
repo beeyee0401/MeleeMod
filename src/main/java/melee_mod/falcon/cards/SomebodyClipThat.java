@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import globals.Constants;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.patches.AbstractCardEnum;
-import melee_mod.falcon.powers.SomebodyClipThatPower;
+import melee_mod.falcon.powers.ClippedPower;
 
 public class SomebodyClipThat extends CustomCard {
     private static final String ID = Constants.CardNames.SOMEBODY_CLIP_THAT;
@@ -38,11 +38,13 @@ public class SomebodyClipThat extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.isEthereal = false;
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 
     @Override
     public void use(AbstractPlayer player, AbstractMonster monster) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new SomebodyClipThatPower(player, 1)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new ClippedPower(player, 1)));
     }
 }

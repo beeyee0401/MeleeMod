@@ -66,15 +66,15 @@ public class Constants {
         public static final String PERCENT = "Percent";
         public static final String POWER_SHIELDING = "PowerShielding";
         public static final String REMOVE_ARTIFACTS = "RemoveArtifacts";
-        public static final String SOMEBODY_CLIP_THAT = "SomebodyClipThat";
+        public static final String CLIPPED = "Clipped";
         public static final String UCF = "UCF";
         public static final String UCF_ITS_TRUE = "UCFItsTrue";
     }
 
     public static class Relics {
         public static final String AIR_WOBBLING = "AirWobbling";
+        public static final String POWER_CLIPPER = "PowerClipper";
         public static final String LOSERS_MANG0 = "LosersMang0";
-
     }
 }
 

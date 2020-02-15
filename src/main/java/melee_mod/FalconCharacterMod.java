@@ -24,6 +24,7 @@ import melee_mod.falcon.patches.FalconEnum;
 import melee_mod.falcon.relics.AirWobbling;
 import globals.Constants;
 import melee_mod.falcon.relics.LosersMang0;
+import melee_mod.falcon.relics.PowerClipper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -80,6 +81,7 @@ public class FalconCharacterMod implements CharacterMod {
         // Add relics
         BaseMod.addRelicToCustomPool(new AirWobbling(), AbstractCardEnum.FALCON_BLUE);
         BaseMod.addRelicToCustomPool(new LosersMang0(), AbstractCardEnum.FALCON_BLUE);
+        BaseMod.addRelicToCustomPool(new PowerClipper(), AbstractCardEnum.FALCON_BLUE);
     }
 
     @Override
@@ -168,7 +170,7 @@ public class FalconCharacterMod implements CharacterMod {
         logger.info("setting up custom keywords");
         BaseMod.addKeyword(new String[] { Constants.Keywords.FINISHER.toLowerCase(), Constants.Keywords.FINISHER }, "Add 25% additional damage for each combo-point consumed");
         BaseMod.addKeyword(new String[] { Constants.Keywords.COMBO.toLowerCase(), Constants.Keywords.COMBO }, "Add a combo-point to the target");
-        BaseMod.addKeyword(new String[] { Constants.Keywords.BURN.toLowerCase(), Constants.Keywords.BURN }, "Take damage equal to two times the Burn stacks at the end of the turn");
+        BaseMod.addKeyword(new String[] { Constants.Keywords.BURN.toLowerCase(), Constants.Keywords.BURN }, "Take damage equal to two times the Burn stacks at the end of the turn. Burn decreases by 1 each turn.");
         BaseMod.addKeyword(new String[] { Constants.Keywords.PERCENT.toLowerCase(), Constants.Keywords.PERCENT }, "Take X% additional damage. At 100%, at the end of the turn, gain 1 intangible and remove all %");
     }
 
@@ -269,7 +271,6 @@ public class FalconCharacterMod implements CharacterMod {
 
         if (! hasExtension(resource)) {
             result += ".png";
-//            result += ".jpg";
         }
 
         return result;

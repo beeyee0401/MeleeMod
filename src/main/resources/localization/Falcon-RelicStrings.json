@@ -6,6 +6,13 @@
       "Your #yAerial cards that add #yCombo-Points add one additional #yCombo-Point."
     ]
   },
+  "PowerClipper": {
+    "NAME": "Power Clipper",
+    "FLAVOR": "Basically Marcurial for Zain",
+    "DESCRIPTIONS": [
+      "Every 10 turns, replay the cards you played this turn"
+    ]
+  },
   "LosersMang0": {
     "NAME": "Loser's Mang0",
     "FLAVOR": "And now, he will try.",

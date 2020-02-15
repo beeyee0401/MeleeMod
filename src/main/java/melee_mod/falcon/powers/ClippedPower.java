@@ -12,12 +12,12 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import globals.Constants;
 import melee_mod.FalconCharacterMod;
 
-import static globals.Constants.Powers.SOMEBODY_CLIP_THAT;
+import static globals.Constants.Powers.CLIPPED;
 
-public class SomebodyClipThatPower extends AbstractPower {
-    private static final String POWER_ID = SOMEBODY_CLIP_THAT;
-    private static final String NAME = "Somebody Clip That!";
-    public SomebodyClipThatPower(AbstractCreature owner, int amount) {
+public class ClippedPower extends AbstractPower {
+    private static final String POWER_ID = CLIPPED;
+    private static final String NAME = "Clipped";
+    public ClippedPower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;

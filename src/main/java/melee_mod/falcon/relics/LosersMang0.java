@@ -3,6 +3,7 @@ package melee_mod.falcon.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
@@ -39,6 +40,11 @@ public class LosersMang0 extends CustomRelic {
 
     @Override
     public void onTrigger() {
+        AbstractPlayer p = AbstractDungeon.player;
+        this.flash();
+        this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, 5)));
+        this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, 5)));
         this.setCounter(-2);
     }
 
