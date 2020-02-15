@@ -122,7 +122,7 @@
   },
   "RapidJabs": {
     "NAME": "Rapid Jabs",
-    "DESCRIPTION": "Deal !D! damage (X ⋅ !M!) times"
+    "DESCRIPTION": "Deal !D! damage (X x !M!) times"
   },
   "RaptorBoost": {
     "NAME": "Raptor Boost",
