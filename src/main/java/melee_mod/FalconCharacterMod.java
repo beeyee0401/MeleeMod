@@ -132,6 +132,7 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new Roll());
         cards.add(new Shield());
         cards.add(new ShieldDrop());
+        cards.add(new SomebodyClipThat());
         cards.add(new SweetSpot());
         cards.add(new TeamAttackOn());
 

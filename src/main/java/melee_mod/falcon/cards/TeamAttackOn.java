@@ -49,19 +49,16 @@ public class TeamAttackOn extends CustomCard {
         ArrayList<AbstractMonster> monsters = AbstractDungeon.getCurrRoom().monsters.monsters;
         if (this.upgraded){
             for (AbstractMonster m : monsters) {
-                friendlyFireAttack(monsters, m);
+                friendlyFireAttack(m);
             }
         } else {
-            friendlyFireAttack(monsters, monster);
+            friendlyFireAttack(monster);
         }
     }
 
-    private void friendlyFireAttack(ArrayList<AbstractMonster> monsters, AbstractMonster attacker){
+    private void friendlyFireAttack(AbstractMonster attacker){
         if (attacker.getIntentBaseDmg() > 0) {
-            AbstractMonster target = attacker;
-            while (target == attacker) {
-                target = monsters.get((int) (Math.random() * monsters.size()));
-            }
+            AbstractMonster target = AbstractDungeon.getRandomMonster(attacker);
             int damage = attacker.getIntentDmg();
             AbstractDungeon.actionManager.addToBottom(new DamageAction(target, new DamageInfo(attacker, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }

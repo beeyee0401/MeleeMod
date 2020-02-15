@@ -39,6 +39,7 @@ public class Constants {
         public static final String SHIELD_DROP = "ShieldDrop";
         public static final String SHIELD_POKE = "ShieldPoke";
         public static final String SOFT_KNEE = "SoftKnee";
+        public static final String SOMEBODY_CLIP_THAT = "SomebodyClipThat";
         public static final String SWEET_SPOT = "SweetSpot";
         public static final String TAUNT = "Taunt";
         public static final String TEAM_ATTACK_ON = "TeamAttackOn";
@@ -65,6 +66,7 @@ public class Constants {
         public static final String PERCENT = "Percent";
         public static final String POWER_SHIELDING = "PowerShielding";
         public static final String REMOVE_ARTIFACTS = "RemoveArtifacts";
+        public static final String SOMEBODY_CLIP_THAT = "SomebodyClipThat";
         public static final String UCF = "UCF";
         public static final String UCF_ITS_TRUE = "UCFItsTrue";
     }

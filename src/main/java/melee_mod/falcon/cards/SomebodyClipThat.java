@@ -1,5 +1,48 @@
 package melee_mod.falcon.cards;
 
-// next card played twice
-public class SomebodyClipThat {
+import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import globals.Constants;
+import melee_mod.FalconCharacterMod;
+import melee_mod.falcon.patches.AbstractCardEnum;
+import melee_mod.falcon.powers.SomebodyClipThatPower;
+
+public class SomebodyClipThat extends CustomCard {
+    private static final String ID = Constants.CardNames.SOMEBODY_CLIP_THAT;
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    private static final String NAME = cardStrings.NAME;
+    private static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    private static final int COST = 2;
+
+    public SomebodyClipThat() {
+        super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
+                AbstractCard.CardType.SKILL, AbstractCardEnum.FALCON_BLUE,
+                AbstractCard.CardRarity.RARE, CardTarget.NONE);
+        this.exhaust = true;
+        this.isEthereal = true;
+    }
+
+    @Override
+    public AbstractCard makeCopy() {
+        return new SomebodyClipThat();
+    }
+
+    @Override
+    public void upgrade() {
+        if (!this.upgraded) {
+            this.upgradeName();
+            this.isEthereal = false;
+        }
+    }
+
+    @Override
+    public void use(AbstractPlayer player, AbstractMonster monster) {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new SomebodyClipThatPower(player, 1)));
+    }
 }

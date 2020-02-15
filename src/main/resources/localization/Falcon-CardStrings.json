@@ -148,6 +148,11 @@
     "NAME": "Soft Knee",
     "DESCRIPTION": "Aerial NL Combo NL Deal !D! damage"
   },
+  "SomebodyClipThat": {
+    "NAME": "Somebody Clip That",
+    "DESCRIPTION": "Replay the cards played for this turn NL Exhaust NL Ethereal",
+    "UPGRADE_DESCRIPTION": "Replay the cards played for this turn NL Exhaust"
+  },
   "SweetSpot": {
     "NAME": "Sweet Spot",
     "DESCRIPTION": "Gain !B! Block. Draw !M! cards."
