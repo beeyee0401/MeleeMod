@@ -21,11 +21,13 @@ public class Constants {
         public static final String GENTLEMAN = "Gentleman";
         public static final String GET_UP_ATTACK = "GetUpAttack";
         public static final String GRAB = "Grab";
+        public static final String HAX_DASH = "HaxDash";
         public static final String JAB = "Jab";
         public static final String KNEE = "Knee";
         public static final String L_CANCEL = "L_Cancel";
         public static final String LOSE_STOCK = "LoseStock";
         public static final String NEUTRAL_AIR = "NeutralAir";
+        public static final String NIPPLE_SPIKE = "NippleSpike";
         public static final String NO_DI = "NoDI";
         public static final String PAUSE = "Pause";
         public static final String PHANTOM_HIT = "PhantomHit";
@@ -36,6 +38,7 @@ public class Constants {
         public static final String SHIELD = "Shield";
         public static final String SHIELD_DROP = "ShieldDrop";
         public static final String SHIELD_POKE = "ShieldPoke";
+        public static final String SOFT_KNEE = "SoftKnee";
         public static final String SWEET_SPOT = "SweetSpot";
         public static final String TAUNT = "Taunt";
         public static final String TEAM_ATTACK_ON = "TeamAttackOn";

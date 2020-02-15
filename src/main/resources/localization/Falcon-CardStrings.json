@@ -72,8 +72,12 @@
   },
   "Grab": {
     "NAME": "Grab",
-    "DESCRIPTION": "Deal !D! damage. NL Combo",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Combo NL Choose a Finisher card from your draw pile and place it into your hand."
+    "DESCRIPTION": "Combo",
+    "UPGRADE_DESCRIPTION": "Combo NL Choose a Finisher card from your draw pile and place it into your hand."
+  },
+  "HaxDash": {
+    "NAME": "Hax Dash",
+    "DESCRIPTION": "Gain 1 Dexterity that expires at the end of this turn NL Draw 1 card"
   },
   "Jab": {
     "NAME": "Jab",
@@ -94,7 +98,11 @@
   },
   "NeutralAir": {
     "NAME": "Neutral Air",
-    "DESCRIPTION": "Aerial NL Combo Deal !D! damage !M! times."
+    "DESCRIPTION": "Aerial NL Combo Deal !D! damage !M! times"
+  },
+  "NippleSpike": {
+    "NAME": "Nipple Spike",
+    "DESCRIPTION": "Aerial NL Finisher NL Deal !D! damage"
   },
   "NoDI": {
     "NAME": "No DI",
@@ -135,6 +143,10 @@
   "ShieldPoke": {
     "NAME": "Shield Poke",
     "DESCRIPTION": "Deal !D! damage that goes through Block"
+  },
+  "SoftKnee": {
+    "NAME": "Soft Knee",
+    "DESCRIPTION": "Aerial NL Combo NL Deal !D! damage"
   },
   "SweetSpot": {
     "NAME": "Sweet Spot",

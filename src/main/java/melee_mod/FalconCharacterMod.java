@@ -95,13 +95,15 @@ public class FalconCharacterMod implements CharacterMod {
         List<CustomCard> cards = new ArrayList<CustomCard>();
 
         // total 75 cards
-        // 28 attacks (17 atm)
+        // 28 attacks (20 atm)
 
         // AERIALS
         cards.add(new BackAir());
         cards.add(new DownAir());
         cards.add(new Knee());
         cards.add(new NeutralAir());
+        cards.add(new NippleSpike());
+        cards.add(new SoftKnee());
 
         // PERCENT
         cards.add(new DownTilt());
@@ -115,22 +117,23 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new ForwardSmash());
         cards.add(new RaptorBoost());
 
-        // SKILLS (36 for Silent)(15)
+        // SKILLS (36 for Silent)(16)
         cards.add(new AirDodge());
         cards.add(new AmsahTech());
         cards.add(new DashDance());
         cards.add(new DIMixUp());
         cards.add(new EdgeCancel());
         cards.add(new FalconDive());
+        cards.add(new HaxDash());
         cards.add(new LoseStock());
-        cards.add(new Roll());
-        cards.add(new Shield());
-        cards.add(new ShieldDrop());
         cards.add(new NoDI());
         cards.add(new Pause());
         cards.add(new PhantomHit());
-        cards.add(new TeamAttackOn());
+        cards.add(new Roll());
+        cards.add(new Shield());
+        cards.add(new ShieldDrop());
         cards.add(new SweetSpot());
+        cards.add(new TeamAttackOn());
 
         // POWERS (11 for Silent)
         cards.add(new LCancel());

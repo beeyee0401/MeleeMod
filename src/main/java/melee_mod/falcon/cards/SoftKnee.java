@@ -1,6 +1,7 @@
 package melee_mod.falcon.cards;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -8,42 +9,44 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import globals.Constants;
 import melee_mod.FalconCharacterMod;
-import melee_mod.falcon.actions.KeywordDrawPileToHandAction;
 import melee_mod.falcon.cards.keyword_card_helpers.ComboCardHelper;
 import melee_mod.falcon.patches.AbstractCardEnum;
 
-public class Grab extends CustomCard {
-    public static final String ID = Constants.CardNames.GRAB;
+import static melee_mod.falcon.patches.CustomTags.AERIAL;
+
+public class SoftKnee extends CustomCard {
+    public static final String ID = Constants.CardNames.SOFT_KNEE;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 0;
+    private static final int BASE_DAMAGE = 3;
+    private static final int UPGRADE_DAMAGE = 3;
 
-    public Grab() {
+    public SoftKnee() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
-                CardType.ATTACK, AbstractCardEnum.FALCON_BLUE,
-                CardRarity.UNCOMMON, CardTarget.ENEMY);
+                AbstractCard.CardType.ATTACK, AbstractCardEnum.FALCON_BLUE,
+                CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
+        this.damage = this.baseDamage = BASE_DAMAGE;
+        this.tags.add(AERIAL);
+        this.exhaust = true;
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new Grab();
+        return new SoftKnee();
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            this.initializeDescription();
+            this.upgradeDamage(UPGRADE_DAMAGE);
         }
     }
 
     @Override
-    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        ComboCardHelper.addComboPoint(abstractMonster);
-        if (this.upgraded){
-            this.addToBot(new KeywordDrawPileToHandAction(1, CardType.ATTACK, Constants.Keywords.FINISHER));
-        }
+    public void use(AbstractPlayer player, AbstractMonster monster) {
+        ComboCardHelper.doBaseAction(player, monster, this, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
     }
 }
