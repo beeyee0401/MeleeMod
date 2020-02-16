@@ -90,7 +90,8 @@ public class FalconCharacterMod implements CharacterMod {
 
         List<CustomCard> cards = new ArrayList<CustomCard>();
 
-        // total 75 cards
+        // total 75 cards (20 common, 16 rare, 3 starter, 36 uncommon)
+        // my rarity dist (16 common, 10 rare, 4 starter, 13 uncommon)
         // 28 attacks (20 atm)
 
         // AERIALS
@@ -100,12 +101,14 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new NeutralAir());
         cards.add(new NippleSpike());
         cards.add(new SoftKnee());
+        cards.add(new UpAir());
 
         // PERCENT
         cards.add(new DownTilt());
         cards.add(new ForwardTilt());
         cards.add(new GetUpAttack());
         cards.add(new BlueFalcon());
+        cards.add(new UpTilt());
 
         // BURNS
         cards.add(new FalconKick());
@@ -144,6 +147,7 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new RapidJabs());
         cards.add(new ShieldPoke());
         cards.add(new Grab());
+        cards.add(new UpSmash());
 
         for(CustomCard card : cards) {
             BaseMod.addCard(card);
@@ -172,76 +176,6 @@ public class FalconCharacterMod implements CharacterMod {
         BaseMod.addKeyword(new String[] { Constants.Keywords.COMBO.toLowerCase(), Constants.Keywords.COMBO }, "Add a combo-point to the target");
         BaseMod.addKeyword(new String[] { Constants.Keywords.BURN.toLowerCase(), Constants.Keywords.BURN }, "Take damage equal to two times the Burn stacks at the end of the turn. Burn decreases by 1 each turn.");
         BaseMod.addKeyword(new String[] { Constants.Keywords.PERCENT.toLowerCase(), Constants.Keywords.PERCENT }, "Take X% additional damage. At 100%, at the end of the turn, gain 1 intangible and remove all %");
-    }
-
-    //
-    // Relic code
-    // (yes we're doing the exact same things the devs did where relic code
-    // isn't in the actual relics - oh well)
-    //
-
-    private boolean moreThanXStacks(AbstractPlayer player, String powerID, int stacksWanted) {
-        if (player != null && player.hasPower(powerID) && player.getPower(powerID).amount >= stacksWanted) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    @Override
-    public void receivePostBattle(AbstractRoom arg0) {
-
-    }
-
-    @Override
-    public void receivePostDungeonInitialize() {
-
-    }
-
-    @Override
-    public void receivePostExhaust(AbstractCard c) {
-    }
-
-    @Override
-    public void receivePostDraw(AbstractCard c) {
-    }
-
-    //
-    // Enigma hooks and functionality
-    //
-
-    @Override
-    public void receiveCardUsed(AbstractCard c) {
-        AbstractPlayer p = AbstractDungeon.player;
-        if (p.hasPower("EnigmaPower") && c.cardID.equals("Dazed")) {
-            AbstractDungeon.actionManager.addToTop(new GainBlockAction(p, p, c.block));
-            AbstractDungeon.actionManager.addToTop(new DamageAllEnemiesAction(AbstractDungeon.player,
-                    c.multiDamage,
-                    DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE, true));
-            c.exhaustOnUseOnce = false;
-        }
-    }
-
-    public static boolean hasRelicCustom(String relicID, AbstractCard card) {
-        System.out.println("I was checked!");
-        // if it's checking for relicID.equals("Medical Kit") then we know we're in the block where
-        // we are saying if we can use a status card so also check if we have enigma and the card is Dazed
-        if (relicID.equals("Medical Kit") && AbstractDungeon.player.hasPower("EnigmaPower") && card.cardID.equals("Dazed")) {
-            return true;
-        } else {
-            // otherwise leave normal behavior intact
-            return AbstractDungeon.player.hasRelic(relicID);
-        }
-    }
-
-    public static void maybeUseDazed(Dazed dazed) {
-        System.out.println("maybe use dazed");
-        if (!AbstractDungeon.player.hasPower("EnigmaPower")) {
-            System.out.println("do use dazed");
-            AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.utility.UseCardAction(dazed));
-        } else {
-            System.out.println("don't use dazed");
-        }
     }
 
     public static String makeCardImagePath(String cardName) {
@@ -278,10 +212,5 @@ public class FalconCharacterMod implements CharacterMod {
 
     private static boolean hasExtension(String filename) {
         return filename.lastIndexOf('.') > 0;
-    }
-
-    @Override
-    public void receivePowersModified() {
-
     }
 }

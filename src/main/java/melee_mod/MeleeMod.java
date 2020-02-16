@@ -36,9 +36,7 @@ import static globals.Constants.ASSETS_FOLDER;
 @SpireInitializer
 public class MeleeMod implements PostInitializeSubscriber,
         EditCardsSubscriber, EditRelicsSubscriber, EditCharactersSubscriber,
-        EditStringsSubscriber, SetUnlocksSubscriber, OnCardUseSubscriber,
-        EditKeywordsSubscriber, OnPowersModifiedSubscriber, PostExhaustSubscriber,
-        PostBattleSubscriber, PostDungeonInitializeSubscriber, PostDrawSubscriber {
+        EditStringsSubscriber, SetUnlocksSubscriber, EditKeywordsSubscriber {
     public static final Logger logger = LogManager.getLogger(MeleeMod.class.getName());
     private List<CharacterMod> mods;
 
@@ -134,48 +132,6 @@ public class MeleeMod implements PostInitializeSubscriber,
         logger.info("setting up custom keywords");
         for(EditKeywordsSubscriber mod : mods) {
             mod.receiveEditKeywords();
-        }
-    }
-
-    @Override
-    public void receiveCardUsed(AbstractCard c) {
-        for(OnCardUseSubscriber mod : mods) {
-            mod.receiveCardUsed(c);
-        }
-    }
-
-    @Override
-    public void receivePowersModified() {
-        for(OnPowersModifiedSubscriber mod : mods) {
-            mod.receivePowersModified();
-        }
-    }
-
-    @Override
-    public void receivePostBattle(AbstractRoom arg0) {
-        for(PostBattleSubscriber mod : mods) {
-            mod.receivePostBattle(arg0);
-        }
-    }
-
-    @Override
-    public void receivePostDungeonInitialize() {
-        for(PostDungeonInitializeSubscriber mod : mods) {
-            mod.receivePostDungeonInitialize();
-        }
-    }
-
-    @Override
-    public void receivePostExhaust(AbstractCard c) {
-        for (PostExhaustSubscriber mod : mods) {
-            mod.receivePostExhaust(c);
-        }
-    }
-
-    @Override
-    public void receivePostDraw(AbstractCard c) {
-        for (PostDrawSubscriber mod : mods) {
-            mod.receivePostDraw(c);
         }
     }
 }

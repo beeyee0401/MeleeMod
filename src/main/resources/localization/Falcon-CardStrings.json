@@ -170,5 +170,17 @@
     "NAME": "UCF",
     "DESCRIPTION": "At the start of each turn, add a Shield Drop with Ethereal to your hand.",
     "UPGRADE_DESCRIPTION": "At the start of each turn, add a Shield Drop with Ethereal to your hand. NL When an enemy dies, add a Phantom Hit to your Draw Pile"
+  },
+  "UpAir": {
+    "NAME": "Up Air",
+    "DESCRIPTION": "Aerial NL Combo NL Deal !D! damage."
+  },
+  "UpSmash": {
+    "NAME": "Up Smash",
+    "DESCRIPTION": "Combo NL Deal !D! damage twice."
+  },
+  "UpTilt": {
+    "NAME": "Up Tilt",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Percent to the target."
   }
 }

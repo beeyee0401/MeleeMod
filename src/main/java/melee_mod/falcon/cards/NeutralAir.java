@@ -31,7 +31,7 @@ public class NeutralAir extends CustomCard {
     public NeutralAir() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.FALCON_BLUE,
-                CardRarity.COMMON, CardTarget.ENEMY);
+                CardRarity.BASIC, CardTarget.ENEMY);
         this.baseDamage = BASE_DAMAGE;
         this.magicNumber = this.baseMagicNumber = TIMES;
         this.tags.add(AERIAL);

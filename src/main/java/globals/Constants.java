@@ -9,15 +9,18 @@ public class Constants {
         public static final String AMSAH_TECH = "AmsahTech";
         public static final String BACK_AIR = "BackAir";
         public static final String BLUE_FALCON = "BlueFalcon";
+        public static final String CROUCH_CANCEL = "CrouchCancel";
         public static final String DASH_DANCE = "DashDance";
         public static final String DI_MIX_UP = "DIMixUp";
         public static final String DOWN_AIR = "DownAir";
         public static final String DOWN_SMASH = "DownSmash";
+        public static final String DOWN_TILT = "DownTilt";
         public static final String EDGE_CANCEL = "EdgeCancel";
         public static final String FALCON_DIVE = "FalconDive";
         public static final String FALCON_KICK = "FalconKick";
         public static final String FALCON_PUNCH = "FalconPunch";
         public static final String FORWARD_SMASH = "ForwardSmash";
+        public static final String FORWARD_TILT = "ForwardTilt";
         public static final String GENTLEMAN = "Gentleman";
         public static final String GET_UP_ATTACK = "GetUpAttack";
         public static final String GRAB = "Grab";
@@ -26,7 +29,9 @@ public class Constants {
         public static final String KNEE = "Knee";
         public static final String L_CANCEL = "L_Cancel";
         public static final String LOSE_STOCK = "LoseStock";
+        public static final String MOONWALKING = "Moonwalking";
         public static final String NEUTRAL_AIR = "NeutralAir";
+        public static final String NICE_BACK_AIR = "NiceBackAir";
         public static final String NIPPLE_SPIKE = "NippleSpike";
         public static final String NO_DI = "NoDI";
         public static final String PAUSE = "Pause";
@@ -44,6 +49,9 @@ public class Constants {
         public static final String TAUNT = "Taunt";
         public static final String TEAM_ATTACK_ON = "TeamAttackOn";
         public static final String UCF = "UCF";
+        public static final String UP_AIR = "UpAir";
+        public static final String UP_SMASH = "UpSmash";
+        public static final String UP_TILT = "UpTilt";
     }
 
     public static class Keywords {

@@ -32,8 +32,7 @@ public class Knee extends CustomCard {
 
     public Knee() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
-                CardType.ATTACK, AbstractCardEnum.FALCON_BLUE,
-                CardRarity.UNCOMMON, CardTarget.ENEMY);
+                CardType.ATTACK, AbstractCardEnum.FALCON_BLUE, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = BASE_DAMAGE;
         this.tags.add(AERIAL);
         this.exhaust = true;

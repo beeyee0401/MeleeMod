@@ -67,15 +67,11 @@ public class CaptainFalcon extends CustomPlayer {
         retVal.add(Constants.CardNames.SHIELD);
         retVal.add(Constants.CardNames.SHIELD);
         retVal.add(Constants.CardNames.SHIELD);
-        retVal.add(Constants.CardNames.KNEE);
+        retVal.add(Constants.CardNames.NEUTRAL_AIR);
+        retVal.add(Constants.CardNames.BACK_AIR);
 
-        retVal.add(Constants.CardNames.UCF);
-        retVal.add(Constants.CardNames.SHIELD_DROP);
-//        retVal.add(Constants.CardNames.BLUE_FALCON);
-        retVal.add(Constants.CardNames.GRAB);
-        retVal.add(Constants.CardNames.SOMEBODY_CLIP_THAT);
-//        retVal.add(Constants.CardNames.AMSAH_TECH);
-//        retVal.add(Constants.CardNames.POWER_SHIELD);
+        // TEST CARDS
+
         return retVal;
     }
 
@@ -163,12 +159,7 @@ public class CaptainFalcon extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(Constants.Relics.AIR_WOBBLING);
-        retVal.add(Constants.Relics.POWER_CLIPPER);
-        retVal.add(Constants.Relics.LOSERS_MANG0);
-        retVal.add("Lizard Tail");
         UnlockTracker.markRelicAsSeen(Constants.Relics.AIR_WOBBLING);
-        UnlockTracker.markRelicAsSeen(Constants.Relics.POWER_CLIPPER);
-        UnlockTracker.markRelicAsSeen(Constants.Relics.LOSERS_MANG0);
         return retVal;
     }
 

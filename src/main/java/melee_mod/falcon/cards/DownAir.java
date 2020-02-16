@@ -25,8 +25,7 @@ public class DownAir extends CustomCard {
 
     public DownAir() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
-                AbstractCard.CardType.ATTACK, AbstractCardEnum.FALCON_BLUE,
-                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
+                AbstractCard.CardType.ATTACK, AbstractCardEnum.FALCON_BLUE, CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
         this.damage = this.baseDamage = BASE_DAMAGE;
         this.tags.add(AERIAL);
         this.exhaust = true;
