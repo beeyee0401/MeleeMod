@@ -32,7 +32,7 @@ public class LosersMang0 extends CustomRelic {
             this.usedUp();
             this.description = "At the start of combat, gain +4 Strength and +4 Dexterity";
             this.tips.clear();
-            this.tips.add(new PowerTip(this.name, this.description));
+            this.tips.add(new PowerTip("Loser's Mang0", this.description));
             this.initializeTips();
             this.counter = -2;
         }
