@@ -71,7 +71,6 @@ public class CaptainFalcon extends CustomPlayer {
         retVal.add(Constants.CardNames.BACK_AIR);
 
         // TEST CARDS
-        retVal.add(Constants.CardNames.I_KILLED_MUFASA);
 
         return retVal;
     }
