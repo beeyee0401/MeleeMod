@@ -23,7 +23,7 @@ public class UCF extends CustomCard {
 
     public UCF() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION, AbstractCard.CardType.POWER,
-                AbstractCardEnum.FALCON_BLUE, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
+                AbstractCardEnum.FALCON_BLUE, AbstractCard.CardRarity.RARE, CardTarget.NONE);
     }
 
     @Override

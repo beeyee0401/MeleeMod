@@ -37,13 +37,13 @@ public class UCFPower extends AbstractPower {
     public void atStartOfTurn() {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             this.flash();
-            this.addToBot(new MakeTempCardInHandAction(new ShieldDropTemp(), this.amount, false));
+            this.addToBot(new MakeTempCardInHandAction(new ShieldDropTemp(), 1, false));
         }
     }
 
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        if (card.cardID == Constants.CardNames.SHIELD_DROP) {
+        if (card.cardID.equals(Constants.CardNames.SHIELD_DROP)) {
             this.addToBot(new DrawCardAction(this.amount));
         }
     }

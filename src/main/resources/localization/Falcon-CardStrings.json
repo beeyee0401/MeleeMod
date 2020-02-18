@@ -79,6 +79,10 @@
     "NAME": "Hax Dash",
     "DESCRIPTION": "Gain 1 Dexterity that expires at the end of this turn. NL Draw 1 card."
   },
+  "IKilledMufasa": {
+    "NAME": "I Killed Mufasa",
+    "DESCRIPTION": "For each enemy, add a card to your hand that applies 99 Vulnerable to the target."
+  },
   "Jab": {
     "NAME": "Jab",
     "DESCRIPTION": "Deal !D! damage."
@@ -107,6 +111,10 @@
   "NoDI": {
     "NAME": "No DI",
     "DESCRIPTION": "Apply !M! Vulnerable to the target"
+  },
+  "NoDITemp": {
+    "NAME": "2007 DI",
+    "DESCRIPTION": "Apply !M! Vulnerable to the target NL Exhaust"
   },
   "Pause": {
     "NAME": "Pause",

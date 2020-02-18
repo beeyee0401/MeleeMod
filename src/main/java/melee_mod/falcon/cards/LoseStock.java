@@ -28,7 +28,7 @@ public class LoseStock extends CustomCard {
 
     public LoseStock() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.FALCON_BLUE, CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+                AbstractCardEnum.FALCON_BLUE, CardRarity.UNCOMMON, CardTarget.NONE);
         this.magicNumber = this.baseMagicNumber = BASE_ENERGY_GAIN;
         this.exhaust = true;
     }

@@ -19,12 +19,12 @@ public class PowerShield extends CustomCard {
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int POWER_AMOUNT = 1;
-    private static final int ADDITIONAL_POWER_AMOUNT = 1;
+    private static final int POWER_AMOUNT = 2;
+    private static final int ADDITIONAL_POWER_AMOUNT = 2;
 
     public PowerShield() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION, CardType.POWER,
-                AbstractCardEnum.FALCON_BLUE, CardRarity.RARE, AbstractCard.CardTarget.SELF);
+                AbstractCardEnum.FALCON_BLUE, CardRarity.UNCOMMON, CardTarget.NONE);
         this.magicNumber = this.baseMagicNumber = POWER_AMOUNT;
     }
 

@@ -25,7 +25,7 @@ public class Taunt extends CustomCard {
 
     public Taunt() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION, CardType.POWER,
-                AbstractCardEnum.FALCON_BLUE, CardRarity.RARE, AbstractCard.CardTarget.SELF);
+                AbstractCardEnum.FALCON_BLUE, CardRarity.UNCOMMON, CardTarget.NONE);
         this.baseMagicNumber = this.magicNumber = VULNERABLE;
     }
 

@@ -27,7 +27,7 @@ public class AirDodge extends CustomCard {
 
     public AirDodge() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.FALCON_BLUE, CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+                AbstractCardEnum.FALCON_BLUE, CardRarity.UNCOMMON, CardTarget.NONE);
 
         this.baseMagicNumber = this.magicNumber = PERCENT;
     }

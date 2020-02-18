@@ -25,7 +25,7 @@ public class AmsahTech extends CustomCard {
 
     public AmsahTech() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.FALCON_BLUE, CardRarity.RARE, AbstractCard.CardTarget.SELF);
+                AbstractCardEnum.FALCON_BLUE, CardRarity.RARE, CardTarget.NONE);
         this.exhaust = true;
     }
 

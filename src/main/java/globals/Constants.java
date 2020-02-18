@@ -27,6 +27,7 @@ public class Constants {
         public static final String HAX_DASH = "HaxDash";
         public static final String JAB = "Jab";
         public static final String KNEE = "Knee";
+        public static final String I_KILLED_MUFASA = "IKilledMufasa";
         public static final String L_CANCEL = "L_Cancel";
         public static final String LOSE_STOCK = "LoseStock";
         public static final String MOONWALKING = "Moonwalking";
@@ -34,6 +35,7 @@ public class Constants {
         public static final String NICE_BACK_AIR = "NiceBackAir";
         public static final String NIPPLE_SPIKE = "NippleSpike";
         public static final String NO_DI = "NoDI";
+        public static final String NO_DI_TEMP = "NoDITemp";
         public static final String PAUSE = "Pause";
         public static final String PHANTOM_HIT = "PhantomHit";
         public static final String POWER_SHIELD = "PowerShield";
