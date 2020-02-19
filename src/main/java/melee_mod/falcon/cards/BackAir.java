@@ -53,6 +53,5 @@ public class BackAir extends CustomCard {
         DamageInfo info = new DamageInfo(player, this.damage, this.damageTypeForTurn);
         DamageAction action = new DamageAction(monster, info, AbstractGameAction.AttackEffect.SMASH);
         AbstractDungeon.actionManager.addToBottom(action);
-        FinisherCardHelper.removeComboPoints(monster);
     }
 }

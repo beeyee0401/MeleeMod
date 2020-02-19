@@ -25,7 +25,6 @@ public class ComboCardHelper {
     public static void doBaseAction(AbstractPlayer player, AbstractMonster monster, CustomCard card, AbstractGameAction.AttackEffect attackEffect) {
         boolean shouldAddComboPoint = true;
         if (player.hasPower(Constants.Powers.COMBO_FINISHER) && monster.hasPower(Constants.Powers.COMBO_POINTS)) {
-            card.damage = (int) FinisherCardHelper.getFinisherDamage(card.damage, monster);
             shouldAddComboPoint = false;
         }
 

@@ -53,7 +53,6 @@ public class ForwardSmash extends CustomCard {
         DamageInfo info = new DamageInfo(player, damage, damageType);
         DamageAction action = new DamageAction(monster, info, AbstractGameAction.AttackEffect.SMASH);
         AbstractDungeon.actionManager.addToBottom(action);
-        FinisherCardHelper.removeComboPoints(monster);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, player, new BurnPower(monster, this.magicNumber)));
     }
 }

@@ -86,9 +86,10 @@ public class Constants {
     public static class Relics {
         public static final String AIR_WOBBLING = "AirWobbling";
         public static final String AUTO_L_CANCELING = "AutoLCanceling";
+        public static final String LOSERS_MANG0 = "LosersMang0";
+        public static final String NO_KNEE = "NoKnee";
         public static final String PEOPLES_CHAMP = "PeoplesChamp";
         public static final String POWER_CLIPPER = "PowerClipper";
-        public static final String LOSERS_MANG0 = "LosersMang0";
     }
 }
 

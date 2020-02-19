@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.cards.CommentatorsCurse;
 
@@ -16,6 +17,11 @@ public class PeoplesChamp extends CustomRelic {
 
     public PeoplesChamp() {
         super(ID, new Texture(FalconCharacterMod.makeRelicImagePath(ID)), RelicTier.COMMON, LandingSound.MAGICAL);
+    }
+
+    @Override
+    public AbstractRelic makeCopy() {
+        return new PeoplesChamp();
     }
 
     public String getUpdatedDescription() {

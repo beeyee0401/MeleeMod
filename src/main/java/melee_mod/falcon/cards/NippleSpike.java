@@ -52,6 +52,5 @@ public class NippleSpike extends CustomCard {
         DamageInfo info = new DamageInfo(player, damage, damageType);
         DamageAction action = new DamageAction(monster, info, AbstractGameAction.AttackEffect.SMASH);
         AbstractDungeon.actionManager.addToBottom(action);
-        FinisherCardHelper.removeComboPoints(monster);
     }
 }

@@ -13,10 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.cards.keyword_card_helpers.ComboCardHelper;
-import melee_mod.falcon.cards.keyword_card_helpers.FinisherCardHelper;
 import melee_mod.falcon.patches.AbstractCardEnum;
-import melee_mod.falcon.patches.CustomTags;
-import melee_mod.falcon.powers.ComboPointPower;
 import globals.Constants;
 
 import static melee_mod.falcon.patches.CustomTags.AERIAL;
@@ -56,13 +53,11 @@ public class Knee extends CustomCard {
         DamageInfo info = new DamageInfo(player, damage, damageType);
         DamageAction action = new DamageAction(monster, info, AbstractGameAction.AttackEffect.SMASH);
         AbstractDungeon.actionManager.addToBottom(action);
-        if (!monster.hasPower(ComboPointPower.POWER_ID)) {
+        if (!monster.hasPower(Constants.Powers.COMBO_POINTS)) {
             ComboCardHelper.addComboPoint(monster);
             if (player.hasPower(Constants.Powers.AIR_WOBBLING)){
                 ComboCardHelper.addComboPoint(monster);
             }
-        } else {
-            FinisherCardHelper.removeComboPoints(monster);
         }
     }
 }
