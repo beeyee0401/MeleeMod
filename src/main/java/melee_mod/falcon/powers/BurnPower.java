@@ -12,7 +12,7 @@ import globals.Constants;
 public class BurnPower extends AbstractPower {
     public static final String POWER_ID = Constants.Powers.BURN;
     public static final String NAME = "Burn";
-    public static final String DESCRIPTION = "Take two times the Burn stacks at the end of the turn.";
+    public static final String DESCRIPTION = "Take damage equal to two times the Burn stacks at the end of the turn. Reduce Burn by 1 each turn.";
     public BurnPower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;

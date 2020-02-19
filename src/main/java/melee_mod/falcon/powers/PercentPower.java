@@ -2,22 +2,14 @@ package melee_mod.falcon.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import melee_mod.FalconCharacterMod;
-import globals.Constants;
-import melee_mod.falcon.cards.PhantomHit;
 
+import static globals.Constants.Powers.ANGEL_PLATFORM;
 import static globals.Constants.Powers.PERCENT;
 
-// add angel platform power at 100%
 public class PercentPower extends AbstractPower {
     public static final String POWER_ID = PERCENT;
     public static final String NAME = "Percent";
@@ -49,7 +41,7 @@ public class PercentPower extends AbstractPower {
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
         this.amount += stackAmount;
-        if (this.amount >= 100) {
+        if (this.amount >= 100 && !this.owner.hasPower(ANGEL_PLATFORM)) {
             this.addToBot(new ApplyPowerAction(this.owner, this.owner, new AngelPlatformPower(this.owner, 1)));
         }
     }

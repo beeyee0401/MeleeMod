@@ -2,8 +2,8 @@ package melee_mod.falcon.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.BufferPower;
 import melee_mod.FalconCharacterMod;
@@ -29,9 +29,7 @@ public class LoseBufferPower extends AbstractPower {
     }
 
     public void atEndOfRound() {
-        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, BufferPower.POWER_ID, this.amount));
-        AbstractDungeon.actionManager
-                .addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner,
-                        this.owner, this));
+        this.addToBot(new ReducePowerAction(this.owner, this.owner, BufferPower.POWER_ID, this.amount));
+        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 }

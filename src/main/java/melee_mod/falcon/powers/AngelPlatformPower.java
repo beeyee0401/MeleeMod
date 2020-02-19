@@ -2,7 +2,6 @@ package melee_mod.falcon.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -28,13 +27,13 @@ public class AngelPlatformPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = "At the end of the turn, remove all Percent and gain 1 intangibility";
+        this.description = "At the end of the turn, remove all Percent and gain " +  this.amount + " intangibility";
     }
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new IntangiblePlayerPower(this.owner, 1)));
-        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new IntangiblePlayerPower(this.owner, this.amount)));
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, Constants.Powers.PERCENT));
     }
 }
