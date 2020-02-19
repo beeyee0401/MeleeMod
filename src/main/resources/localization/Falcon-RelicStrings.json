@@ -1,23 +1,16 @@
 {
   "AirWobbling": {
     "NAME": "Air Wobbling",
-    "FLAVOR": "Falcon's OP and wobbles you into a Rest",
+    "FLAVOR": "Falcon's OP and wobbles you into a Rest.",
     "DESCRIPTIONS": [
       "Your #yAerial cards that add #yCombo-Points add one additional #yCombo-Point."
     ]
   },
   "AutoLCanceling": {
     "NAME": "Auto L Canceling",
-    "FLAVOR": "Everyone misses them, sometimes it's nice to turn it on",
+    "FLAVOR": "Everyone misses them, sometimes it's nice to turn it on.",
     "DESCRIPTIONS": [
       "After using an Aerial, reduce the cost of your next card by 1 [E] if it's a non-Aerial."
-    ]
-  },
-  "PowerClipper": {
-    "NAME": "Power Clipper",
-    "FLAVOR": "Basically Marcurial for Zain",
-    "DESCRIPTIONS": [
-      "Every 10 turns, replay the cards you played this turn"
     ]
   },
   "LosersMang0": {
@@ -27,6 +20,28 @@
       "At the start of combat, gain -1 Strength and -1 Dexterity. If you die and resurrect, at the start of combat, gain +4 Strength and +4 Dexterity"
     ]
   },
+  "NoKnee": {
+    "NAME": "No Knee",
+    "FLAVOR": "Subscribe to twitch.tv/n0ne.",
+    "DESCRIPTIONS": [
+      "When a Finisher is used on a target that has Combo-points, gain 2 Strength."
+    ]
+  },
+  "PeoplesChamp": {
+    "NAME": "People's Champ",
+    "FLAVOR": "I lost to Scarth in bracket at The Big House 6, my shame is immeasurable.",
+    "DESCRIPTIONS": [
+      "Every 6 turns, add a Commentator Curse that can change the intent of the target to your hand."
+    ]
+  },
+  "PowerClipper": {
+    "NAME": "Power Clipper",
+    "FLAVOR": "Basically Marcurial for Zain.",
+    "DESCRIPTIONS": [
+      "Every 10 turns, replay the cards you played this turn."
+    ]
+  },
+
   "PurpleSkull": {
     "NAME": "Purple Skull",
     "FLAVOR": "A small skull imbued with chaotic power.",

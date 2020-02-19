@@ -10,6 +10,7 @@ public class Constants {
         public static final String BACK_AIR = "BackAir";
         public static final String BLUE_FALCON = "BlueFalcon";
         public static final String CROUCH_CANCEL = "CrouchCancel";
+        public static final String COMMENTATORS_CURSE = "CommentatorsCurse";
         public static final String DASH_DANCE = "DashDance";
         public static final String DI_MIX_UP = "DIMixUp";
         public static final String DOWN_AIR = "DownAir";
@@ -69,6 +70,7 @@ public class Constants {
         public static final String BURN = "Burn";
         public static final String COMBO_FINISHER = "ComboFinisher";
         public static final String COMBO_POINTS = "ComboPoints";
+        public static final String CROWD_PLEASER = "CrowdPleaser";
         public static final String EDGE_CANCELING = "EdgeCanceling";
         public static final String L_CANCELING = "LCanceling";
         public static final String L_CANCELED = "LCanceled";
@@ -84,6 +86,7 @@ public class Constants {
     public static class Relics {
         public static final String AIR_WOBBLING = "AirWobbling";
         public static final String AUTO_L_CANCELING = "AutoLCanceling";
+        public static final String PEOPLES_CHAMP = "PeoplesChamp";
         public static final String POWER_CLIPPER = "PowerClipper";
         public static final String LOSERS_MANG0 = "LosersMang0";
     }

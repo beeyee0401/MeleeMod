@@ -40,7 +40,6 @@ public class PowerClipper extends CustomRelic {
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             this.addToBot(new ApplyPowerAction(AbstractDungeon.player, null, new ClippedPower(AbstractDungeon.player, 1), 1));
         }
-
     }
 
     public AbstractRelic makeCopy() {

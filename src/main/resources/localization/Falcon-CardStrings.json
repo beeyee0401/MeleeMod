@@ -16,6 +16,10 @@
     "NAME": "Blue Falcon",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! Percent to ALL enemies. NL Exhaust"
   },
+  "CommentatorsCurse": {
+    "NAME": "Commentator's Curse",
+    "DESCRIPTION": "Randomize the intent of the target."
+  },
   "DashDance": {
     "NAME": "Dash Dance",
     "DESCRIPTION": "Gain !B! Block. NL Draw !M! cards."

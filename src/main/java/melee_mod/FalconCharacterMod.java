@@ -13,11 +13,8 @@ import melee_mod.falcon.cards.*;
 import melee_mod.falcon.characters.CaptainFalcon;
 import melee_mod.falcon.patches.AbstractCardEnum;
 import melee_mod.falcon.patches.FalconEnum;
-import melee_mod.falcon.relics.AirWobbling;
+import melee_mod.falcon.relics.*;
 import globals.Constants;
-import melee_mod.falcon.relics.AutoLCanceling;
-import melee_mod.falcon.relics.LosersMang0;
-import melee_mod.falcon.relics.PowerClipper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -75,6 +72,7 @@ public class FalconCharacterMod implements CharacterMod {
         BaseMod.addRelicToCustomPool(new AirWobbling(), AbstractCardEnum.FALCON_BLUE);
         BaseMod.addRelicToCustomPool(new AutoLCanceling(), AbstractCardEnum.FALCON_BLUE);
         BaseMod.addRelicToCustomPool(new LosersMang0(), AbstractCardEnum.FALCON_BLUE);
+        BaseMod.addRelicToCustomPool(new PeoplesChamp(), AbstractCardEnum.FALCON_BLUE);
         BaseMod.addRelicToCustomPool(new PowerClipper(), AbstractCardEnum.FALCON_BLUE);
     }
 
