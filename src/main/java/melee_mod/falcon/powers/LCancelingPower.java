@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -16,7 +17,6 @@ import static globals.Constants.Powers.L_CANCELING;
 public class LCancelingPower extends AbstractPower {
     private static final String POWER_ID = L_CANCELING;
     private static final String NAME = "Learned to L-Cancel";
-    private static final String DESCRIPTION = "After using an Aerial, reduce the cost of your next card by 1 [E] if it's a non-Aerial";
     public LCancelingPower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
@@ -28,14 +28,15 @@ public class LCancelingPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTION;
+        this.description = "After using an Aerial, reduce the cost of your next card by " + this.amount + " [E] if it's a non-Aerial.";
     }
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.tags.contains(CustomTags.AERIAL) &&
                 !this.owner.hasPower(L_CANCELED)){
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(action.target, action.source, new LCanceledPower(action.target, 1)));
+            AbstractPlayer p = AbstractDungeon.player;
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LCanceledPower(p, this.amount)));
         }
     }
 }

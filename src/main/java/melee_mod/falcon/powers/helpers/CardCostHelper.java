@@ -11,7 +11,7 @@ public class CardCostHelper {
         for (AbstractCard c : cards) {
             if (!c.tags.contains(CustomTags.AERIAL)) {
                 if (action == Enums.CostAction.REDUCE){
-                    c.costForTurn = c.cost - difference;
+                    c.costForTurn = Math.max((c.cost - difference), 0);
                     c.isCostModifiedForTurn = true;
                 } else if (action == Enums.CostAction.INCREASE) {
                     c.costForTurn = c.cost + difference;

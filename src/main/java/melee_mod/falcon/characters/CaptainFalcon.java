@@ -71,6 +71,7 @@ public class CaptainFalcon extends CustomPlayer {
         retVal.add(Constants.CardNames.BACK_AIR);
 
         // TEST CARDS
+        retVal.add(Constants.CardNames.L_CANCEL);
 
         return retVal;
     }
@@ -159,10 +160,9 @@ public class CaptainFalcon extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(Constants.Relics.AIR_WOBBLING);
-        retVal.add(Constants.Relics.LOSERS_MANG0);
-        retVal.add("Lizard Tail");
+        retVal.add(Constants.Relics.AUTO_L_CANCELING);
         UnlockTracker.markRelicAsSeen(Constants.Relics.AIR_WOBBLING);
-        UnlockTracker.markRelicAsSeen(Constants.Relics.LOSERS_MANG0);
+        UnlockTracker.markRelicAsSeen(Constants.Relics.AUTO_L_CANCELING);
         return retVal;
     }
 

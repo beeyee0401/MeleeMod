@@ -9,13 +9,13 @@ import globals.Enums;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.powers.helpers.CardCostHelper;
 
-import static globals.Constants.Powers.EDGE_CANCELLING;
+import static globals.Constants.Powers.EDGE_CANCELING;
 
-public class EdgeCancellingPower extends AbstractPower {
-    public static final String POWER_ID = EDGE_CANCELLING;
-    public static final String NAME = "Edge Cancelling";
+public class EdgeCancelingPower extends AbstractPower {
+    public static final String POWER_ID = EDGE_CANCELING;
+    public static final String NAME = "Edge Canceling";
 
-    public EdgeCancellingPower(AbstractCreature owner, int amount) {
+    public EdgeCancelingPower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;

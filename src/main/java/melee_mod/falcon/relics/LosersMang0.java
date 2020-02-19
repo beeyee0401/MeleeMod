@@ -18,7 +18,7 @@ public class LosersMang0 extends CustomRelic {
     public static final String ID = LOSERS_MANG0;
 
     public LosersMang0() {
-        super(ID, new Texture(FalconCharacterMod.makeRelicImagePath(ID)), RelicTier.RARE, LandingSound.MAGICAL);
+        super(ID, new Texture(FalconCharacterMod.makeRelicImagePath(ID)), RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
 
     @Override
@@ -42,7 +42,7 @@ public class LosersMang0 extends CustomRelic {
     public void onTrigger() {
         AbstractPlayer p = AbstractDungeon.player;
         this.flash();
-        this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        this.addToTop(new RelicAboveCreatureAction(p, this));
         this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, 5)));
         this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, 5)));
         this.setCounter(-2);

@@ -17,7 +17,6 @@ import static globals.Constants.Powers.L_CANCELED;
 public class LCanceledPower extends AbstractPower {
     private static final String POWER_ID = L_CANCELED;
     private static final String NAME = "Just L-Canceled";
-    private static final String DESCRIPTION = "Cost of your next non-Aerial card is reduced by 1 [E]";
 
     public LCanceledPower(AbstractCreature owner, int amount) {
         this.name = NAME;
@@ -30,7 +29,7 @@ public class LCanceledPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTION;
+        this.description = "Cost of your next non-Aerial card is reduced by " + this.amount + " [E]";
     }
 
     @Override
@@ -46,7 +45,7 @@ public class LCanceledPower extends AbstractPower {
 
     @Override
     public void onInitialApplication() {
-        int reduction = 1;
+        int reduction = this.amount;
         CardCostHelper.setCardCosts(AbstractDungeon.player.hand.group, Enums.CostAction.REDUCE, reduction);
         CardCostHelper.setCardCosts(AbstractDungeon.player.drawPile.group, Enums.CostAction.REDUCE, reduction);
         CardCostHelper.setCardCosts(AbstractDungeon.player.discardPile.group, Enums.CostAction.REDUCE, reduction);

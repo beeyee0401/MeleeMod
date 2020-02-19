@@ -69,7 +69,7 @@ public class Constants {
         public static final String BURN = "Burn";
         public static final String COMBO_FINISHER = "ComboFinisher";
         public static final String COMBO_POINTS = "ComboPoints";
-        public static final String EDGE_CANCELLING = "EdgeCancelling";
+        public static final String EDGE_CANCELING = "EdgeCanceling";
         public static final String L_CANCELING = "LCanceling";
         public static final String L_CANCELED = "LCanceled";
         public static final String LOSE_BUFFER = "LoseBuffer";
@@ -83,6 +83,7 @@ public class Constants {
 
     public static class Relics {
         public static final String AIR_WOBBLING = "AirWobbling";
+        public static final String AUTO_L_CANCELING = "AutoLCanceling";
         public static final String POWER_CLIPPER = "PowerClipper";
         public static final String LOSERS_MANG0 = "LosersMang0";
     }

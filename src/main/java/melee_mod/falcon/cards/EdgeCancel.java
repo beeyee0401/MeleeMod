@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.patches.AbstractCardEnum;
-import melee_mod.falcon.powers.EdgeCancellingPower;
+import melee_mod.falcon.powers.EdgeCancelingPower;
 import globals.Constants;
 
 public class EdgeCancel extends CustomCard {
@@ -49,7 +49,7 @@ public class EdgeCancel extends CustomCard {
 
     @Override
     public void use(AbstractPlayer player, AbstractMonster monster) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new EdgeCancellingPower(player, COST_REDUCTION)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new EdgeCancelingPower(player, COST_REDUCTION)));
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(player, DRAW));
         if (this.upgraded){
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(UPGRADE_ENERGY));

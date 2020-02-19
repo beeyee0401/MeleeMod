@@ -6,6 +6,13 @@
       "Your #yAerial cards that add #yCombo-Points add one additional #yCombo-Point."
     ]
   },
+  "AutoLCanceling": {
+    "NAME": "Auto L Canceling",
+    "FLAVOR": "Everyone misses them, sometimes it's nice to turn it on",
+    "DESCRIPTIONS": [
+      "After using an Aerial, reduce the cost of your next card by 1 [E] if it's a non-Aerial."
+    ]
+  },
   "PowerClipper": {
     "NAME": "Power Clipper",
     "FLAVOR": "Basically Marcurial for Zain",

@@ -4,17 +4,9 @@ import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.status.Dazed;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import melee_mod.falcon.CharacterMod;
 import melee_mod.falcon.cards.*;
@@ -23,6 +15,7 @@ import melee_mod.falcon.patches.AbstractCardEnum;
 import melee_mod.falcon.patches.FalconEnum;
 import melee_mod.falcon.relics.AirWobbling;
 import globals.Constants;
+import melee_mod.falcon.relics.AutoLCanceling;
 import melee_mod.falcon.relics.LosersMang0;
 import melee_mod.falcon.relics.PowerClipper;
 import org.apache.logging.log4j.LogManager;
@@ -80,6 +73,7 @@ public class FalconCharacterMod implements CharacterMod {
     public void receiveEditRelics() {
         // Add relics
         BaseMod.addRelicToCustomPool(new AirWobbling(), AbstractCardEnum.FALCON_BLUE);
+        BaseMod.addRelicToCustomPool(new AutoLCanceling(), AbstractCardEnum.FALCON_BLUE);
         BaseMod.addRelicToCustomPool(new LosersMang0(), AbstractCardEnum.FALCON_BLUE);
         BaseMod.addRelicToCustomPool(new PowerClipper(), AbstractCardEnum.FALCON_BLUE);
     }
