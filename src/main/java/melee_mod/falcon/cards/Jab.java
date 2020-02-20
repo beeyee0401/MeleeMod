@@ -27,6 +27,8 @@ public class Jab extends CustomCard {
                 AbstractCard.CardTarget.ENEMY);
 
         this.baseDamage = ATTACK_DMG;
+        this.tags.add(CardTags.STRIKE);
+        this.tags.add(CardTags.STARTER_STRIKE);
     }
 
     @Override

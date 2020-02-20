@@ -37,8 +37,8 @@
     "DESCRIPTION": "Deal !D! damage !M! times."
   },
   "DownTilt": {
-    "NAME": "Down Air",
-    "DESCRIPTION": "Combo Deal !D! damage. Apply !M! Percent to the target."
+    "NAME": "Down Tilt",
+    "DESCRIPTION": "Combo NL Deal !D! damage. NL Apply !M! Percent to the target."
   },
   "EdgeCancel": {
     "NAME": "Edge Cancel",

@@ -27,6 +27,7 @@ public class Shield extends CustomCard {
                 AbstractCardEnum.FALCON_BLUE, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
 
         this.baseBlock = BLOCK_AMT;
+        this.tags.add(CardTags.STARTER_DEFEND);
     }
 
     @Override
