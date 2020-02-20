@@ -144,6 +144,10 @@
     "NAME": "Roll",
     "DESCRIPTION": "Gain !B! Block. Gain !M! Artifact that expires at the end of the turn."
   },
+  "Shine": {
+    "NAME": "Shine",
+    "DESCRIPTION": "Combo NL Deal !D! damage."
+  },
   "Shield": {
     "NAME": "Shield",
     "DESCRIPTION": "Gain !B! Block."

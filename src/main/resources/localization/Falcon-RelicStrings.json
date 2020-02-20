@@ -13,6 +13,12 @@
       "After using an Aerial, reduce the cost of your next card by 1 [E] if it's a non-Aerial."
     ]
   },
+  "B0XX": {
+    "NAME": "B0XX",
+    "DESCRIPTIONS": [
+      "On pickup, remove all Jabs. Receive 5 Shines."
+    ]
+  },
   "FourStock": {
     "NAME": "Four Stock",
     "DESCRIPTIONS": [

@@ -46,6 +46,7 @@ public class Constants {
         public static final String SHIELD = "Shield";
         public static final String SHIELD_DROP = "ShieldDrop";
         public static final String SHIELD_POKE = "ShieldPoke";
+        public static final String SHINE = "Shine";
         public static final String SOFT_KNEE = "SoftKnee";
         public static final String SOMEBODY_CLIP_THAT = "SomebodyClipThat";
         public static final String SWEET_SPOT = "SweetSpot";
@@ -86,6 +87,7 @@ public class Constants {
     public static class Relics {
         public static final String AIR_WOBBLING = "AirWobbling";
         public static final String AUTO_L_CANCELING = "AutoLCanceling";
+        public static final String B0XX = "B0XX";
         public static final String FOUR_STOCK = "FourStock";
         public static final String LOSERS_MANG0 = "LosersMang0";
         public static final String NO_KNEE = "NoKnee";
