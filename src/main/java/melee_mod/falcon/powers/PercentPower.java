@@ -11,8 +11,9 @@ import static globals.Constants.Powers.ANGEL_PLATFORM;
 import static globals.Constants.Powers.PERCENT;
 
 public class PercentPower extends AbstractPower {
-    public static final String POWER_ID = PERCENT;
-    public static final String NAME = "Percent";
+    private static final String POWER_ID = PERCENT;
+    private static final String NAME = "Percent";
+
     public PercentPower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;

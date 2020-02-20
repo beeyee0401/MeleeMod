@@ -13,7 +13,7 @@ import melee_mod.falcon.powers.LCancelingPower;
 import static globals.Constants.Relics.AUTO_L_CANCELING;
 
 public class AutoLCanceling extends CustomRelic {
-    public static final String ID = AUTO_L_CANCELING;
+    private static final String ID = AUTO_L_CANCELING;
 
     public AutoLCanceling() {
         super(ID, new Texture(FalconCharacterMod.makeRelicImagePath(ID)), RelicTier.COMMON, LandingSound.MAGICAL);

@@ -22,9 +22,9 @@ public class KeywordDrawPileToHandAction extends AbstractGameAction {
     private int numberOfCards;
     private boolean optional;
 
-    public KeywordDrawPileToHandAction(int amount, CardType type, String keyword, String exclusion, int numberOfCards, boolean optional) {
+    public KeywordDrawPileToHandAction(CardType type, String keyword, String exclusion, int numberOfCards, boolean optional) {
         this.player = AbstractDungeon.player;
-        this.setValues(this.player, this.player, amount);
+        setValues(this.player, this.player, numberOfCards);
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = this.startDuration = Settings.ACTION_DUR_MED;
         this.typeToCheck = type;
@@ -34,18 +34,25 @@ public class KeywordDrawPileToHandAction extends AbstractGameAction {
         this.optional = optional;
     }
 
-    public KeywordDrawPileToHandAction(int amount, CardType type, String keyword, String exclusion) {
-        this(amount, type, keyword, exclusion, 1, false);
+    public KeywordDrawPileToHandAction(int numberOfCards, CardType type, String keyword, String exclusion) {
+        this(type, keyword, exclusion, numberOfCards, false);
     }
 
     public void update() {
         if (this.duration == this.startDuration) {
             if (!this.player.drawPile.isEmpty() && this.numberOfCards > 0) {
+                ArrayList<AbstractCard> cardsThatMeetCriteria = new ArrayList();
                 AbstractCard card;
                 Iterator var6;
-                if (this.player.drawPile.size() <= this.numberOfCards && !this.optional) {
+                for (AbstractCard c: this.player.drawPile.group) {
+                    if (this.typeToCheck == c.type && !cardIdToExclude.equals(c.cardID) &&
+                            (c.keywords.contains(this.keywordToCheck) || c.keywords.contains(this.keywordToCheck.toLowerCase()))){
+                        cardsThatMeetCriteria.add(c);
+                    }
+                }
+                if (cardsThatMeetCriteria.size() <= this.numberOfCards && !this.optional) {
                     ArrayList<AbstractCard> cardsToMove = new ArrayList();
-                    var6 = this.player.drawPile.group.iterator();
+                    var6 = cardsThatMeetCriteria.iterator();
 
                     while(var6.hasNext()) {
                         card = (AbstractCard)var6.next();
@@ -67,14 +74,11 @@ public class KeywordDrawPileToHandAction extends AbstractGameAction {
                     this.isDone = true;
                 } else {
                     CardGroup temp = new CardGroup(CardGroupType.UNSPECIFIED);
-                    var6 = this.player.drawPile.group.iterator();
+                    var6 = cardsThatMeetCriteria.iterator();
 
                     while(var6.hasNext()) {
                         card = (AbstractCard)var6.next();
-                        if (this.typeToCheck == card.type && !cardIdToExclude.equals(card.cardID) &&
-                                (card.keywords.contains(this.keywordToCheck) || card.keywords.contains(this.keywordToCheck.toLowerCase()))) {
-                            temp.addToRandomSpot(card);
-                        }
+                        temp.addToRandomSpot(card);
                     }
 
                     temp.sortAlphabetically(true);

@@ -11,8 +11,9 @@ import melee_mod.FalconCharacterMod;
 import static globals.Constants.Powers.REMOVE_ARTIFACTS;
 
 public class RemoveArtifactsPower extends AbstractPower {
-    public static final String POWER_ID = REMOVE_ARTIFACTS;
-    public static final String NAME = "Remove Artifacts";
+    private static final String POWER_ID = REMOVE_ARTIFACTS;
+    private static final String NAME = "Remove Artifacts";
+
     public RemoveArtifactsPower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;

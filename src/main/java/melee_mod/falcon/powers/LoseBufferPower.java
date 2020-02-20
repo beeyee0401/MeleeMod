@@ -11,8 +11,9 @@ import melee_mod.FalconCharacterMod;
 import static globals.Constants.Powers.LOSE_BUFFER;
 
 public class LoseBufferPower extends AbstractPower {
-    public static final String POWER_ID = LOSE_BUFFER;
-    public static final String NAME = "Lose Buffer";
+    private static final String POWER_ID = LOSE_BUFFER;
+    private static final String NAME = "Lose Buffer";
+
     public LoseBufferPower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;

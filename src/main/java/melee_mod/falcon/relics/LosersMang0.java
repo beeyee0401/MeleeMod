@@ -15,7 +15,7 @@ import melee_mod.FalconCharacterMod;
 import static globals.Constants.Relics.LOSERS_MANG0;
 
 public class LosersMang0 extends CustomRelic {
-    public static final String ID = LOSERS_MANG0;
+    private static final String ID = LOSERS_MANG0;
 
     public LosersMang0() {
         super(ID, new Texture(FalconCharacterMod.makeRelicImagePath(ID)), RelicTier.UNCOMMON, LandingSound.MAGICAL);

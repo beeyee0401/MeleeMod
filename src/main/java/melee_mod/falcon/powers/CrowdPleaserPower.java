@@ -14,8 +14,8 @@ import static globals.Constants.Powers.COMBO_POINTS;
 import static globals.Constants.Powers.CROWD_PLEASER;
 
 public class CrowdPleaserPower extends AbstractPower {
-    public static final String POWER_ID = CROWD_PLEASER;
-    public static final String NAME = "Crowd Pleaser";
+    private static final String POWER_ID = CROWD_PLEASER;
+    private static final String NAME = "Crowd Pleaser";
     public CrowdPleaserPower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;

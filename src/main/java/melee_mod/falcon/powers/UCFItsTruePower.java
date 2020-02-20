@@ -14,8 +14,8 @@ import melee_mod.falcon.cards.PhantomHit;
 import static globals.Constants.Powers.UCF_ITS_TRUE;
 
 public class UCFItsTruePower extends AbstractPower {
-    public static final String POWER_ID = UCF_ITS_TRUE;
-    public static final String NAME = "UCF: It's True";
+    private static final String POWER_ID = UCF_ITS_TRUE;
+    private static final String NAME = "UCF: It's True";
 
     public UCFItsTruePower(AbstractCreature owner, int amount) {
         this.name = NAME;

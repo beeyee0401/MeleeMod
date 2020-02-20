@@ -15,8 +15,8 @@ import melee_mod.falcon.cards.ShieldDropTemp;
 import static globals.Constants.Powers.UCF;
 
 public class UCFPower extends AbstractPower {
-    public static final String POWER_ID = UCF;
-    public static final String NAME = "UCF";
+    private static final String POWER_ID = UCF;
+    private static final String NAME = "UCF";
 
     public UCFPower(AbstractCreature owner, int amount) {
         this.name = NAME;

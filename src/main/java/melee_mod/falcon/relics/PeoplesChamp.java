@@ -12,7 +12,7 @@ import melee_mod.falcon.cards.CommentatorsCurse;
 import static globals.Constants.Relics.PEOPLES_CHAMP;
 
 public class PeoplesChamp extends CustomRelic {
-    public static final String ID = PEOPLES_CHAMP;
+    private static final String ID = PEOPLES_CHAMP;
     private static final int NUM_TURNS = 6;
 
     public PeoplesChamp() {

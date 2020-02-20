@@ -15,11 +15,10 @@ import melee_mod.falcon.cards.keyword_card_helpers.FinisherCardHelper;
 
 import static globals.Constants.Powers.COMBO_POINTS;
 
-public class ComboPointPower
-        extends AbstractPower {
-    public static final String POWER_ID = COMBO_POINTS;
-    public static final String NAME = "Combo-Points";
-    public static final String DESCRIPTION = "When using a Finisher on this target, multiply the damage by 25% for each combo-point consumed";
+public class ComboPointPower extends AbstractPower {
+    private static final String POWER_ID = COMBO_POINTS;
+    private static final String NAME = "Combo-Points";
+    private static final String DESCRIPTION = "When using a Finisher on this target, multiply the damage by 25% for each combo-point consumed";
     public ComboPointPower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
@@ -52,7 +51,7 @@ public class ComboPointPower
 
     @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
-        if (action.target != null && action.target.hasPower(COMBO_POINTS) &&
+        if (action.target != null && action.target.hasPower(COMBO_POINTS) && card.type == AbstractCard.CardType.ATTACK &&
                 (card.keywords.contains(Constants.Keywords.FINISHER) || card.keywords.contains(Constants.Keywords.FINISHER.toLowerCase()))){
             FinisherCardHelper.removeComboPoints(action.target);
         }

@@ -12,7 +12,7 @@ import melee_mod.falcon.powers.CrowdPleaserPower;
 import static globals.Constants.Relics.NO_KNEE;
 
 public class NoKnee extends CustomRelic {
-    public static final String ID = NO_KNEE;
+    private static final String ID = NO_KNEE;
 
     public NoKnee() {
         super(ID, new Texture(FalconCharacterMod.makeRelicImagePath(ID)), RelicTier.UNCOMMON, LandingSound.MAGICAL);

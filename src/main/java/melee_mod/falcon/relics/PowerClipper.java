@@ -12,7 +12,7 @@ import melee_mod.falcon.powers.ClippedPower;
 import static globals.Constants.Relics.POWER_CLIPPER;
 
 public class PowerClipper extends CustomRelic {
-    public static final String ID = POWER_CLIPPER;
+    private static final String ID = POWER_CLIPPER;
     private static final int NUM_TURNS = 10;
 
     public PowerClipper() {

@@ -12,8 +12,8 @@ import melee_mod.falcon.powers.helpers.CardCostHelper;
 import static globals.Constants.Powers.EDGE_CANCELING;
 
 public class EdgeCancelingPower extends AbstractPower {
-    public static final String POWER_ID = EDGE_CANCELING;
-    public static final String NAME = "Edge Canceling";
+    private static final String POWER_ID = EDGE_CANCELING;
+    private static final String NAME = "Edge Canceling";
 
     public EdgeCancelingPower(AbstractCreature owner, int amount) {
         this.name = NAME;

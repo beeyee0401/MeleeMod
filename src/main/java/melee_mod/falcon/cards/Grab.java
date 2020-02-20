@@ -21,7 +21,7 @@ public class Grab extends CustomCard {
 
     public Grab() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
-                CardType.ATTACK, AbstractCardEnum.FALCON_BLUE,
+                CardType.SKILL, AbstractCardEnum.FALCON_BLUE,
                 CardRarity.UNCOMMON, CardTarget.ENEMY);
     }
 
