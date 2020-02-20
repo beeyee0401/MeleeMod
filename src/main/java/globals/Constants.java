@@ -56,6 +56,7 @@ public class Constants {
         public static final String UP_AIR = "UpAir";
         public static final String UP_SMASH = "UpSmash";
         public static final String UP_TILT = "UpTilt";
+        public static final String V_CANCEL = "VCancel";
     }
 
     public static class Keywords {

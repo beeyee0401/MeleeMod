@@ -13,6 +13,8 @@ import melee_mod.falcon.patches.CustomTags;
 import melee_mod.falcon.powers.ComboPointPower;
 import globals.Constants;
 
+import java.util.ArrayList;
+
 public class ComboCardHelper {
     public static void addComboPoint(AbstractMonster monster){
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, monster, new ComboPointPower(monster, 1), 1));
@@ -23,21 +25,27 @@ public class ComboCardHelper {
     }
 
     public static void doBaseAction(AbstractPlayer player, AbstractMonster monster, CustomCard card, AbstractGameAction.AttackEffect attackEffect) {
+        doBaseAction(player, monster, card.damage, card.magicNumber, card.damageTypeForTurn, card.tags, attackEffect);
+    }
+
+    public static void doBaseAction(AbstractPlayer player, AbstractMonster monster, int damage, int hitCount,
+                                    DamageInfo.DamageType damageType, ArrayList<AbstractCard.CardTags> tagsList,
+                                    AbstractGameAction.AttackEffect attackEffect) {
         boolean shouldAddComboPoint = true;
         if (player.hasPower(Constants.Powers.COMBO_FINISHER) && monster.hasPower(Constants.Powers.COMBO_POINTS)) {
             shouldAddComboPoint = false;
         }
 
-        int hitCount = card.magicNumber > 0 ? card.magicNumber : 1;
-        for (int i = 0; i < hitCount; i++) {
-            DamageInfo info = new DamageInfo(player, card.damage, card.damageTypeForTurn);
+        int numHits = hitCount > 0 ? hitCount : 1;
+        for (int i = 0; i < numHits; i++) {
+            DamageInfo info = new DamageInfo(player, damage, damageType);
             DamageAction action = new DamageAction(monster, info, attackEffect);
             AbstractDungeon.actionManager.addToBottom(action);
         }
 
         if (shouldAddComboPoint){
             addComboPoint(monster);
-            if (player.hasPower(Constants.Powers.AIR_WOBBLING) && card.tags.contains(CustomTags.AERIAL)){
+            if (player.hasPower(Constants.Powers.AIR_WOBBLING) && tagsList.contains(CustomTags.AERIAL)){
                 addComboPoint(monster);
             }
         }

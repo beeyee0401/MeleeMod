@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BufferPower;
 import globals.Constants;
 import melee_mod.FalconCharacterMod;
+import melee_mod.falcon.cards.keyword_card_helpers.PercentCardHelper;
 import melee_mod.falcon.patches.AbstractCardEnum;
 import melee_mod.falcon.powers.LoseBufferPower;
 import melee_mod.falcon.powers.PercentPower;
@@ -49,6 +50,6 @@ public class AirDodge extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BufferPower(p, BUFFER)));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseBufferPower(p, BUFFER)));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PercentPower(p, this.magicNumber)));
+        PercentCardHelper.applyPercent(p, p, this.magicNumber);
     }
 }

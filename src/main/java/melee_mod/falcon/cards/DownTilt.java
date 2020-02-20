@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import melee_mod.FalconCharacterMod;
+import melee_mod.falcon.cards.keyword_card_helpers.ComboCardHelper;
 import melee_mod.falcon.cards.keyword_card_helpers.PercentCardHelper;
 import melee_mod.falcon.patches.AbstractCardEnum;
 import globals.Constants;
@@ -48,10 +49,7 @@ public class DownTilt extends CustomCard {
 
     @Override
     public void use(AbstractPlayer player, AbstractMonster monster) {
-        DamageInfo info = new DamageInfo(player, damage, damageTypeForTurn);
-        DamageAction action = new DamageAction(monster, info, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        AbstractDungeon.actionManager.addToBottom(action);
-
+        ComboCardHelper.doBaseAction(player, monster, this.damage, 1, this.damageTypeForTurn, this.tags, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         PercentCardHelper.applyPercent(player, monster, this.magicNumber);
     }
 }

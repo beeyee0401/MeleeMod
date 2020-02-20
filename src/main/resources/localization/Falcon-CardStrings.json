@@ -198,5 +198,10 @@
   "UpTilt": {
     "NAME": "Up Tilt",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Percent to the target."
+  },
+  "VCancel": {
+    "NAME": "V Cancel",
+    "DESCRIPTION": "Draw !M! card. Draw an extra card if you draw a Skill.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. Draw an extra card if you draw a Skill."
   }
 }

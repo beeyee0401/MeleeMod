@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import globals.Constants;
 import melee_mod.FalconCharacterMod;
+import melee_mod.falcon.cards.keyword_card_helpers.PercentCardHelper;
 import melee_mod.falcon.patches.AbstractCardEnum;
 import melee_mod.falcon.powers.PercentPower;
 
@@ -57,7 +58,7 @@ public class BlueFalcon extends CustomCard {
         this.addToBot(new SFXAction("ATTACK_HEAVY"));
         this.addToBot(new DamageAllEnemiesAction(player, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, player, new PercentPower(m, this.magicNumber)));
+            PercentCardHelper.applyPercent(player, m, this.magicNumber);
         }
     }
 }
