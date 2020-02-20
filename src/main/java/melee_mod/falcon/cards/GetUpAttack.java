@@ -43,7 +43,7 @@ public class GetUpAttack extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeDamage(UPGRADE_DAMAGE);
-            this.rawDescription = "Deal !D! damage !M! times. Apply " + (this.damage * this.magicNumber) + " Percent to the target.";
+            this.rawDescription = "Deal !D! damage !M! times. Apply Percent equal to damage dealt to the target.";
             this.initializeDescription();
         }
     }
