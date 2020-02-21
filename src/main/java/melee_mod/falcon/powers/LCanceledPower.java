@@ -35,10 +35,7 @@ public class LCanceledPower extends AbstractPower {
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (!card.tags.contains(CustomTags.AERIAL)){
-            CardCostHelper.resetCardCosts(AbstractDungeon.player.hand.group);
-            CardCostHelper.resetCardCosts(AbstractDungeon.player.drawPile.group);
-            CardCostHelper.resetCardCosts(AbstractDungeon.player.discardPile.group);
-            CardCostHelper.resetCardCosts(AbstractDungeon.player.exhaustPile.group);
+            CardCostHelper.resetAllCardCosts();
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
     }
@@ -46,9 +43,9 @@ public class LCanceledPower extends AbstractPower {
     @Override
     public void onInitialApplication() {
         int reduction = this.amount;
-        CardCostHelper.setCardCosts(AbstractDungeon.player.hand.group, Enums.CostAction.REDUCE, reduction);
-        CardCostHelper.setCardCosts(AbstractDungeon.player.drawPile.group, Enums.CostAction.REDUCE, reduction);
-        CardCostHelper.setCardCosts(AbstractDungeon.player.discardPile.group, Enums.CostAction.REDUCE, reduction);
-        CardCostHelper.setCardCosts(AbstractDungeon.player.exhaustPile.group, Enums.CostAction.REDUCE, reduction);
+        CardCostHelper.setCardCostByTag(AbstractDungeon.player.hand.group, Enums.CostAction.REDUCE, reduction, CustomTags.AERIAL, true);
+        CardCostHelper.setCardCostByTag(AbstractDungeon.player.drawPile.group, Enums.CostAction.REDUCE, reduction, CustomTags.AERIAL, true);
+        CardCostHelper.setCardCostByTag(AbstractDungeon.player.discardPile.group, Enums.CostAction.REDUCE, reduction, CustomTags.AERIAL, true);
+        CardCostHelper.setCardCostByTag(AbstractDungeon.player.exhaustPile.group, Enums.CostAction.REDUCE, reduction, CustomTags.AERIAL, true);
     }
 }

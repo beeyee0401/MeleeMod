@@ -12,8 +12,10 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import melee_mod.FalconCharacterMod;
 import globals.Constants;
 import melee_mod.falcon.cards.keyword_card_helpers.FinisherCardHelper;
+import melee_mod.falcon.powers.helpers.CardCostHelper;
 
 import static globals.Constants.Powers.COMBO_POINTS;
+import static globals.Enums.CostAction.REDUCE;
 
 public class ComboPointPower extends AbstractPower {
     private static final String POWER_ID = COMBO_POINTS;
@@ -42,6 +44,17 @@ public class ComboPointPower extends AbstractPower {
             damage += damage * (this.amount * 0.25);
         }
         return damage;
+    }
+
+    @Override
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
+        int reduction = this.amount;
+        CardCostHelper.setCardCostByKeywordAndType(AbstractDungeon.player.hand.group, REDUCE, reduction, AbstractCard.CardType.ATTACK, Constants.Keywords.FINISHER);
+        CardCostHelper.setCardCostByKeywordAndType(AbstractDungeon.player.drawPile.group, REDUCE, reduction, AbstractCard.CardType.ATTACK, Constants.Keywords.FINISHER);
+        CardCostHelper.setCardCostByKeywordAndType(AbstractDungeon.player.discardPile.group, REDUCE, reduction, AbstractCard.CardType.ATTACK, Constants.Keywords.FINISHER);
+        CardCostHelper.setCardCostByKeywordAndType(AbstractDungeon.player.exhaustPile.group, REDUCE, reduction, AbstractCard.CardType.ATTACK, Constants.Keywords.FINISHER);
     }
 
     @Override

@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import globals.Enums;
 import melee_mod.FalconCharacterMod;
+import melee_mod.falcon.patches.CustomTags;
 import melee_mod.falcon.powers.helpers.CardCostHelper;
 
 import static globals.Constants.Powers.EDGE_CANCELING;
@@ -34,10 +35,7 @@ public class EdgeCancelingPower extends AbstractPower {
     @Override
     public void atEndOfRound() {
         if (this.amount == 1){
-            CardCostHelper.resetCardCosts(AbstractDungeon.player.hand.group);
-            CardCostHelper.resetCardCosts(AbstractDungeon.player.drawPile.group);
-            CardCostHelper.resetCardCosts(AbstractDungeon.player.discardPile.group);
-            CardCostHelper.resetCardCosts(AbstractDungeon.player.exhaustPile.group);
+            CardCostHelper.resetAllCardCosts();
         }
         AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this.ID, 1));
     }
@@ -45,9 +43,9 @@ public class EdgeCancelingPower extends AbstractPower {
     @Override
     public void onInitialApplication() {
         int reduction = 1;
-        CardCostHelper.setCardCosts(AbstractDungeon.player.hand.group, Enums.CostAction.REDUCE, reduction);
-        CardCostHelper.setCardCosts(AbstractDungeon.player.drawPile.group, Enums.CostAction.REDUCE, reduction);
-        CardCostHelper.setCardCosts(AbstractDungeon.player.discardPile.group, Enums.CostAction.REDUCE, reduction);
-        CardCostHelper.setCardCosts(AbstractDungeon.player.exhaustPile.group,Enums.CostAction.REDUCE, reduction);
+        CardCostHelper.setCardCostByTag(AbstractDungeon.player.hand.group, Enums.CostAction.REDUCE, reduction, CustomTags.AERIAL);
+        CardCostHelper.setCardCostByTag(AbstractDungeon.player.drawPile.group, Enums.CostAction.REDUCE, reduction, CustomTags.AERIAL);
+        CardCostHelper.setCardCostByTag(AbstractDungeon.player.discardPile.group, Enums.CostAction.REDUCE, reduction, CustomTags.AERIAL);
+        CardCostHelper.setCardCostByTag(AbstractDungeon.player.exhaustPile.group, Enums.CostAction.REDUCE, reduction, CustomTags.AERIAL);
     }
 }

@@ -24,6 +24,7 @@ public class UpTilt extends CustomCard {
     private static final int BASE_DAMAGE = 6;
     private static final int BASE_PERCENT = 13;
     private static final int UPGRADE_DAMAGE = 3;
+    private static final int UPGRADE_PERCENT = 5;
 
     public UpTilt() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
@@ -43,6 +44,7 @@ public class UpTilt extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeDamage(UPGRADE_DAMAGE);
+            this.upgradeMagicNumber(UPGRADE_PERCENT);
         }
     }
 

@@ -25,7 +25,7 @@ public class UpAir extends CustomCard {
     public UpAir() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.FALCON_BLUE, CardRarity.COMMON, CardTarget.ENEMY);
-        this.baseDamage = BASE_DAMAGE;
+        this.damage = this.baseDamage = BASE_DAMAGE;
         this.tags.add(AERIAL);
     }
 
