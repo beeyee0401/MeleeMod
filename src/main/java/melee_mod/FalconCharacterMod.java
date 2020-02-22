@@ -15,6 +15,7 @@ import melee_mod.falcon.patches.AbstractCardEnum;
 import melee_mod.falcon.patches.FalconEnum;
 import melee_mod.falcon.relics.*;
 import globals.Constants;
+import melee_mod.variables.DamagePlusTwo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -82,7 +83,7 @@ public class FalconCharacterMod implements CharacterMod {
     @Override
     public void receiveEditCards() {
         logger.info("add cards for " + FalconEnum.FALCON.toString());
-
+        BaseMod.addDynamicVariable(new DamagePlusTwo());
         List<CustomCard> cards = new ArrayList<CustomCard>();
 
         // total 75 cards (21 common, 16 rare, 3 starter, 35 uncommon)

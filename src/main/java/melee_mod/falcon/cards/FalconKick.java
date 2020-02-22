@@ -23,10 +23,11 @@ public class FalconKick extends CustomCard {
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int BASE_BLOCK = 4;
-    private static final int BASE_DAMAGE = 4;
+    private static final int BASE_BLOCK = 5;
+    private static final int BASE_DAMAGE = 5;
+    private static final int UPGRADE_DAMAGE_BLOCK = 2;
     private static final int BASE_BURNS = 1;
-    private static final int UPGRADE_ALL = 1;
+    private static final int UPGRADE_BURN = 1;
 
     public FalconKick() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
@@ -46,9 +47,9 @@ public class FalconKick extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(UPGRADE_ALL);
-            this.upgradeBlock(UPGRADE_ALL);
-            this.upgradeMagicNumber(UPGRADE_ALL);
+            this.upgradeDamage(UPGRADE_DAMAGE_BLOCK);
+            this.upgradeBlock(UPGRADE_DAMAGE_BLOCK);
+            this.upgradeMagicNumber(UPGRADE_BURN);
         }
     }
 

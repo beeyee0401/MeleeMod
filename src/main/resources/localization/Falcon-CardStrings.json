@@ -68,7 +68,7 @@
   },
   "Gentleman": {
     "NAME": "Gentleman",
-    "DESCRIPTION": "Deal !D! damage 2 times, then deal !D! +2 damage."
+    "DESCRIPTION": "Deal !D! damage 2 times, then deal !melee:D+2! damage."
   },
   "GetUpAttack": {
     "NAME": "Get Up Attack",
