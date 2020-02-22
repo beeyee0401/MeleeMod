@@ -22,6 +22,7 @@ public class FalconDive extends CustomCard {
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int BASE_BLOCK = 6;
+    private static final int UPGRADE_BLOCK = 2;
     private static final int BASE_BURNS = 1;
     private static final int UPGRADE_BURN = 1;
 
@@ -42,6 +43,7 @@ public class FalconDive extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.upgradeBlock(UPGRADE_BLOCK);
             this.upgradeMagicNumber(UPGRADE_BURN);
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();

@@ -30,7 +30,7 @@ public class BackAir extends CustomCard {
 
     public BackAir() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
-                CardType.ATTACK, AbstractCardEnum.FALCON_BLUE, CardRarity.BASIC, CardTarget.ENEMY);
+                CardType.ATTACK, AbstractCardEnum.FALCON_BLUE, CardRarity.COMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = BASE_DAMAGE;
         this.tags.add(AERIAL);
     }

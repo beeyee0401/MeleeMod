@@ -6,7 +6,7 @@
   "AmsahTech": {
     "NAME": "Amsah Tech",
     "DESCRIPTION": "Gain [E] NL Draw 2 cards NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Gain [E][E] NL Draw 2 cards. NL Exhaust"
+    "UPGRADE_DESCRIPTION": "Gain [E] [E] NL Draw 2 cards. NL Exhaust"
   },
   "BackAir": {
     "NAME": "Back Air",
@@ -30,7 +30,7 @@
   },
   "DownAir": {
     "NAME": "Down Air",
-    "DESCRIPTION": "Combo NL Deal !D! damage. NL Add additional combo-point. NL Exhaust"
+    "DESCRIPTION": "Aerial NL Combo NL Deal !D! damage. Add additional combo-point. NL Exhaust"
   },
   "DownSmash": {
     "NAME": "Down Smash",
@@ -42,8 +42,8 @@
   },
   "EdgeCancel": {
     "NAME": "Edge Cancel",
-    "DESCRIPTION": "Your Aerials cost 1 less [E] this turn. Draw a card. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Your Aerials cost !M! less [E] this turn. Draw a card. Gain [E]. NL Exhaust."
+    "DESCRIPTION": "Your Aerials cost 1 less [E] this turn. NL Draw a card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Your Aerials cost !M! less [E] this turn. NL Draw a card. NL Gain [E]. NL Exhaust."
   },
   "FalconDive": {
     "NAME": "Falcon Dive",
@@ -81,7 +81,7 @@
   },
   "HaxDash": {
     "NAME": "Hax Dash",
-    "DESCRIPTION": "Gain 1 Dexterity that expires at the end of this turn. NL Draw 1 card."
+    "DESCRIPTION": "Gain 1 Dexterity. NL Draw 1 card."
   },
   "IKilledMufasa": {
     "NAME": "I Killed Mufasa",
@@ -101,8 +101,8 @@
   },
   "LoseStock": {
     "NAME": "Lose Stock",
-    "DESCRIPTION": "Lose 6 health. Gain 1 intangibility. NL Gain [E] next turn NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Lose 6 health. Gain 1 intangibility. NL Gain [E][E] next turn NL Exhaust"
+    "DESCRIPTION": "Lose 6 health. Gain 1 Intangibility. NL Gain [E] next turn. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Lose 6 health. Gain 1 Intangibility. NL Gain [E] [E] next turn. NL Exhaust"
   },
   "NeutralAir": {
     "NAME": "Neutral Air",
@@ -126,7 +126,7 @@
   },
   "PhantomHit": {
     "NAME": "Phantom Hit",
-    "DESCRIPTION": "Gain !M! intangibility. NL ALL enemies gain 1 intangibility. NL Exhaust"
+    "DESCRIPTION": "Gain !M! Intangibility. NL ALL enemies gain 1 Intangibility. NL Exhaust"
   },
   "PowerShield": {
     "NAME": "Power Shield",

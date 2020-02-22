@@ -12,6 +12,8 @@ import globals.Constants;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.patches.AbstractCardEnum;
 
+import java.util.ArrayList;
+
 public class IKilledMufasa extends CustomCard {
     private static final String ID = Constants.CardNames.I_KILLED_MUFASA;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -26,7 +28,14 @@ public class IKilledMufasa extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new MakeTempCardInHandAction(new NoDITemp(), AbstractDungeon.getCurrRoom().monsters.monsters.size(), false));
+        ArrayList<AbstractMonster> monsters = AbstractDungeon.getCurrRoom().monsters.monsters;
+        int alive = 0;
+        for (AbstractMonster monster: monsters) {
+            if (monster.isDead){
+                alive++;
+            }
+        }
+        this.addToBot(new MakeTempCardInHandAction(new NoDITemp(), alive, false));
     }
 
     public AbstractCard makeCopy() {

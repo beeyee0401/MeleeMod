@@ -30,12 +30,12 @@ public class ComboFinisherPower extends AbstractPower {
     @Override
     public void updateDescription() {
         int percent = 10 * amount;
-        this.description = "If the target has combo-points, your next combo card becomes a finisher and applies an additional " + percent + "%";
+        this.description = "If the target has combo-points, your next combo attack becomes a finisher and applies an additional " + percent + "%";
     }
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (ComboCardHelper.isComboCard(card) && card.type == AbstractCard.CardType.ATTACK &&
+        if (ComboCardHelper.isComboCard(card, action) && card.type == AbstractCard.CardType.ATTACK &&
                 action.target != null && action.target.hasPower(Constants.Powers.COMBO_POINTS)){
             PercentCardHelper.applyPercent(action.source, action.target, 10 * this.amount);
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));

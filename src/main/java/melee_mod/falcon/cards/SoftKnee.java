@@ -29,7 +29,6 @@ public class SoftKnee extends CustomCard {
                 CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
         this.damage = this.baseDamage = BASE_DAMAGE;
         this.tags.add(AERIAL);
-        this.exhaust = true;
     }
 
     @Override

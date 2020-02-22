@@ -4,6 +4,7 @@ import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -51,7 +52,15 @@ public class ComboCardHelper {
         }
     }
 
-    public static boolean isComboCard(AbstractCard card){
-        return card.keywords.contains(Constants.Keywords.COMBO) || card.keywords.contains(Constants.Keywords.COMBO.toLowerCase());
+    public static boolean isComboCard(AbstractCard card, UseCardAction action){
+        if (card.keywords.contains(Constants.Keywords.COMBO) || card.keywords.contains(Constants.Keywords.COMBO.toLowerCase())){
+            // Knee is only a combo card if they have no Combo Points
+            if (card.cardID.equals(Constants.CardNames.KNEE) &&
+                    action.target != null && action.target.hasPower(Constants.Powers.COMBO_POINTS)){
+                return false;
+            }
+            return true;
+        }
+        return false;
     }
 }

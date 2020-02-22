@@ -26,7 +26,7 @@ public class PercentPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = "Takes " + this.amount + "% more damage from attacks";
+        this.description = "Takes " + this.amount + "% more damage from attacks. At 100%, at the end of the turn, gain 1 Intangible and remove all %";
     }
 
     @Override

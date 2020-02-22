@@ -22,7 +22,7 @@ public class Roll extends CustomCard {
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 2;
-    private static final int BASE_BLOCK = 8;
+    private static final int BASE_BLOCK = 11;
     private static final int DEBUFFS_AVOIDED = 1;
     private static final int UPGRADE_DEBUFFS = 1;
 
@@ -51,7 +51,7 @@ public class Roll extends CustomCard {
     public void use(AbstractPlayer player, AbstractMonster abstractMonster) {
         GainBlockAction action = new GainBlockAction(player, player, this.block);
         AbstractDungeon.actionManager.addToBottom(action);
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new ArtifactPower(player, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new RemoveArtifactsPower(player, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new ArtifactPower(player, this.magicNumber), this.magicNumber));
     }
 }

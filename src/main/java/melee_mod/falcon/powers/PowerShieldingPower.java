@@ -1,13 +1,18 @@
 package melee_mod.falcon.powers;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import melee_mod.FalconCharacterMod;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import static globals.Constants.Powers.POWER_SHIELDING;
 
@@ -30,6 +35,8 @@ public class PowerShieldingPower extends AbstractPower {
 
     @Override
     public void onGainedBlock(float blockAmount) {
-        this.addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, new int[] { this.amount }, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        int[] multiDamage = new int[AbstractDungeon.getCurrRoom().monsters.monsters.size()];
+        Arrays.fill(multiDamage, this.amount);
+        this.addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
     }
 }

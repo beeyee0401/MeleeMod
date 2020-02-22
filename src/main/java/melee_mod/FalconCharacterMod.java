@@ -87,7 +87,7 @@ public class FalconCharacterMod implements CharacterMod {
         List<CustomCard> cards = new ArrayList<CustomCard>();
 
         // total 75 cards (21 common, 16 rare, 3 starter, 35 uncommon)
-        // my rarity dist (16 common, 11 rare, 4 starter, 13 uncommon)
+        // my rarity dist (18 common, 11 rare, 2 starter, 13 uncommon)
         // 28 attacks (20 atm)
 
         // AERIALS
@@ -173,7 +173,7 @@ public class FalconCharacterMod implements CharacterMod {
         BaseMod.addKeyword(new String[] { Constants.Keywords.FINISHER.toLowerCase(), Constants.Keywords.FINISHER }, "Add 25% additional damage for each combo-point consumed");
         BaseMod.addKeyword(new String[] { Constants.Keywords.COMBO.toLowerCase(), Constants.Keywords.COMBO }, "Add a combo-point to the target");
         BaseMod.addKeyword(new String[] { Constants.Keywords.BURN.toLowerCase(), Constants.Keywords.BURN }, "Take damage equal to two times the Burn stacks at the end of the turn. Burn decreases by 1 each turn.");
-        BaseMod.addKeyword(new String[] { Constants.Keywords.PERCENT.toLowerCase(), Constants.Keywords.PERCENT }, "Take X% additional damage. At 100%, at the end of the turn, gain 1 intangible and remove all %");
+        BaseMod.addKeyword(new String[] { Constants.Keywords.PERCENT.toLowerCase(), Constants.Keywords.PERCENT }, "Take X% additional damage. At 100%, at the end of the turn, gain 1 Intangible and remove all %");
     }
 
     public static String makeCardImagePath(String cardName) {
