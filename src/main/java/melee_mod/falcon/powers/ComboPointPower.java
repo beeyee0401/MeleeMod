@@ -29,6 +29,7 @@ public class ComboPointPower extends AbstractPower {
         this.updateDescription();
         this.img = new Texture(FalconCharacterMod.makePowerImagePath(POWER_ID));
         this.type = PowerType.DEBUFF;
+        reduceCardCosts();
     }
 
     @Override
@@ -50,11 +51,7 @@ public class ComboPointPower extends AbstractPower {
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
         this.amount += stackAmount;
-        int reduction = this.amount;
-        CardCostHelper.setCardCostByKeywordAndType(AbstractDungeon.player.hand.group, REDUCE, reduction, AbstractCard.CardType.ATTACK, Constants.Keywords.FINISHER);
-        CardCostHelper.setCardCostByKeywordAndType(AbstractDungeon.player.drawPile.group, REDUCE, reduction, AbstractCard.CardType.ATTACK, Constants.Keywords.FINISHER);
-        CardCostHelper.setCardCostByKeywordAndType(AbstractDungeon.player.discardPile.group, REDUCE, reduction, AbstractCard.CardType.ATTACK, Constants.Keywords.FINISHER);
-        CardCostHelper.setCardCostByKeywordAndType(AbstractDungeon.player.exhaustPile.group, REDUCE, reduction, AbstractCard.CardType.ATTACK, Constants.Keywords.FINISHER);
+        reduceCardCosts();
     }
 
     @Override
@@ -68,5 +65,13 @@ public class ComboPointPower extends AbstractPower {
                 (card.keywords.contains(Constants.Keywords.FINISHER) || card.keywords.contains(Constants.Keywords.FINISHER.toLowerCase()))){
             FinisherCardHelper.removeComboPoints(action.target);
         }
+    }
+
+    private void reduceCardCosts(){
+        int reduction = this.amount;
+        CardCostHelper.setCardCostByKeywordAndType(AbstractDungeon.player.hand.group, REDUCE, reduction, AbstractCard.CardType.ATTACK, Constants.Keywords.FINISHER);
+        CardCostHelper.setCardCostByKeywordAndType(AbstractDungeon.player.drawPile.group, REDUCE, reduction, AbstractCard.CardType.ATTACK, Constants.Keywords.FINISHER);
+        CardCostHelper.setCardCostByKeywordAndType(AbstractDungeon.player.discardPile.group, REDUCE, reduction, AbstractCard.CardType.ATTACK, Constants.Keywords.FINISHER);
+        CardCostHelper.setCardCostByKeywordAndType(AbstractDungeon.player.exhaustPile.group, REDUCE, reduction, AbstractCard.CardType.ATTACK, Constants.Keywords.FINISHER);
     }
 }
