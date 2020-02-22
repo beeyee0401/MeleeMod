@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import melee_mod.FalconCharacterMod;
-import melee_mod.falcon.actions.RapidJabsAction;
+import melee_mod.actions.RapidJabsAction;
 import melee_mod.falcon.patches.AbstractCardEnum;
 import globals.Constants;
 

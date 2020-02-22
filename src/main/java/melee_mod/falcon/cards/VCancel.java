@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import globals.Constants;
 import melee_mod.FalconCharacterMod;
-import melee_mod.falcon.actions.VCancelAction;
+import melee_mod.actions.VCancelAction;
 import melee_mod.falcon.patches.AbstractCardEnum;
 
 public class VCancel extends CustomCard {

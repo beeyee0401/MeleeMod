@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import globals.Constants;
 import melee_mod.FalconCharacterMod;
-import melee_mod.falcon.actions.KeywordDrawPileToHandAction;
+import melee_mod.actions.KeywordDrawPileToHandAction;
 import melee_mod.falcon.cards.keyword_card_helpers.ComboCardHelper;
 import melee_mod.falcon.patches.AbstractCardEnum;
 
