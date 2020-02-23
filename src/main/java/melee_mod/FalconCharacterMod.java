@@ -132,7 +132,7 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new SweetSpot());
         cards.add(new TeamAttackOn());
         cards.add(new VCancel());
-//        cards.add(new WallJump());
+        cards.add(new WallJump());
 
         // POWERS (11 for Silent)(6)
         cards.add(new IKilledMufasa());
