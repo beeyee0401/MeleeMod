@@ -68,6 +68,7 @@ public class CaptainFalcon extends CustomPlayer {
         retVal.add(Constants.CardNames.BACK_AIR);
 
         // TEST CARDS
+        retVal.add(Constants.CardNames.WE_TECH_THOSE);
 
         return retVal;
     }
@@ -112,7 +113,7 @@ public class CaptainFalcon extends CustomPlayer {
 
     @Override
     public String getVampireText() {
-        return null;
+        return "Want Falcon to become a vampire?";
     }
 
     @Override

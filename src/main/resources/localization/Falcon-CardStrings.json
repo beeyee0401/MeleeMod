@@ -81,7 +81,7 @@
   },
   "HaxDash": {
     "NAME": "Hax Dash",
-    "DESCRIPTION": "Gain 1 Dexterity. NL Draw 1 card."
+    "DESCRIPTION": "Gain 3 Dexterity that expires at the end of the turn. NL Draw 1 card."
   },
   "IKilledMufasa": {
     "NAME": "I Killed Mufasa",
@@ -203,5 +203,13 @@
     "NAME": "V Cancel",
     "DESCRIPTION": "Draw !M! card. Draw an extra card if you draw a Skill.",
     "UPGRADE_DESCRIPTION": "Draw !M! cards. Draw an extra card if you draw a Skill."
+  },
+  "WallJump": {
+    "NAME": "Wall Jump",
+    "DESCRIPTION": "Gain !B! Block. NL Gain [E] next turn."
+  },
+  "WeTechThose": {
+    "NAME": "WeTechThose",
+    "DESCRIPTION": "If you take 5 or more damage, gain Dexterity equal to 20% of the damage that expires at the end of the next turn."
   }
 }

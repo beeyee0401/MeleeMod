@@ -31,7 +31,7 @@ public class IKilledMufasa extends CustomCard {
         ArrayList<AbstractMonster> monsters = AbstractDungeon.getCurrRoom().monsters.monsters;
         int alive = 0;
         for (AbstractMonster monster: monsters) {
-            if (monster.isDead){
+            if (!monster.isDead){
                 alive++;
             }
         }

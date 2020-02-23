@@ -57,6 +57,8 @@ public class Constants {
         public static final String UP_SMASH = "UpSmash";
         public static final String UP_TILT = "UpTilt";
         public static final String V_CANCEL = "VCancel";
+        public static final String WALL_JUMP = "WallJump";
+        public static final String WE_TECH_THOSE = "WeTechThose";
     }
 
     public static class Keywords {
@@ -83,6 +85,7 @@ public class Constants {
         public static final String CLIPPED = "Clipped";
         public static final String UCF = "UCF";
         public static final String UCF_ITS_TRUE = "UCFItsTrue";
+        public static final String WE_TECH_THOSE = "WeTechThose";
     }
 
     public static class Relics {

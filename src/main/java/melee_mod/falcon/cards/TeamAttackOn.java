@@ -26,7 +26,7 @@ public class TeamAttackOn extends CustomCard {
     public TeamAttackOn() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
                 AbstractCard.CardType.SKILL, AbstractCardEnum.FALCON_BLUE,
-                AbstractCard.CardRarity.RARE, CardTarget.ENEMY);
+                CardRarity.UNCOMMON, CardTarget.ENEMY);
     }
 
     @Override

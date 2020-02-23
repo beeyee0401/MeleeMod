@@ -23,7 +23,7 @@ public class LCancel extends CustomCard {
 
     public LCancel() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION, CardType.POWER,
-                AbstractCardEnum.FALCON_BLUE, CardRarity.COMMON, CardTarget.NONE);
+                AbstractCardEnum.FALCON_BLUE, CardRarity.UNCOMMON, CardTarget.NONE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

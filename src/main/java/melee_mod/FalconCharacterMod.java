@@ -112,7 +112,7 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new ForwardSmash());
         cards.add(new RaptorBoost());
 
-        // SKILLS (36 for Silent)(16)
+        // SKILLS (36 for Silent)(20)
         cards.add(new AirDodge());
         cards.add(new AmsahTech());
         cards.add(new DashDance());
@@ -132,13 +132,15 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new SweetSpot());
         cards.add(new TeamAttackOn());
         cards.add(new VCancel());
+//        cards.add(new WallJump());
 
-        // POWERS (11 for Silent)
+        // POWERS (11 for Silent)(6)
         cards.add(new IKilledMufasa());
         cards.add(new LCancel());
         cards.add(new PowerShield());
         cards.add(new Taunt());
         cards.add(new UCF());
+        cards.add(new WeTechThose());
 
         cards.add(new Jab());
         cards.add(new DownSmash());
