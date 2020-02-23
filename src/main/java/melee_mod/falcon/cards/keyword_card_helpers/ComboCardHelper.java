@@ -18,7 +18,11 @@ import java.util.ArrayList;
 
 public class ComboCardHelper {
     public static void addComboPoint(AbstractMonster monster){
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, monster, new ComboPointPower(monster, 1), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, monster, new ComboPointPower(monster, 1, false), 1));
+    }
+
+    public static void addComboPointByComboAndFinisher(AbstractMonster monster){
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, monster, new ComboPointPower(monster, 1, true), 1));
     }
 
     public static void doBaseAction(AbstractPlayer player, AbstractMonster monster, CustomCard card) {

@@ -54,9 +54,9 @@ public class Knee extends CustomCard {
         DamageAction action = new DamageAction(monster, info, AbstractGameAction.AttackEffect.SMASH);
         AbstractDungeon.actionManager.addToBottom(action);
         if (!monster.hasPower(Constants.Powers.COMBO_POINTS)) {
-            ComboCardHelper.addComboPoint(monster);
+            ComboCardHelper.addComboPointByComboAndFinisher(monster);
             if (player.hasPower(Constants.Powers.AIR_WOBBLING)){
-                ComboCardHelper.addComboPoint(monster);
+                ComboCardHelper.addComboPointByComboAndFinisher(monster);
             }
         }
     }

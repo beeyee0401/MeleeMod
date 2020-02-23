@@ -5,8 +5,10 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import melee_mod.FalconCharacterMod;
@@ -14,14 +16,18 @@ import globals.Constants;
 import melee_mod.falcon.cards.keyword_card_helpers.FinisherCardHelper;
 import melee_mod.falcon.powers.helpers.CardCostHelper;
 
-import static globals.Constants.Powers.COMBO_POINTS;
+import java.util.ArrayList;
+
+import static globals.Constants.Powers.*;
 import static globals.Enums.CostAction.REDUCE;
 
 public class ComboPointPower extends AbstractPower {
     private static final String POWER_ID = COMBO_POINTS;
     private static final String NAME = "Combo-Points";
-    private static final String DESCRIPTION = "When using a Finisher on this target, multiply the damage by 25% for each combo-point consumed";
-    public ComboPointPower(AbstractCreature owner, int amount) {
+    private ArrayList<AbstractCard> cardsToChange = new ArrayList<>();
+    private boolean isStartedByComboAndFinisher;
+
+    public ComboPointPower(AbstractCreature owner, int amount, boolean isStartedByComboAndFinisher) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
@@ -29,19 +35,21 @@ public class ComboPointPower extends AbstractPower {
         this.updateDescription();
         this.img = new Texture(FalconCharacterMod.makePowerImagePath(POWER_ID));
         this.type = PowerType.DEBUFF;
-        reduceCardCosts();
+        // this is super jank, but not sure how to make sure the points don't get consumed immediately since Knee is both a finisher and a combo
+        this.isStartedByComboAndFinisher = isStartedByComboAndFinisher;
+        setCardGroup();
     }
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTION;
+        this.description = "When using a Finisher on this target, multiply the damage by 25% for each combo-point consumed. Finisher costs are reduced by [E] for each active combo-point";
     }
 
     @Override
     public float atDamageReceive(float damage, DamageInfo.DamageType damageType, AbstractCard card){
         boolean isFinisher = card.keywords.contains(Constants.Keywords.FINISHER) || card.keywords.contains(Constants.Keywords.FINISHER.toLowerCase());
         boolean isComboCard = card.keywords.contains(Constants.Keywords.COMBO) || card.keywords.contains(Constants.Keywords.COMBO.toLowerCase());
-        if (isFinisher || (isComboCard && AbstractDungeon.player.hasPower(Constants.Powers.COMBO_FINISHER))){
+        if (isFinisher || (isComboCard && AbstractDungeon.player.hasPower(Constants.Powers.COMBO_FINISHER))) {
             damage += damage * (this.amount * 0.25);
         }
         return damage;
@@ -51,7 +59,12 @@ public class ComboPointPower extends AbstractPower {
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
         this.amount += stackAmount;
-        reduceCardCosts();
+        reduceCardCosts(stackAmount);
+    }
+
+    @Override
+    public void onInitialApplication() {
+        reduceCardCosts(this.amount);
     }
 
     @Override
@@ -62,16 +75,53 @@ public class ComboPointPower extends AbstractPower {
     @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if (action.target != null && action.target.hasPower(COMBO_POINTS) && card.type == AbstractCard.CardType.ATTACK &&
-                (card.keywords.contains(Constants.Keywords.FINISHER) || card.keywords.contains(Constants.Keywords.FINISHER.toLowerCase()))){
+                (card.keywords.contains(Constants.Keywords.FINISHER) || card.keywords.contains(Constants.Keywords.FINISHER.toLowerCase())) &&
+                !this.isStartedByComboAndFinisher){
             FinisherCardHelper.removeComboPoints(action.target);
+        }
+        this.isStartedByComboAndFinisher = false;
+    }
+
+    @Override
+    public void onDeath() {
+        onRemove();
+        initializeComboPointCosts();
+    }
+
+    @Override
+    public void onRemove() {
+        AbstractPlayer p = AbstractDungeon.player;
+        CardCostHelper.resetCardCost(this.cardsToChange);
+        if (p.hasPower(EDGE_CANCELING)){
+            p.getPower(EDGE_CANCELING).onInitialApplication();
+        }
+        if (p.hasPower(L_CANCELED)){
+            p.getPower(L_CANCELED).onInitialApplication();
         }
     }
 
-    private void reduceCardCosts(){
-        int reduction = this.amount;
-        CardCostHelper.setCardCostByKeywordAndType(AbstractDungeon.player.hand.group, REDUCE, reduction, AbstractCard.CardType.ATTACK, Constants.Keywords.FINISHER);
-        CardCostHelper.setCardCostByKeywordAndType(AbstractDungeon.player.drawPile.group, REDUCE, reduction, AbstractCard.CardType.ATTACK, Constants.Keywords.FINISHER);
-        CardCostHelper.setCardCostByKeywordAndType(AbstractDungeon.player.discardPile.group, REDUCE, reduction, AbstractCard.CardType.ATTACK, Constants.Keywords.FINISHER);
-        CardCostHelper.setCardCostByKeywordAndType(AbstractDungeon.player.exhaustPile.group, REDUCE, reduction, AbstractCard.CardType.ATTACK, Constants.Keywords.FINISHER);
+    public static void initializeComboPointCosts(){
+        for (AbstractMonster m: AbstractDungeon.getCurrRoom().monsters.monsters) {
+            if (!m.isDead && m.hasPower(COMBO_POINTS)){
+                m.getPower(COMBO_POINTS).onInitialApplication();
+            }
+        }
+    }
+
+    private void setCardGroup(){
+        ArrayList<AbstractCard> allCards = new ArrayList<>();
+        allCards.addAll(AbstractDungeon.player.hand.group);
+        allCards.addAll(AbstractDungeon.player.drawPile.group);
+        allCards.addAll(AbstractDungeon.player.discardPile.group);
+        allCards.addAll(AbstractDungeon.player.exhaustPile.group);
+        for (AbstractCard c : allCards) {
+            if (c.type == AbstractCard.CardType.ATTACK && (c.keywords.contains(Constants.Keywords.FINISHER) || c.keywords.contains(Constants.Keywords.FINISHER.toLowerCase()))) {
+                this.cardsToChange.add(c);
+            }
+        }
+    }
+
+    private void reduceCardCosts(int reduction){
+        CardCostHelper.setCardCosts(this.cardsToChange, REDUCE, reduction);
     }
 }
