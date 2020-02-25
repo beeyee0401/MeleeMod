@@ -189,8 +189,8 @@ public class FalconCharacterMod implements CharacterMod {
         }
     }
 
-    public static String makeRelicImagePath(String power) {
-        return makePath("relics/" + power);
+    public static String makeRelicImagePath(String relic) {
+        return makePath("relics/" + relic);
     }
 
     public static String makePowerImagePath(String power) {
