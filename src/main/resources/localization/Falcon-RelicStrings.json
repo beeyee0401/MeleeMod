@@ -19,6 +19,12 @@
       "On pickup, remove all Jabs. Receive 5 Shines."
     ]
   },
+  "BMoveUser": {
+    "NAME": "B Move User",
+    "DESCRIPTIONS": [
+      "Whenever you apply Burn, apply an additional 1 Burn."
+    ]
+  },
   "FourStock": {
     "NAME": "Four Stock",
     "DESCRIPTIONS": [

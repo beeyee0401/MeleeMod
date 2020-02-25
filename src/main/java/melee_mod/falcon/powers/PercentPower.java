@@ -40,8 +40,7 @@ public class PercentPower extends AbstractPower {
 
     @Override
     public void stackPower(int stackAmount) {
-        this.fontScale = 8.0F;
-        this.amount += stackAmount;
+        super.stackPower(stackAmount);
         if (this.amount >= 100 && !this.owner.hasPower(ANGEL_PLATFORM)) {
             this.addToBot(new ApplyPowerAction(this.owner, this.owner, new AngelPlatformPower(this.owner, 1)));
         }

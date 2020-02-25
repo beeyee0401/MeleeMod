@@ -3,6 +3,7 @@ package melee_mod.falcon.powers;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -18,6 +19,11 @@ public class BurnPower extends AbstractPower {
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
+        AbstractPlayer p = AbstractDungeon.player;
+        if (p.hasRelic(Constants.Relics.B_MOVE_USER)){
+            p.getRelic(Constants.Relics.B_MOVE_USER).flash();
+            this.amount++;
+        }
         this.updateDescription();
         this.img = new Texture(FalconCharacterMod.makePowerImagePath(POWER_ID));
         this.type = PowerType.DEBUFF;

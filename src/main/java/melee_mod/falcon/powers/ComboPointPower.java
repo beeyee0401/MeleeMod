@@ -57,8 +57,7 @@ public class ComboPointPower extends AbstractPower {
 
     @Override
     public void stackPower(int stackAmount) {
-        this.fontScale = 8.0F;
-        this.amount += stackAmount;
+        super.stackPower(stackAmount);
         reduceCardCosts(stackAmount);
     }
 
