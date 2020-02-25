@@ -7,6 +7,7 @@ import globals.Constants;
 
 public class FinisherCardHelper {
     public static void removeComboPoints(AbstractCreature monster) {
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(monster, monster, Constants.Powers.COMBO_POINTS));
+        AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(monster, monster, Constants.Powers.COMBO_POINTS));
+//        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(monster, monster, Constants.Powers.COMBO_POINTS));
     }
 }

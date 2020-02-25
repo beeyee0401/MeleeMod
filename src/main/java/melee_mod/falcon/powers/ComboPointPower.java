@@ -89,14 +89,8 @@ public class ComboPointPower extends AbstractPower {
 
     @Override
     public void onRemove() {
-        AbstractPlayer p = AbstractDungeon.player;
         CardCostHelper.resetCardCost(this.cardsToChange);
-        if (p.hasPower(EDGE_CANCELING)){
-            p.getPower(EDGE_CANCELING).onInitialApplication();
-        }
-        if (p.hasPower(L_CANCELED)){
-            p.getPower(L_CANCELED).onInitialApplication();
-        }
+        CardCostHelper.initializeBuffCosts(this);
     }
 
     public static void initializeComboPointCosts(){

@@ -156,9 +156,9 @@ public class CaptainFalcon extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(Constants.Relics.AIR_WOBBLING);
-        retVal.add(Constants.Relics.NO_KNEE);
+        retVal.add(Constants.Relics.JOHNNY_STOCK);
         UnlockTracker.markRelicAsSeen(Constants.Relics.AIR_WOBBLING);
-        UnlockTracker.markRelicAsSeen(Constants.Relics.NO_KNEE);
+        UnlockTracker.markRelicAsSeen(Constants.Relics.JOHNNY_STOCK);
         return retVal;
     }
 

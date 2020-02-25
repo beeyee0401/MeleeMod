@@ -76,6 +76,7 @@ public class Constants {
         public static final String COMBO_POINTS = "ComboPoints";
         public static final String CROWD_PLEASER = "CrowdPleaser";
         public static final String EDGE_CANCELING = "EdgeCanceling";
+        public static final String JOHNNY_STOCK = "JohnnyStock";
         public static final String L_CANCELING = "LCanceling";
         public static final String L_CANCELED = "LCanceled";
         public static final String LOSE_BUFFER = "LoseBuffer";
@@ -94,6 +95,7 @@ public class Constants {
         public static final String B_MOVE_USER = "BMoveUser";
         public static final String B0XX = "B0XX";
         public static final String FOUR_STOCK = "FourStock";
+        public static final String JOHNNY_STOCK = "JohnnyStock";
         public static final String LOSERS_MANG0 = "LosersMang0";
         public static final String MARTHRITIS = "Marthritis";
         public static final String NO_KNEE = "NoKnee";

@@ -11,12 +11,13 @@ import globals.Enums;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.patches.CustomTags;
 import melee_mod.falcon.powers.helpers.CardCostHelper;
+import melee_mod.falcon.powers.interfaces.ICostReducingBuff;
 
 import java.util.ArrayList;
 
 import static globals.Constants.Powers.*;
 
-public class EdgeCancelingPower extends AbstractPower {
+public class EdgeCancelingPower extends AbstractPower implements ICostReducingBuff {
     private static final String POWER_ID = EDGE_CANCELING;
     private static final String NAME = "Edge Canceling";
     private ArrayList<AbstractCard> cardsToChange = new ArrayList<>();
@@ -48,9 +49,13 @@ public class EdgeCancelingPower extends AbstractPower {
         AbstractPlayer p = AbstractDungeon.player;
         CardCostHelper.resetCardCost(this.cardsToChange);
         ComboPointPower.initializeComboPointCosts();
-        if (p.hasPower(L_CANCELED)){
-            p.getPower(L_CANCELED).onInitialApplication();
-        }
+        CardCostHelper.initializeBuffCosts(this);
+//        if (p.hasPower(L_CANCELED)){
+//            p.getPower(L_CANCELED).onInitialApplication();
+//        }
+//        if (p.hasPower(JOHNNY_STOCK)){
+//            p.getPower(JOHNNY_STOCK).onInitialApplication();
+//        }
     }
 
     @Override

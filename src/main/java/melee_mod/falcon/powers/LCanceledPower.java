@@ -12,12 +12,14 @@ import globals.Enums;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.patches.CustomTags;
 import melee_mod.falcon.powers.helpers.CardCostHelper;
+import melee_mod.falcon.powers.interfaces.ICostReducingBuff;
 
 import java.util.ArrayList;
 
 import static globals.Constants.Powers.*;
+import static melee_mod.falcon.powers.interfaces.ICostReducingBuff.*;
 
-public class LCanceledPower extends AbstractPower {
+public class LCanceledPower extends AbstractPower implements ICostReducingBuff {
     private static final String POWER_ID = L_CANCELED;
     private static final String NAME = "Just L-Canceled";
     private ArrayList<AbstractCard> cardsToChange = new ArrayList<>();
@@ -49,9 +51,10 @@ public class LCanceledPower extends AbstractPower {
         AbstractPlayer p = AbstractDungeon.player;
         CardCostHelper.resetCardCost(this.cardsToChange);
         ComboPointPower.initializeComboPointCosts();
-        if (p.hasPower(EDGE_CANCELING)){
-            p.getPower(EDGE_CANCELING).onInitialApplication();
-        }
+        CardCostHelper.initializeBuffCosts(this);
+//        if (p.hasPower(EDGE_CANCELING)){
+//            p.getPower(EDGE_CANCELING).onInitialApplication();
+//        }
     }
 
     @Override

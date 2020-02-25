@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import melee_mod.falcon.patches.CustomTags;
@@ -17,11 +18,11 @@ import globals.Constants;
 import java.util.ArrayList;
 
 public class ComboCardHelper {
-    public static void addComboPoint(AbstractMonster monster){
+    public static void addComboPoint(AbstractCreature monster){
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, monster, new ComboPointPower(monster, 1, false), 1));
     }
 
-    public static void addComboPointByComboAndFinisher(AbstractMonster monster){
+    public static void addComboPointByComboAndFinisher(AbstractCreature monster){
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, monster, new ComboPointPower(monster, 1, true), 1));
     }
 

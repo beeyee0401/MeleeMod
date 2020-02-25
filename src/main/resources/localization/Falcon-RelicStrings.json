@@ -34,6 +34,13 @@
       "When a battle is finished without taking damage, upgrade a card."
     ]
   },
+  "JohnnyStock": {
+    "NAME": "Johnny Stock",
+    "FLAVOR": "When he's on his last stock is when he comes alive.",
+    "DESCRIPTIONS": [
+      "While you have 20% or less of your max health, gain 5 Strength and ALL attack cards add an additional combo-point and cost 1 less [E]"
+    ]
+  },
   "LosersMang0": {
     "NAME": "Team Beer Mang0",
     "FLAVOR": "And now, he will try.",

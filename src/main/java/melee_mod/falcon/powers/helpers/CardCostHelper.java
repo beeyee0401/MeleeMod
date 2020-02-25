@@ -1,7 +1,11 @@
 package melee_mod.falcon.powers.helpers;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import globals.Enums;
+import melee_mod.falcon.powers.interfaces.ICostReducingBuff;
 
 import java.util.ArrayList;
 
@@ -14,7 +18,6 @@ public class CardCostHelper {
 
     public static void resetCardCost(ArrayList<AbstractCard> cards){
         for (AbstractCard c : cards) {
-            c.hover();
             setCardCost(c, Enums.CostAction.RESET, 0);
         }
     }
@@ -33,5 +36,14 @@ public class CardCostHelper {
     public static void resetCardCost(AbstractCard c) {
         c.costForTurn = c.cost;
         c.isCostModifiedForTurn = false;
+    }
+
+    public static void initializeBuffCosts(AbstractPower currentPower){
+        AbstractPlayer p = AbstractDungeon.player;
+        for (AbstractPower power: p.powers) {
+            if (power != currentPower && power instanceof ICostReducingBuff) {
+                power.onInitialApplication();
+            }
+        }
     }
 }
