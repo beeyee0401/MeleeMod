@@ -16,13 +16,14 @@ import melee_mod.falcon.patches.AbstractCardEnum;
 import globals.Constants;
 
 public class ForwardTilt extends CustomCard {
-    private static final String ID = Constants.CardNames.DOWN_SMASH;
+    private static final String ID = Constants.CardNames.FORWARD_TILT;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int BASE_DAMAGE = 6;
-    private static final int BASE_PERCENT = 5;
+    private static final int BASE_DAMAGE = 8;
+    private static final int BASE_PERCENT = 8;
+    private static final int UPGRADE_DAMAGE = 3;
     private static final int UPGRADE_PERCENT = 5;
 
     public ForwardTilt() {
@@ -42,6 +43,7 @@ public class ForwardTilt extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.upgradeDamage(UPGRADE_DAMAGE);
             this.upgradeMagicNumber(UPGRADE_PERCENT);
         }
     }

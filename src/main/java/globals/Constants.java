@@ -95,6 +95,7 @@ public class Constants {
         public static final String B0XX = "B0XX";
         public static final String FOUR_STOCK = "FourStock";
         public static final String LOSERS_MANG0 = "LosersMang0";
+        public static final String MARTHRITIS = "Marthritis";
         public static final String NO_KNEE = "NoKnee";
         public static final String PEOPLES_CHAMP = "PeoplesChamp";
         public static final String POWER_CLIPPER = "PowerClipper";

@@ -15,18 +15,21 @@
   },
   "B0XX": {
     "NAME": "B0XX",
+    "FLAVOR": "L+R+A+Start, Choose Fox.",
     "DESCRIPTIONS": [
-      "On pickup, remove all Jabs. Receive 5 Shines."
+      "On pickup, remove all #yJabs. Receive 5 #yShines."
     ]
   },
   "BMoveUser": {
     "NAME": "B Move User",
+    "FLAVOR": "Raptor Boost is lame in Neutral.",
     "DESCRIPTIONS": [
-      "Whenever you apply Burn, apply an additional 1 Burn."
+      "Whenever you apply #yBurn, apply an additional 1 #yBurn."
     ]
   },
   "FourStock": {
     "NAME": "Four Stock",
+    "FLAVOR": "I suppose this relic is more like a JV 5, but this works.",
     "DESCRIPTIONS": [
       "When a battle is finished without taking damage, upgrade a card."
     ]
@@ -38,11 +41,18 @@
       "At the start of combat, gain -1 Strength and -1 Dexterity. If you die and resurrect, at the start of combat, gain +4 Strength and +4 Dexterity"
     ]
   },
+  "Marthritis": {
+    "NAME": "Marthritis",
+    "FLAVOR": "Side-B -> Up-Tilt",
+    "DESCRIPTIONS": [
+      "Double the #yPercent you apply to enemies"
+    ]
+  },
   "NoKnee": {
     "NAME": "No Knee",
     "FLAVOR": "Subscribe to twitch.tv/n0ne.",
     "DESCRIPTIONS": [
-      "When a Finisher is used on a target that has Combo-points, gain 2 Strength."
+      "When a #yFinisher is used on a target that has #yCombo-points, gain 2 Strength."
     ]
   },
   "PeoplesChamp": {

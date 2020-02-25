@@ -3,8 +3,11 @@ package melee_mod.falcon.powers;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import globals.Constants;
 import melee_mod.FalconCharacterMod;
 
 import static globals.Constants.Powers.ANGEL_PLATFORM;
@@ -19,6 +22,11 @@ public class PercentPower extends AbstractPower {
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
+        AbstractPlayer p = AbstractDungeon.player;
+        if (!this.owner.isPlayer && p.hasRelic(Constants.Relics.MARTHRITIS)){
+            p.getRelic(Constants.Relics.MARTHRITIS).flash();
+            this.amount *= 2;
+        }
         this.updateDescription();
         this.img = new Texture(FalconCharacterMod.makePowerImagePath(POWER_ID));
         this.type = PowerType.DEBUFF;
@@ -32,7 +40,7 @@ public class PercentPower extends AbstractPower {
     @Override
     public float atDamageReceive(float damage, DamageInfo.DamageType type) {
         if (type == DamageInfo.DamageType.NORMAL) {
-            return (float) (damage * (1 + (this.amount / 100.0)));
+            return (float) Math.round(damage * (1 + (this.amount / 100.0)));
         } else {
             return damage;
         }
