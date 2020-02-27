@@ -3,6 +3,7 @@ package melee_mod.falcon.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,11 +12,15 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import melee_mod.FalconCharacterMod;
+import melee_mod.falcon.cards.Mang0Falco;
+import melee_mod.falcon.cards.Mang0Fox;
+import melee_mod.falcon.cards.ShieldDropTemp;
 
 import static globals.Constants.Relics.LOSERS_MANG0;
 
 public class LosersMang0 extends CustomRelic {
     private static final String ID = LOSERS_MANG0;
+    private static final int BASE_BUFFS = 4;
 
     public LosersMang0() {
         super(ID, new Texture(FalconCharacterMod.makeRelicImagePath(ID)), RelicTier.UNCOMMON, LandingSound.MAGICAL);
@@ -30,7 +35,7 @@ public class LosersMang0 extends CustomRelic {
     public void setCounter(int setCounter) {
         if (setCounter == -2) {
             this.usedUp();
-            this.description = "At the start of combat, gain +4 Strength and +4 Dexterity";
+            this.description = "At the start of combat, gain +4 Strength and +4 Dexterity.";
             this.tips.clear();
             this.tips.add(new PowerTip("Loser's Mang0", this.description));
             this.initializeTips();
@@ -43,20 +48,20 @@ public class LosersMang0 extends CustomRelic {
         AbstractPlayer p = AbstractDungeon.player;
         this.flash();
         this.addToTop(new RelicAboveCreatureAction(p, this));
-        this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, 5)));
-        this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, 5)));
+        this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, BASE_BUFFS)));
+        this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, BASE_BUFFS)));
         this.setCounter(-2);
     }
 
     @Override
-    public void atBattleStart() {
+    public void atBattleStartPreDraw() {
         AbstractPlayer p = AbstractDungeon.player;
         if (this.usedUp){
-            this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, 4)));
-            this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, 4)));
+            this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, BASE_BUFFS)));
+            this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, BASE_BUFFS)));
         } else {
-            this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, -1)));
-            this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, -1)));
+            this.addToBot(new MakeTempCardInHandAction(new Mang0Falco(), 1, false));
+            this.addToBot(new MakeTempCardInHandAction(new Mang0Fox(), 1, false));
         }
     }
 

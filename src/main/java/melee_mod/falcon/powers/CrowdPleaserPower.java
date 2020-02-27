@@ -5,10 +5,12 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import globals.Constants;
 import melee_mod.FalconCharacterMod;
+import melee_mod.falcon.cards.keyword_card_helpers.ComboCardHelper;
 
 import static globals.Constants.Powers.COMBO_POINTS;
 import static globals.Constants.Powers.CROWD_PLEASER;
@@ -31,10 +33,15 @@ public class CrowdPleaserPower extends AbstractPower {
     }
 
     @Override
-    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
-        if (action.target != null && action.target.hasPower(COMBO_POINTS) &&
-                (card.keywords.contains(Constants.Keywords.FINISHER) || card.keywords.contains(Constants.Keywords.FINISHER.toLowerCase()))){
-            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount * 2)));
+    public void onUseCard(AbstractCard card, UseCardAction action) {
+        if (card.type == AbstractCard.CardType.ATTACK) {
+            boolean isFinisher = card.keywords.contains(Constants.Keywords.FINISHER) || card.keywords.contains(Constants.Keywords.FINISHER.toLowerCase());
+            boolean hasComboFinisherPower = AbstractDungeon.player.hasPower(Constants.Powers.COMBO_FINISHER);
+            boolean isComboCard = ComboCardHelper.isComboCard(card, action);
+            if (action.target != null && action.target.hasPower(COMBO_POINTS) &&
+                    (isFinisher || (hasComboFinisherPower && isComboCard))) {
+                this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount * 2)));
+            }
         }
     }
 }

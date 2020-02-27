@@ -8,6 +8,11 @@
     "DESCRIPTION": "Gain [E] NL Draw 2 cards NL Exhaust",
     "UPGRADE_DESCRIPTION": "Gain [E] [E] NL Draw 2 cards. NL Exhaust"
   },
+  "BabActivated": {
+    "NAME": "Bab Activated",
+    "DESCRIPTION": "When a Finisher is used on a target with Combo-points, gain 2 Strength.",
+    "UPGRADE_DESCRIPTION": "When a Finisher is used on a target with Combo-points, gain 4 Strength."
+  },
   "BackAir": {
     "NAME": "Back Air",
     "DESCRIPTION": "Aerial NL Finisher NL Deal !D! damage."
@@ -26,7 +31,7 @@
   },
   "DIMixUp": {
     "NAME": "DI Mix Up",
-    "DESCRIPTION": "Your next Combo card becomes a Finisher and applies Percent. NL Apply !M! Vulnerable to ALL enemies."
+    "DESCRIPTION": "Your next Combo card does the damage of a Finisher, removes Combo-points, and applies Percent. NL Apply !M! Vulnerable to ALL enemies."
   },
   "DownAir": {
     "NAME": "Down Air",
@@ -38,7 +43,8 @@
   },
   "DownTilt": {
     "NAME": "Down Tilt",
-    "DESCRIPTION": "Combo NL Deal !D! damage. NL Apply !M! Percent to the target."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Percent to the target.",
+    "UPGRADE_DESCRIPTION": "Combo NL Deal !D! damage. NL Apply !M! Percent to the target."
   },
   "EdgeCancel": {
     "NAME": "Edge Cancel",
@@ -103,6 +109,14 @@
     "NAME": "Lose Stock",
     "DESCRIPTION": "Lose 6 health. Gain 1 Intangibility. NL Gain [E] next turn. NL Exhaust",
     "UPGRADE_DESCRIPTION": "Lose 6 health. Gain 1 Intangibility. NL Gain [E] [E] next turn. NL Exhaust"
+  },
+  "Mang0Falco": {
+    "NAME": "Mang0 Falco",
+    "DESCRIPTION": "Retain NL Gain !M! Strength that expires at the end of the turn. NL Exhaust"
+  },
+  "Mang0Fox": {
+    "NAME": "Mang0 Fox",
+    "DESCRIPTION": "Retain NL Gain !M! Dexterity that expires at the end of the turn. NL Exhaust"
   },
   "NeutralAir": {
     "NAME": "Neutral Air",

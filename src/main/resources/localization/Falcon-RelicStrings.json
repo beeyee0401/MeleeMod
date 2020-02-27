@@ -45,7 +45,7 @@
     "NAME": "Team Beer Mang0",
     "FLAVOR": "And now, he will try.",
     "DESCRIPTIONS": [
-      "At the start of combat, gain -1 Strength and -1 Dexterity. If you die and resurrect, at the start of combat, gain +4 Strength and +4 Dexterity"
+      "At the start of combat, add a Mang0 Fox and Falco to your hand. If you die and resurrect, this effect changes."
     ]
   },
   "Marthritis": {

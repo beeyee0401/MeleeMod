@@ -22,9 +22,9 @@ public class DownTilt extends CustomCard {
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int BASE_DAMAGE = 9;
+    private static final int BASE_DAMAGE = 8;
     private static final int BASE_PERCENT = 6;
-    private static final int UPGRADE_DAMAGE = 3;
+    private static final int UPGRADE_DAMAGE = 2;
 
     public DownTilt() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
@@ -43,13 +43,21 @@ public class DownTilt extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            this.initializeDescription();
             this.upgradeDamage(UPGRADE_DAMAGE);
         }
     }
 
     @Override
     public void use(AbstractPlayer player, AbstractMonster monster) {
-        ComboCardHelper.doBaseAction(player, monster, this.damage, 1, this.damageTypeForTurn, this.tags, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        if (upgraded){
+            ComboCardHelper.doBaseAction(player, monster, this.damage, 1, this.damageTypeForTurn, this.tags, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        } else {
+            DamageInfo info = new DamageInfo(player, damage, damageType);
+            DamageAction action = new DamageAction(monster, info, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+            AbstractDungeon.actionManager.addToBottom(action);
+        }
         PercentCardHelper.applyPercent(player, monster, this.magicNumber);
     }
 }

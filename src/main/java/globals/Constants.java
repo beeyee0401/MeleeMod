@@ -7,6 +7,7 @@ public class Constants {
     public static class CardNames {
         public static final String AIR_DODGE = "AirDodge";
         public static final String AMSAH_TECH = "AmsahTech";
+        public static final String BAB_ACTIVATED = "BabActivated";
         public static final String BACK_AIR = "BackAir";
         public static final String BLUE_FALCON = "BlueFalcon";
         public static final String CROUCH_CANCEL = "CrouchCancel";
@@ -20,6 +21,7 @@ public class Constants {
         public static final String FALCON_DIVE = "FalconDive";
         public static final String FALCON_KICK = "FalconKick";
         public static final String FALCON_PUNCH = "FalconPunch";
+        public static final String FISHING = "Fishing";
         public static final String FORWARD_SMASH = "ForwardSmash";
         public static final String FORWARD_TILT = "ForwardTilt";
         public static final String GENTLEMAN = "Gentleman";
@@ -31,6 +33,8 @@ public class Constants {
         public static final String I_KILLED_MUFASA = "IKilledMufasa";
         public static final String L_CANCEL = "L_Cancel";
         public static final String LOSE_STOCK = "LoseStock";
+        public static final String MANG0_FALCO = "Mang0Falco";
+        public static final String MANG0_FOX = "Mang0Fox";
         public static final String MOONWALKING = "Moonwalking";
         public static final String NEUTRAL_AIR = "NeutralAir";
         public static final String NICE_BACK_AIR = "NiceBackAir";
@@ -58,6 +62,8 @@ public class Constants {
         public static final String UP_TILT = "UpTilt";
         public static final String V_CANCEL = "VCancel";
         public static final String WALL_JUMP = "WallJump";
+        public static final String WAVE_DASH = "WaveDash";
+        public static final String WAVE_LAND = "WaveLand";
         public static final String WE_TECH_THOSE = "WeTechThose";
     }
 

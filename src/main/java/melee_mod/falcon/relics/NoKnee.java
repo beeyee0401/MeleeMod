@@ -15,7 +15,7 @@ public class NoKnee extends CustomRelic {
     private static final String ID = NO_KNEE;
 
     public NoKnee() {
-        super(ID, new Texture(FalconCharacterMod.makeRelicImagePath(ID)), RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        super(ID, new Texture(FalconCharacterMod.makeRelicImagePath(ID)), RelicTier.COMMON, LandingSound.MAGICAL);
     }
 
     @Override
