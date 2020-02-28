@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.cards.Mang0Falco;
 import melee_mod.falcon.cards.Mang0Fox;
-import melee_mod.falcon.cards.ShieldDropTemp;
 
 import static globals.Constants.Relics.LOSERS_MANG0;
 

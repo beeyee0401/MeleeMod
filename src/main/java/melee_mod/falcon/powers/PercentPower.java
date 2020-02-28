@@ -23,10 +23,6 @@ public class PercentPower extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
         AbstractPlayer p = AbstractDungeon.player;
-        if (!this.owner.isPlayer && p.hasRelic(Constants.Relics.MARTHRITIS)){
-            p.getRelic(Constants.Relics.MARTHRITIS).flash();
-            this.amount *= 2;
-        }
         this.updateDescription();
         this.img = new Texture(FalconCharacterMod.makePowerImagePath(POWER_ID));
         this.type = PowerType.DEBUFF;

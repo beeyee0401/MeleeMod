@@ -20,10 +20,6 @@ public class BurnPower extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
         AbstractPlayer p = AbstractDungeon.player;
-        if (p.hasRelic(Constants.Relics.B_MOVE_USER)){
-            p.getRelic(Constants.Relics.B_MOVE_USER).flash();
-            this.amount++;
-        }
         this.updateDescription();
         this.img = new Texture(FalconCharacterMod.makePowerImagePath(POWER_ID));
         this.type = PowerType.DEBUFF;
