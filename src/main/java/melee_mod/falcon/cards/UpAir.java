@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import globals.Constants;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.cards.keyword_card_helpers.ComboCardHelper;
+import melee_mod.falcon.cards.keyword_card_helpers.PercentCardHelper;
 import melee_mod.falcon.patches.AbstractCardEnum;
 
 import static melee_mod.falcon.patches.CustomTags.AERIAL;
@@ -20,7 +21,7 @@ public class UpAir extends CustomCard {
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int BASE_DAMAGE = 9;
-    private static final int UPGRADE_DAMAGE = 3;
+    private static final int PERCENT = 10;
 
     public UpAir() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
@@ -38,12 +39,16 @@ public class UpAir extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(UPGRADE_DAMAGE);
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         ComboCardHelper.doBaseAction(abstractPlayer, abstractMonster, this);
+        if (this.upgraded){
+            PercentCardHelper.applyPercent(abstractPlayer, abstractMonster, PERCENT);
+        }
     }
 }

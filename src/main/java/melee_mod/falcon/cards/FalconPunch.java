@@ -24,7 +24,7 @@ public class FalconPunch extends CustomCard {
     private static final int COST = 3;
     private static final int BASE_DAMAGE = 30;
     private static final int BASE_BURNS = 3;
-    private static final int UPGRADE_DAMAGE = 6;
+    private static final int UPGRADE_BURN = 3;
 
     public FalconPunch() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
@@ -44,7 +44,7 @@ public class FalconPunch extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(UPGRADE_DAMAGE);
+            this.upgradeMagicNumber(UPGRADE_BURN);
         }
     }
 

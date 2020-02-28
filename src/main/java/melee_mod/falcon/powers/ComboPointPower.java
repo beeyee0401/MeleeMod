@@ -1,6 +1,7 @@
 package melee_mod.falcon.powers;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -37,6 +38,10 @@ public class ComboPointPower extends AbstractPower {
         this.type = PowerType.DEBUFF;
         // this is super jank, but not sure how to make sure the points don't get consumed immediately since Knee is both a finisher and a combo
         this.isStartedByComboAndFinisher = isStartedByComboAndFinisher;
+        AbstractPlayer p = AbstractDungeon.player;
+        if (p.hasPower(CAUTIOUS)){
+            this.addToBot(new GainBlockAction(p, p.getPower(CAUTIOUS).amount));
+        }
         setCardGroup();
     }
 

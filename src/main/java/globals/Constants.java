@@ -10,6 +10,7 @@ public class Constants {
         public static final String BAB_ACTIVATED = "BabActivated";
         public static final String BACK_AIR = "BackAir";
         public static final String BLUE_FALCON = "BlueFalcon";
+        public static final String CAUTIOUS = "Cautious";
         public static final String CROUCH_CANCEL = "CrouchCancel";
         public static final String COMMENTATORS_CURSE = "CommentatorsCurse";
         public static final String DASH_DANCE = "DashDance";
@@ -21,6 +22,7 @@ public class Constants {
         public static final String FALCON_DIVE = "FalconDive";
         public static final String FALCON_KICK = "FalconKick";
         public static final String FALCON_PUNCH = "FalconPunch";
+        public static final String FIRE_FLOWER = "FireFlower";
         public static final String FISHING = "Fishing";
         public static final String FORWARD_SMASH = "ForwardSmash";
         public static final String FORWARD_TILT = "ForwardTilt";
@@ -78,10 +80,12 @@ public class Constants {
         public static final String AIR_WOBBLING = "AirWobbling";
         public static final String ANGEL_PLATFORM = "AngelPlatform";
         public static final String BURN = "Burn";
-        public static final String COMBO_FINISHER = "ComboFinisher";
+        public static final String CAUTIOUS = "Cautious";
         public static final String COMBO_POINTS = "ComboPoints";
+        public static final String COMBO_FINISHER = "ComboFinisher";
         public static final String CROWD_PLEASER = "CrowdPleaser";
         public static final String EDGE_CANCELING = "EdgeCanceling";
+        public static final String FISHING = "Fishing";
         public static final String JOHNNY_STOCK = "JohnnyStock";
         public static final String L_CANCELING = "LCanceling";
         public static final String L_CANCELED = "LCanceled";

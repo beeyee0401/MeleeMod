@@ -24,7 +24,7 @@ public class DownTilt extends CustomCard {
     private static final int COST = 1;
     private static final int BASE_DAMAGE = 8;
     private static final int BASE_PERCENT = 6;
-    private static final int UPGRADE_DAMAGE = 2;
+    private static final int UPGRADE_DAMAGE = 3;
 
     public DownTilt() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,

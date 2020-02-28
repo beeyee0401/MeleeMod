@@ -29,7 +29,7 @@ public class CrowdPleaserPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = "When a Finisher is used on a target that has Combo-points, gain " + (this.amount * 2) + " Strength.";
+        this.description = "When a Finisher is used on a target that has Combo-points, gain " + this.amount + " Strength.";
     }
 
     @Override
@@ -40,7 +40,7 @@ public class CrowdPleaserPower extends AbstractPower {
             boolean isComboCard = ComboCardHelper.isComboCard(card, action);
             if (action.target != null && action.target.hasPower(COMBO_POINTS) &&
                     (isFinisher || (hasComboFinisherPower && isComboCard))) {
-                this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount * 2)));
+                this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount)));
             }
         }
     }

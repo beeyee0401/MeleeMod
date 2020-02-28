@@ -28,7 +28,7 @@ public class BlueFalcon extends CustomCard {
     private static final int COST = 3;
     private static final int BASE_DAMAGE = 25;
     private static final int PERCENT = 35;
-    private static final int UPGRADE_DAMAGE = 6;
+    private static final int UPGRADE_COST = 2;
 
     public BlueFalcon() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
@@ -49,7 +49,7 @@ public class BlueFalcon extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(UPGRADE_DAMAGE);
+            this.upgradeBaseCost(UPGRADE_COST);
         }
     }
 

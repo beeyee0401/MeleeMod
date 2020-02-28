@@ -10,8 +10,7 @@
   },
   "BabActivated": {
     "NAME": "Bab Activated",
-    "DESCRIPTION": "When a Finisher is used on a target with Combo-points, gain 2 Strength.",
-    "UPGRADE_DESCRIPTION": "When a Finisher is used on a target with Combo-points, gain 4 Strength."
+    "DESCRIPTION": "When a Finisher is used on a target with Combo-points, gain !M! Strength."
   },
   "BackAir": {
     "NAME": "Back Air",
@@ -20,6 +19,10 @@
   "BlueFalcon": {
     "NAME": "Blue Falcon",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! Percent to ALL enemies. NL Exhaust"
+  },
+  "Cautious": {
+    "NAME": "Cautious",
+    "DESCRIPTION": "Whenever you apply a combo-point, gain !M! Block."
   },
   "CommentatorsCurse": {
     "NAME": "Commentator's Curse",
@@ -35,7 +38,8 @@
   },
   "DownAir": {
     "NAME": "Down Air",
-    "DESCRIPTION": "Aerial NL Combo NL Deal !D! damage. Add additional combo-point. NL Exhaust"
+    "DESCRIPTION": "Aerial NL Combo NL Deal !D! damage. Add additional combo-point. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Aerial NL Combo NL Deal !D! damage. Add additional combo-point."
   },
   "DownSmash": {
     "NAME": "Down Smash",
@@ -63,6 +67,15 @@
   "FalconPunch": {
     "NAME": "Falcon Punch",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Burn to the target. NL Exhaust."
+  },
+  "FireFlower": {
+    "NAME": "Fire Flower",
+    "DESCRIPTION": "Apply !M! Burn to ALL enemies."
+  },
+  "Fishing": {
+    "NAME": "Fishing",
+    "DESCRIPTION": "At the end of your turn, Retain up to 1 Finisher card.",
+    "UPGRADE_DESCRIPTION": "At the end of your turn, Retain up to 2 Finisher cards."
   },
   "ForwardSmash": {
     "NAME": "Forward Smash",
@@ -172,7 +185,7 @@
   },
   "ShieldPoke": {
     "NAME": "Shield Poke",
-    "DESCRIPTION": "Deal !D! damage that goes through Block"
+    "DESCRIPTION": "Deal !D! damage that goes through Block. NL Apply !M! Vulnerable."
   },
   "SoftKnee": {
     "NAME": "Soft Knee",
@@ -203,11 +216,13 @@
   },
   "UpAir": {
     "NAME": "Up Air",
-    "DESCRIPTION": "Aerial NL Combo NL Deal !D! damage."
+    "DESCRIPTION": "Aerial NL Combo NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Aerial NL Combo NL Deal !D! damage. NL Apply !M! Percent."
   },
   "UpSmash": {
     "NAME": "Up Smash",
-    "DESCRIPTION": "Combo NL Deal !D! damage twice."
+    "DESCRIPTION": "Combo NL Deal !D! damage twice.",
+    "UPGRADE_DESCRIPTION": "Combo NL Add an additional combo-point. NL Deal !D! damage twice."
   },
   "UpTilt": {
     "NAME": "Up Tilt",

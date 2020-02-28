@@ -5,43 +5,47 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import globals.Constants;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.patches.AbstractCardEnum;
-import melee_mod.falcon.powers.CrowdPleaserPower;
+import melee_mod.falcon.powers.BurnPower;
 
-public class BabActivated extends CustomCard {
-    private static final String ID = Constants.CardNames.BAB_ACTIVATED;
+public class FireFlower extends CustomCard {
+    private static final String ID = Constants.CardNames.FIRE_FLOWER;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    private static final int COST = 1;
-    private static final int BASE_CROWDPLEASER = 1;
-    private static final int UPGRADE_CROWDPLEASER = 1;
+    private static final int COST = 2;
+    private static final int BASE_BURN = 3;
+    private static final int UPGRADE_COST = 1;
 
-    public BabActivated() {
+    public FireFlower() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
-                CardType.POWER, AbstractCardEnum.FALCON_BLUE, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber = BASE_CROWDPLEASER;
+                AbstractCard.CardType.SKILL, AbstractCardEnum.FALCON_BLUE,
+                AbstractCard.CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        this.magicNumber = this.baseMagicNumber = BASE_BURN;
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new BabActivated();
+        return new FireFlower();
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(UPGRADE_CROWDPLEASER);
+            this.upgradeBaseCost(UPGRADE_COST);
         }
     }
 
     @Override
     public void use(AbstractPlayer player, AbstractMonster monster) {
-        this.addToBot(new ApplyPowerAction(player, player, new CrowdPleaserPower(player, this.magicNumber)));
+        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, player, new BurnPower(m, this.magicNumber)));
+        }
     }
 }

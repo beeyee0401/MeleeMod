@@ -123,6 +123,7 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new DIMixUp());
         cards.add(new EdgeCancel());
         cards.add(new FalconDive());
+        cards.add(new FireFlower());
         cards.add(new Grab());
         cards.add(new HaxDash());
         cards.add(new LoseStock());
@@ -138,8 +139,10 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new VCancel());
         cards.add(new WallJump());
 
-        // POWERS (11 for Silent)(7)
+        // POWERS (11 for Silent)(9)
         cards.add(new BabActivated());
+        cards.add(new Cautious());
+        cards.add(new Fishing());
         cards.add(new IKilledMufasa());
         cards.add(new LCancel());
         cards.add(new PowerShield());
