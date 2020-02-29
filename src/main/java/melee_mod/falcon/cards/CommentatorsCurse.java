@@ -21,6 +21,7 @@ public class CommentatorsCurse extends CustomCard {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
                 CardType.CURSE, AbstractCardEnum.FALCON_BLUE,
                 CardRarity.SPECIAL, AbstractCard.CardTarget.ENEMY);
+        this.selfRetain = true;
     }
 
     @Override

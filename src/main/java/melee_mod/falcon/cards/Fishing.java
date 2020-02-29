@@ -37,9 +37,7 @@ public class Fishing extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            this.initializeDescription();
-            this.isInnate = true;
+            this.upgradeBaseCost(0);
         }
     }
 }

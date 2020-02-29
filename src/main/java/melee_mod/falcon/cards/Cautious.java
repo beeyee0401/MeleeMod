@@ -18,8 +18,8 @@ public class Cautious extends CustomCard {
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int BASE_STACKS = 2;
-    private static final int UPGRADE_STACKS = 1;
+    private static final int BASE_STACKS = 4;
+    private static final int UPGRADE_STACKS = 2;
 
     public Cautious() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION, CardType.POWER,

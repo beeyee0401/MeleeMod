@@ -29,7 +29,7 @@ public class ClippedPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = "Replay the cards played " + (this.amount > 1 ? ("for the next " + this.amount + " turns") : "this turn. Attacks target a random monster");
+        this.description = "Replay the cards played " + (this.amount > 1 ? ("for the next " + this.amount + " turns") : "this turn. All Attacks target one random monster.");
     }
 
     @Override

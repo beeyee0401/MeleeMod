@@ -56,6 +56,7 @@ public class Constants {
         public static final String SHINE = "Shine";
         public static final String SOFT_KNEE = "SoftKnee";
         public static final String SOMEBODY_CLIP_THAT = "SomebodyClipThat";
+        public static final String SUPER_MUSHROOM = "SuperMushroom";
         public static final String SWEET_SPOT = "SweetSpot";
         public static final String TAUNT = "Taunt";
         public static final String TEAM_ATTACK_ON = "TeamAttackOn";
@@ -82,11 +83,13 @@ public class Constants {
         public static final String ANGEL_PLATFORM = "AngelPlatform";
         public static final String BURN = "Burn";
         public static final String CAUTIOUS = "Cautious";
+        public static final String CLIPPED = "Clipped";
         public static final String COMBO_POINTS = "ComboPoints";
         public static final String COMBO_FINISHER = "ComboFinisher";
         public static final String CROWD_PLEASER = "CrowdPleaser";
         public static final String EDGE_CANCELING = "EdgeCanceling";
         public static final String FISHING = "Fishing";
+        public static final String GAIN_DEX = "GainDex";
         public static final String JOHNNY_STOCK = "JohnnyStock";
         public static final String L_CANCELING = "LCanceling";
         public static final String L_CANCELED = "LCanceled";
@@ -94,7 +97,6 @@ public class Constants {
         public static final String PERCENT = "Percent";
         public static final String POWER_SHIELDING = "PowerShielding";
         public static final String REMOVE_ARTIFACTS = "RemoveArtifacts";
-        public static final String CLIPPED = "Clipped";
         public static final String UCF = "UCF";
         public static final String UCF_ITS_TRUE = "UCFItsTrue";
         public static final String WE_TECH_THOSE = "WeTechThose";

@@ -5,7 +5,7 @@
   },
   "AmsahTech": {
     "NAME": "Amsah Tech",
-    "DESCRIPTION": "Gain [E] NL Draw 2 cards NL Exhaust",
+    "DESCRIPTION": "Gain [E] NL Draw 2 cards. NL Exhaust",
     "UPGRADE_DESCRIPTION": "Gain [E] [E] NL Draw 2 cards. NL Exhaust"
   },
   "BabActivated": {
@@ -26,7 +26,7 @@
   },
   "CommentatorsCurse": {
     "NAME": "Commentator's Curse",
-    "DESCRIPTION": "Randomize the intent of the target."
+    "DESCRIPTION": "Retain NL Randomize the intent of the target."
   },
   "DashDance": {
     "NAME": "Dash Dance",
@@ -79,8 +79,7 @@
   },
   "Fishing": {
     "NAME": "Fishing",
-    "DESCRIPTION": "At the end of your turn, Retain up to !M! Finisher card.",
-    "UPGRADE_DESCRIPTION": "Innate NL At the end of your turn, Retain up to !M! Finisher card."
+    "DESCRIPTION": "At the end of your turn, Retain up to !M! Finisher card."
   },
   "ForwardSmash": {
     "NAME": "Forward Smash",
@@ -186,7 +185,7 @@
   },
   "ShieldDrop": {
     "NAME": "Shield Drop",
-    "DESCRIPTION": "Gain !B! Block. Gain !M! Dexterity that expires at the end of this turn"
+    "DESCRIPTION": "Gain !B! Block. Gain !M! Dexterity that expires at the end of this turn."
   },
   "ShieldPoke": {
     "NAME": "Shield Poke",
@@ -194,12 +193,16 @@
   },
   "SoftKnee": {
     "NAME": "Soft Knee",
-    "DESCRIPTION": "Aerial NL Combo NL Deal !D! damage"
+    "DESCRIPTION": "Aerial NL Combo NL Deal !D! damage."
   },
   "SomebodyClipThat": {
     "NAME": "Somebody Clip That",
-    "DESCRIPTION": "Replay the cards played for this turn. NL Exhaust NL Ethereal",
-    "UPGRADE_DESCRIPTION": "Replay the cards played for this turn NL Exhaust"
+    "DESCRIPTION": "Replay the cards played for this turn. All Attacks target one random monster. NL Exhaust NL Ethereal",
+    "UPGRADE_DESCRIPTION": "Replay the cards played for this turn. All Attacks target one random monster. NL Exhaust"
+  },
+  "SuperMushroom": {
+    "NAME": "Super Mushroom",
+    "DESCRIPTION": "Gain !M! Strength that expires at the end of the turn. NL Gain -1 Dexterity that expires at the end of the turn."
   },
   "SweetSpot": {
     "NAME": "Sweet Spot",
@@ -207,12 +210,12 @@
   },
   "Taunt": {
     "NAME": "Taunt",
-    "DESCRIPTION": "Gain !M! Vulnerable. Gain 4 Strength. ALL enemies lose 1 Strength."
+    "DESCRIPTION": "Gain !M! Vulnerable. NL Gain 4 Strength. NL ALL enemies lose 1 Strength."
   },
   "TeamAttackOn": {
     "NAME": "Team Attack On",
-    "DESCRIPTION": "If the target has attacking intent, it attacks another random enemy",
-    "UPGRADE_DESCRIPTION": "ALL enemies with attack intent attack another random enemy"
+    "DESCRIPTION": "If the target has attacking intent, it attacks another random enemy.",
+    "UPGRADE_DESCRIPTION": "ALL enemies with attack intent attack another random enemy."
   },
   "UCF": {
     "NAME": "UCF",
@@ -222,7 +225,7 @@
   "UpAir": {
     "NAME": "Up Air",
     "DESCRIPTION": "Aerial NL Combo NL Deal !D! damage.",
-    "UPGRADE_DESCRIPTION": "Aerial NL Combo NL Deal !D! damage. NL Apply !M! Percent."
+    "UPGRADE_DESCRIPTION": "Aerial NL Combo NL Deal !D! damage. NL Apply 10 Percent."
   },
   "UpSmash": {
     "NAME": "Up Smash",
