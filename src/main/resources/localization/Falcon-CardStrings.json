@@ -53,7 +53,12 @@
   "EdgeCancel": {
     "NAME": "Edge Cancel",
     "DESCRIPTION": "Your Aerials cost 1 less [E] this turn. NL Draw a card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Your Aerials cost !M! less [E] this turn. NL Draw a card. NL Gain [E]. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Your Aerials cost !M! less [E] this turn. NL Draw a card. NL Gain [E]. NL Exhaust"
+  },
+  "EdgeGuard": {
+    "NAME": "Edge Guard",
+    "DESCRIPTION": "Kill a non-Elite/non-Boss enemy if it has 50% or less health. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Kill a non-Elite enemy if it has 50% or less health or an Elite with 35% or less health. NL Exhaust"
   },
   "FalconDive": {
     "NAME": "Falcon Dive",

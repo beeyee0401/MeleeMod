@@ -30,9 +30,9 @@ public class B0XX extends CustomRelic {
         return new B0XX();
     }
 
+    @Override
     public void onEquip() {
         ArrayList<AbstractCard> masterDeck = AbstractDungeon.player.masterDeck.group;
-
         int i;
         for(i = masterDeck.size() - 1; i >= 0; --i) {
             AbstractCard card = masterDeck.get(i);

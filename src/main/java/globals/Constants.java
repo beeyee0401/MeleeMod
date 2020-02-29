@@ -19,6 +19,7 @@ public class Constants {
         public static final String DOWN_SMASH = "DownSmash";
         public static final String DOWN_TILT = "DownTilt";
         public static final String EDGE_CANCEL = "EdgeCancel";
+        public static final String EDGE_GUARD = "EdgeGuard";
         public static final String FALCON_DIVE = "FalconDive";
         public static final String FALCON_KICK = "FalconKick";
         public static final String FALCON_PUNCH = "FalconPunch";

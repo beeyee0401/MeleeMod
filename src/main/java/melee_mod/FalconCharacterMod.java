@@ -115,13 +115,14 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new ForwardSmash());
         cards.add(new RaptorBoost());
 
-        // SKILLS (36 for Silent)(24)
+        // SKILLS (36 for Silent)(25)
         cards.add(new AirDodge());
         cards.add(new AmsahTech());
         cards.add(new BMoveSpecialist());
         cards.add(new DashDance());
         cards.add(new DIMixUp());
         cards.add(new EdgeCancel());
+        cards.add(new EdgeGuard());
         cards.add(new FalconDive());
         cards.add(new FireFlower());
         cards.add(new Grab());
