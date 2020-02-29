@@ -16,6 +16,10 @@
     "NAME": "Back Air",
     "DESCRIPTION": "Aerial NL Finisher NL Deal !D! damage."
   },
+  "BMoveSpecialist": {
+    "NAME": "B Move Specialist",
+    "DESCRIPTION": "For the rest of combat, Burn triggers again at the end of the turn."
+  },
   "BlueFalcon": {
     "NAME": "Blue Falcon",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! Percent to ALL enemies. NL Exhaust"
@@ -23,6 +27,10 @@
   "Cautious": {
     "NAME": "Cautious",
     "DESCRIPTION": "Whenever you apply a combo-point, gain !M! Block."
+  },
+  "CommandGrab": {
+    "NAME": "Command Grab",
+    "DESCRIPTION": "Apply !M! Burn. If the target has Block, apply 3 additional Burn."
   },
   "CommentatorsCurse": {
     "NAME": "Commentator's Curse",
@@ -204,6 +212,10 @@
     "NAME": "Super Mushroom",
     "DESCRIPTION": "Gain !M! Strength that expires at the end of the turn. NL Gain -1 Dexterity that expires at the end of the turn."
   },
+  "SuperSpicyCurry": {
+    "NAME": "Super Spicy Curry",
+    "DESCRIPTION": "Apply !M! Burn and add Strength and Dexterity in additional Burn."
+  },
   "SweetSpot": {
     "NAME": "Sweet Spot",
     "DESCRIPTION": "Gain !B! Block. Draw !M! cards."
@@ -256,7 +268,11 @@
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Choose up to !M! cards to Retain."
   },
   "WeTechThose": {
-    "NAME": "WeTechThose",
+    "NAME": "We Tech Those",
     "DESCRIPTION": "If you take 5 or more damage, gain Dexterity equal to 20% of the damage that expires at the end of the next turn."
+  },
+  "Wildfire": {
+    "NAME": "Wildfire",
+    "DESCRIPTION": "Reduce the target's Burn by !M! and apply the result to ALL enemies. NL Exhaust"
   }
 }

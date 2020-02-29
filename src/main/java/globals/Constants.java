@@ -10,8 +10,10 @@ public class Constants {
         public static final String BAB_ACTIVATED = "BabActivated";
         public static final String BACK_AIR = "BackAir";
         public static final String BLUE_FALCON = "BlueFalcon";
+        public static final String B_MOVE_SPECIALIST = "BMoveSpecialist";
         public static final String CAUTIOUS = "Cautious";
         public static final String CROUCH_CANCEL = "CrouchCancel";
+        public static final String COMMAND_GRAB = "CommandGrab";
         public static final String COMMENTATORS_CURSE = "CommentatorsCurse";
         public static final String DASH_DANCE = "DashDance";
         public static final String DI_MIX_UP = "DIMixUp";
@@ -57,6 +59,7 @@ public class Constants {
         public static final String SOFT_KNEE = "SoftKnee";
         public static final String SOMEBODY_CLIP_THAT = "SomebodyClipThat";
         public static final String SUPER_MUSHROOM = "SuperMushroom";
+        public static final String SUPER_SPICY_CURRY = "SuperSpicyCurry";
         public static final String SWEET_SPOT = "SweetSpot";
         public static final String TAUNT = "Taunt";
         public static final String TEAM_ATTACK_ON = "TeamAttackOn";
@@ -69,6 +72,7 @@ public class Constants {
         public static final String WAVE_DASH = "WaveDash";
         public static final String WAVE_LAND = "WaveLand";
         public static final String WE_TECH_THOSE = "WeTechThose";
+        public static final String WILDFIRE = "Wildfire";
     }
 
     public static class Keywords {
@@ -81,6 +85,7 @@ public class Constants {
     public static class Powers {
         public static final String AIR_WOBBLING = "AirWobbling";
         public static final String ANGEL_PLATFORM = "AngelPlatform";
+        public static final String B_MOVE_SPECIALIST = "BMoveSpecialist";
         public static final String BURN = "Burn";
         public static final String CAUTIOUS = "Cautious";
         public static final String CLIPPED = "Clipped";

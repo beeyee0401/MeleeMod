@@ -18,7 +18,7 @@ public class BabActivated extends CustomCard {
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int BASE_CROWDPLEASER = 1;
+    private static final int BASE_CROWDPLEASER = 2;
     private static final int UPGRADE_CROWDPLEASER = 1;
 
     public BabActivated() {

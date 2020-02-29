@@ -18,6 +18,7 @@ import globals.Constants;
 import melee_mod.variables.DamagePlusTwo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.tools.picocli.CommandLine;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -115,10 +116,10 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new ForwardSmash());
         cards.add(new RaptorBoost());
 
-        // SKILLS (36 for Silent)(26)
+        // SKILLS (36 for Silent)(28)
         cards.add(new AirDodge());
         cards.add(new AmsahTech());
-        cards.add(new BMoveSpecialist());
+        cards.add(new CommandGrab());
         cards.add(new DashDance());
         cards.add(new DIMixUp());
         cards.add(new EdgeCancel());
@@ -136,15 +137,18 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new ShieldDrop());
         cards.add(new SomebodyClipThat());
         cards.add(new SuperMushroom());
+        cards.add(new SuperSpicyCurry());
         cards.add(new SweetSpot());
         cards.add(new TeamAttackOn());
         cards.add(new VCancel());
         cards.add(new WallJump());
         cards.add(new WaveDash());
         cards.add(new WaveLand());
+        cards.add(new Wildfire());
 
-        // POWERS (11 for Silent)(9)
+        // POWERS (11 for Silent)(10)
         cards.add(new BabActivated());
+        cards.add(new BMoveSpecialist());
         cards.add(new Cautious());
         cards.add(new Fishing());
         cards.add(new IKilledMufasa());

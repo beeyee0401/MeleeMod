@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -35,6 +36,17 @@ public class BurnPower extends AbstractPower implements HealthBarRenderPower {
     public void atStartOfTurn() {
         DamageInfo info = new DamageInfo(this.owner, this.amount * 2, DamageInfo.DamageType.HP_LOSS);
         this.owner.damage(info);
+    }
+
+    @Override
+    public void atEndOfTurn(boolean isPlayer) {
+        AbstractPlayer p = AbstractDungeon.player;
+        if (p.hasPower(Constants.Powers.B_MOVE_SPECIALIST)){
+            for (int i = 0; i < p.getPower(Constants.Powers.B_MOVE_SPECIALIST).amount; i++) {
+                DamageInfo info = new DamageInfo(this.owner, this.amount * 2, DamageInfo.DamageType.HP_LOSS);
+                this.owner.damage(info);
+            }
+        }
         AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
     }
 

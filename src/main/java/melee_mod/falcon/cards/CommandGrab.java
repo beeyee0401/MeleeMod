@@ -10,37 +10,43 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import globals.Constants;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.patches.AbstractCardEnum;
-import melee_mod.falcon.powers.BMoveSpecialistPower;
 import melee_mod.falcon.powers.BurnPower;
 
-public class BMoveSpecialist extends CustomCard {
-    private static final String ID = Constants.CardNames.B_MOVE_SPECIALIST;
+public class CommandGrab extends CustomCard {
+    private static final String ID = Constants.CardNames.COMMAND_GRAB;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    private static final int COST = 2;
-    private static final int UPGRADE_COST = 1;
+    private static final int COST = 1;
+    private static final int BASE_BURN = 3;
+    private static final int UPGRADE_BURN = 2;
 
-    public BMoveSpecialist() {
+    public CommandGrab() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
-                CardType.POWER, AbstractCardEnum.FALCON_BLUE, CardRarity.UNCOMMON, CardTarget.NONE);
+                AbstractCard.CardType.SKILL, AbstractCardEnum.FALCON_BLUE,
+                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
+        this.magicNumber = this.baseMagicNumber = BASE_BURN;
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new BMoveSpecialist();
+        return new CommandGrab();
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(UPGRADE_COST);
+            this.upgradeMagicNumber(UPGRADE_BURN);
         }
     }
 
     @Override
     public void use(AbstractPlayer player, AbstractMonster monster) {
-        this.addToBot(new ApplyPowerAction(player, player, new BMoveSpecialistPower(player, 1)));
+        int burn = this.magicNumber;
+        if (monster.currentBlock > 0){
+            burn += 3;
+        }
+        this.addToBot(new ApplyPowerAction(monster, player, new BurnPower(monster, burn)));
     }
 }
