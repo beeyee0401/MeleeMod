@@ -74,8 +74,8 @@
   },
   "Fishing": {
     "NAME": "Fishing",
-    "DESCRIPTION": "At the end of your turn, Retain up to 1 Finisher card.",
-    "UPGRADE_DESCRIPTION": "At the end of your turn, Retain up to 2 Finisher cards."
+    "DESCRIPTION": "At the end of your turn, Retain up to !M! Finisher card.",
+    "UPGRADE_DESCRIPTION": "Innate NL At the end of your turn, Retain up to !M! Finisher card."
   },
   "ForwardSmash": {
     "NAME": "Forward Smash",
@@ -231,11 +231,21 @@
   "VCancel": {
     "NAME": "V Cancel",
     "DESCRIPTION": "Draw !M! card. Draw an extra card if you draw a Skill.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. Draw an extra card if you draw a Skill."
+    "UPGRADE_DESCRIPTION": "Draw !M! card. Draw an extra card if you draw a Skill or Attack."
   },
   "WallJump": {
     "NAME": "Wall Jump",
     "DESCRIPTION": "Gain !B! Block. NL Gain [E] next turn."
+  },
+  "WaveDash": {
+    "NAME": "Wave Dash",
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust a card from your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Exhaust up to !M! cards from your hand."
+  },
+  "WaveLand": {
+    "NAME": "Wave Land",
+    "DESCRIPTION": "Gain !B! Block. NL Choose up to !M! card to Retain.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Choose up to !M! cards to Retain."
   },
   "WeTechThose": {
     "NAME": "WeTechThose",

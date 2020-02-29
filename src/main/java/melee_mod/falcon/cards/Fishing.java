@@ -18,14 +18,16 @@ public class Fishing extends CustomCard {
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
+    private static final int RETAIN = 1;
 
     public Fishing() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION, AbstractCard.CardType.POWER,
                 AbstractCardEnum.FALCON_BLUE, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.NONE);
+        this.magicNumber = this.baseMagicNumber = RETAIN;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new FishingPower(p, 1)));
+        this.addToBot(new ApplyPowerAction(p, p, new FishingPower(p, this.magicNumber)));
     }
 
     public AbstractCard makeCopy() {
@@ -37,7 +39,7 @@ public class Fishing extends CustomCard {
             upgradeName();
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();
-            this.upgradeBaseCost(0);
+            this.isInnate = true;
         }
     }
 }

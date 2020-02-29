@@ -115,7 +115,7 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new ForwardSmash());
         cards.add(new RaptorBoost());
 
-        // SKILLS (36 for Silent)(22)
+        // SKILLS (36 for Silent)(24)
         cards.add(new AirDodge());
         cards.add(new AmsahTech());
         cards.add(new BMoveSpecialist());
@@ -138,6 +138,8 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new TeamAttackOn());
         cards.add(new VCancel());
         cards.add(new WallJump());
+        cards.add(new WaveDash());
+        cards.add(new WaveLand());
 
         // POWERS (11 for Silent)(9)
         cards.add(new BabActivated());
@@ -174,7 +176,7 @@ public class FalconCharacterMod implements CharacterMod {
                 String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
 
-        logger.info("done editting strings");
+        logger.info("done editing strings");
     }
 
     @Override
@@ -182,7 +184,7 @@ public class FalconCharacterMod implements CharacterMod {
         logger.info("setting up custom keywords");
         BaseMod.addKeyword(new String[] { Constants.Keywords.FINISHER.toLowerCase(), Constants.Keywords.FINISHER }, "Add 25% additional damage for each combo-point consumed. Costs 1 less [E] for each active combo-point.");
         BaseMod.addKeyword(new String[] { Constants.Keywords.COMBO.toLowerCase(), Constants.Keywords.COMBO }, "Add a combo-point to the target");
-        BaseMod.addKeyword(new String[] { Constants.Keywords.BURN.toLowerCase(), Constants.Keywords.BURN }, "Take damage equal to two times the Burn stacks at the end of the turn. Burn decreases by 1 each turn.");
+        BaseMod.addKeyword(new String[] { Constants.Keywords.BURN.toLowerCase(), Constants.Keywords.BURN }, "Take damage equal to two times the Burn stacks at the start of the turn. Burn decreases by 1 each turn.");
         BaseMod.addKeyword(new String[] { Constants.Keywords.PERCENT.toLowerCase(), Constants.Keywords.PERCENT }, "Take X% additional damage. At 100%, at the end of the turn, gain 1 Intangible and remove all %");
     }
 

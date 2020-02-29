@@ -19,7 +19,6 @@ public class VCancel extends CustomCard {
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 0;
     private static final int BASE_DRAW = 1;
-    private static final int UPGRADE_DRAW = 1;
 
     public VCancel() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
@@ -29,7 +28,7 @@ public class VCancel extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DrawCardAction(this.magicNumber,  new VCancelAction(1)));
+        this.addToBot(new DrawCardAction(this.magicNumber,  new VCancelAction(1, this.upgraded)));
     }
 
     @Override
@@ -41,7 +40,6 @@ public class VCancel extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(UPGRADE_DRAW);
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
