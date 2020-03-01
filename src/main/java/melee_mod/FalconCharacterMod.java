@@ -91,7 +91,7 @@ public class FalconCharacterMod implements CharacterMod {
         List<CustomCard> cards = new ArrayList<CustomCard>();
 
         // total 75 cards (21 common, 16 rare, 3 starter, 35 uncommon)
-        // my rarity dist (22 common, 10 rare, 2 starter, 26 uncommon)
+        // my rarity dist (22 common, 11 rare, 2 starter, 26 uncommon)
         // 28 attacks (20 atm)
 
         // AERIALS
@@ -146,10 +146,11 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new WaveLand());
         cards.add(new Wildfire());
 
-        // POWERS (11 for Silent)(10)
+        // POWERS (11 for Silent)(11)
         cards.add(new BabActivated());
         cards.add(new BMoveSpecialist());
         cards.add(new Cautious());
+        cards.add(new CrouchCancel());
         cards.add(new Fishing());
         cards.add(new IKilledMufasa());
         cards.add(new LCancel());

@@ -91,6 +91,7 @@ public class Constants {
         public static final String CLIPPED = "Clipped";
         public static final String COMBO_POINTS = "ComboPoints";
         public static final String COMBO_FINISHER = "ComboFinisher";
+        public static final String CROUCH_CANCEL = "CrouchCancel";
         public static final String CROWD_PLEASER = "CrowdPleaser";
         public static final String EDGE_CANCELING = "EdgeCanceling";
         public static final String FISHING = "Fishing";

@@ -34,7 +34,11 @@
   },
   "CommentatorsCurse": {
     "NAME": "Commentator's Curse",
-    "DESCRIPTION": "Retain NL Randomize the intent of the target."
+    "DESCRIPTION": "Retain NL Randomize the intent of the target. Does not work on enemies with set patterns."
+  },
+  "CrouchCancel": {
+    "NAME": "Crouch Cancel",
+    "DESCRIPTION": "When attacked, apply !M! Percent back to the attacker."
   },
   "DashDance": {
     "NAME": "Dash Dance",
