@@ -39,9 +39,8 @@ public class CaptainFalcon extends CustomPlayer {
             FalconCharacterMod.makePath("char/orb/layer5d.png"),
     };
 
-    // Make his spriter animation just a static image of his in-game
     public CaptainFalcon(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, FalconCharacterMod.makePath("char/orb/vfx.png"), new SpriterAnimation(FalconCharacterMod.makePath("char/animation.scml")));
+        super(name, setClass, orbTextures, FalconCharacterMod.makePath("char/orb/vfx.png"), new SpriterAnimation(FalconCharacterMod.makePath("char/cf_sprite.scml")));
 
         initializeClass(null, FalconCharacterMod.makePath(FalconCharacterMod.FALCON_SHOULDER_2),
                 FalconCharacterMod.makePath(FalconCharacterMod.FALCON_SHOULDER_1),
