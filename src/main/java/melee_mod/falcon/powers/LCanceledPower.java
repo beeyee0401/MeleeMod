@@ -48,13 +48,9 @@ public class LCanceledPower extends AbstractPower implements ICostReducingBuff {
 
     @Override
     public void onRemove() {
-        AbstractPlayer p = AbstractDungeon.player;
         CardCostHelper.resetCardCost(this.cardsToChange);
         ComboPointPower.initializeComboPointCosts();
         CardCostHelper.initializeBuffCosts(this);
-//        if (p.hasPower(EDGE_CANCELING)){
-//            p.getPower(EDGE_CANCELING).onInitialApplication();
-//        }
     }
 
     @Override

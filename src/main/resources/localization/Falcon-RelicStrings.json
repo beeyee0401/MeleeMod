@@ -10,7 +10,7 @@
     "NAME": "Auto L Canceling",
     "FLAVOR": "Everyone misses them, sometimes it's nice to turn it on.",
     "DESCRIPTIONS": [
-      "After using an Aerial, reduce the cost of your next card by 1 [E] if it's a non-Aerial."
+      "After using an #yAerial, reduce the cost of your next card by 1 [E] if it's a non-Aerial."
     ]
   },
   "B0XX": {
@@ -24,21 +24,21 @@
     "NAME": "B Move User",
     "FLAVOR": "Raptor Boost is lame in Neutral.",
     "DESCRIPTIONS": [
-      "Whenever you apply #yBurn, apply an additional 1 #yBurn."
+      "Whenever you apply #yBurn, apply an additional 1 #yBurn. #yBurn does one additional damage per stack."
     ]
   },
   "FourStock": {
     "NAME": "Four Stock",
     "FLAVOR": "I suppose this relic is more like a JV 5, but this works.",
     "DESCRIPTIONS": [
-      "When a battle is finished without taking damage, upgrade a card."
+      "When a battle is finished without taking damage, #yUpgrade a card."
     ]
   },
   "JohnnyStock": {
     "NAME": "Johnny Stock",
     "FLAVOR": "When he's on his last stock is when he comes alive.",
     "DESCRIPTIONS": [
-      "While you have 20% or less of your max health, gain 5 Strength and ALL attack cards add an additional combo-point and cost 1 less [E]"
+      "While you have 20% or less of your max health, gain 5 #yStrength and ALL attack cards add an additional combo-point and cost 1 less [E]"
     ]
   },
   "LosersMang0": {
@@ -74,93 +74,6 @@
     "FLAVOR": "Basically Marcurial for Zain.",
     "DESCRIPTIONS": [
       "Every 10 turns, replay the cards you played this turn."
-    ]
-  },
-
-  "PurpleSkull": {
-    "NAME": "Purple Skull",
-    "FLAVOR": "A small skull imbued with chaotic power.",
-    "DESCRIPTIONS": [
-      "While you have #b",
-      " or more stacks of #yWeak, #yVulnerable, or #yFrail, gain #b",
-      " #yDexterity"
-    ]
-  },
-  "GhostlyHand": {
-    "NAME": "Ghostly Hand",
-    "FLAVOR": "Phases in and out of existence. Cool to the touch.",
-    "DESCRIPTIONS": [
-      "Whenever an #yEthereal card enters your Exhaust Pile, gain #b",
-      " HP."
-    ]
-  },
-  "AstralEgg": {
-    "NAME": "Astral Egg",
-    "FLAVOR": "The egg of an interdimensional leviathan. Best to not let it hatch.",
-    "DESCRIPTIONS": [
-      "Whenever you add an #yEthereal card to your deck, it is #yUpgraded"
-    ]
-  },
-  "MechanicalCore": {
-    "NAME": "Mechanical Core",
-    "FLAVOR": "The still powered core of a destroyed mechanical beast. Its shields still are somewhat working.",
-    "DESCRIPTIONS": [
-      "At the start of each combat, gain 1 #yArtifact."
-    ]
-  },
-  "PowerCells": {
-    "NAME": "Power Cells",
-    "FLAVOR": "It's always good to keep some spare charge around. You'll never know when you may need it.",
-    "DESCRIPTIONS": [
-      "On the first turn of each combat, gain #b",
-      " energy and draw #b",
-      " additional cards. The cards in your hand at the beginning of combat are #yEthereal"
-    ]
-  },
-  "PaperPengwin": {
-    "NAME": "Paper Pengwin",
-    "FLAVOR": "Squaaawk!",
-    "DESCRIPTIONS": [
-      "When you are #yFrail, #yWeak, or #yVulnerable, gain #b",
-      " #yStrength and #b",
-      " #yDexterity."
-    ]
-  },
-  "SolarEgg": {
-    "NAME": "Solar Egg",
-    "FLAVOR": "An egg-shaped meteorite that fell from the sun. It glows warmly.",
-    "DESCRIPTIONS": [
-      "Whenever you add an #yEthereal card to your deck, it is #yUpgraded"
-    ]
-  },
-  "RodOfNegation": {
-    "NAME": "Rod of Negation",
-    "FLAVOR": "Imbued with chaotic power, this rod emits a ghastly purple glow on those around it.",
-    "DESCRIPTIONS": [
-      "You may discard #b1 card from your starting hand to gain #b1 #yArtifact."
-    ]
-  },
-  "Blueberries": {
-    "NAME": "Blueberries",
-    "FLAVOR": "Delicious. Very blue.",
-    "DESCRIPTIONS": [
-      "Gain #b",
-      " max HP for each #yEthereal card in your deck."
-    ]
-  },
-  "CosmicSieve": {
-    "NAME": "Cosmic Sieve",
-    "FLAVOR": "Phases in and out of existence. Cool to the touch.",
-    "DESCRIPTIONS": [
-      "Whenever an #yEthereal card enters your Exhaust Pile, heal #b",
-      " HP."
-    ]
-  },
-  "Telescope": {
-    "NAME": "Telescope",
-    "FLAVOR": "With this telescope, one can see further than ever before.",
-    "DESCRIPTIONS": [
-      "Choose any number of cards in your starting hand to gain #yEthereal."
     ]
   }
 }

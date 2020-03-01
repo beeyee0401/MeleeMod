@@ -25,7 +25,7 @@ public class SuperMushroom extends CustomCard {
 
     public SuperMushroom() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
-                CardType.SKILL, AbstractCardEnum.FALCON_BLUE, CardRarity.COMMON, CardTarget.SELF);
+                CardType.SKILL, AbstractCardEnum.FALCON_BLUE, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = BASE_STRENGTH;
     }
 

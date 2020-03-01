@@ -50,12 +50,6 @@ public class EdgeCancelingPower extends AbstractPower implements ICostReducingBu
         CardCostHelper.resetCardCost(this.cardsToChange);
         ComboPointPower.initializeComboPointCosts();
         CardCostHelper.initializeBuffCosts(this);
-//        if (p.hasPower(L_CANCELED)){
-//            p.getPower(L_CANCELED).onInitialApplication();
-//        }
-//        if (p.hasPower(JOHNNY_STOCK)){
-//            p.getPower(JOHNNY_STOCK).onInitialApplication();
-//        }
     }
 
     @Override

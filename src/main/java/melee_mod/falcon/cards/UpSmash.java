@@ -21,7 +21,6 @@ public class UpSmash extends CustomCard {
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 2;
     private static final int BASE_DAMAGE = 8;
-    private static final int UPGRADE_DAMAGE = 3;
     private static final int MAGIC_NUMBER = 2;
 
     public UpSmash() {

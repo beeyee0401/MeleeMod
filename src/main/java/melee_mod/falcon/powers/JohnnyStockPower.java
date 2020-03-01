@@ -44,11 +44,6 @@ public class JohnnyStockPower extends AbstractPower implements ICostReducingBuff
     }
 
     @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-
-    }
-
-    @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK ){
             if (card.target == AbstractCard.CardTarget.ENEMY && action.target != null){
@@ -67,13 +62,6 @@ public class JohnnyStockPower extends AbstractPower implements ICostReducingBuff
         CardCostHelper.resetCardCost(this.cardsToChange);
         ComboPointPower.initializeComboPointCosts();
         CardCostHelper.initializeBuffCosts(this);
-
-//        if (p.hasPower(L_CANCELED)){
-//            p.getPower(L_CANCELED).onInitialApplication();
-//        }
-//        if (p.hasPower(EDGE_CANCELING)){
-//            p.getPower(EDGE_CANCELING).onInitialApplication();
-//        }
     }
 
     private void setCardGroup(){

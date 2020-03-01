@@ -34,8 +34,11 @@ public class ClippedPower extends AbstractPower {
 
     @Override
     public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
-        AbstractMonster m = AbstractDungeon.getRandomMonster();
+        AbstractMonster m;
         for (AbstractCard c: AbstractDungeon.actionManager.cardsPlayedThisTurn) {
+            do {
+                m = AbstractDungeon.getRandomMonster();
+            } while (m.isDead);
             if (!c.cardID.equals(Constants.CardNames.SOMEBODY_CLIP_THAT)) {
                 AbstractCard tmp = c.makeSameInstanceOf();
                 AbstractDungeon.player.limbo.addToBottom(tmp);

@@ -28,7 +28,7 @@ public class GetUpAttack extends CustomCard {
     public GetUpAttack() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
                 AbstractCard.CardType.ATTACK, AbstractCardEnum.FALCON_BLUE,
-                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
+                AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
         this.damage = this.baseDamage = BASE_DAMAGE;
         this.magicNumber = this.baseMagicNumber = MAGIC_NUMBER;
     }
