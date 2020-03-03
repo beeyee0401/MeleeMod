@@ -146,7 +146,7 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new WaveLand());
         cards.add(new Wildfire());
 
-        // POWERS (11 for Silent)(11)
+        // POWERS (11 for Silent)(12)
         cards.add(new BabActivated());
         cards.add(new BMoveSpecialist());
         cards.add(new Cautious());
@@ -154,6 +154,7 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new Fishing());
         cards.add(new IKilledMufasa());
         cards.add(new LCancel());
+        cards.add(new MindReader());
         cards.add(new PowerShield());
         cards.add(new Taunt());
         cards.add(new UCF());

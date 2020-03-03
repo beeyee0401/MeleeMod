@@ -20,6 +20,7 @@ public class Constants {
         public static final String DOWN_AIR = "DownAir";
         public static final String DOWN_SMASH = "DownSmash";
         public static final String DOWN_TILT = "DownTilt";
+        public static final String DROP_ZONE = "DropZone";
         public static final String EDGE_CANCEL = "EdgeCancel";
         public static final String EDGE_GUARD = "EdgeGuard";
         public static final String FALCON_DIVE = "FalconDive";
@@ -40,6 +41,7 @@ public class Constants {
         public static final String LOSE_STOCK = "LoseStock";
         public static final String MANG0_FALCO = "Mang0Falco";
         public static final String MANG0_FOX = "Mang0Fox";
+        public static final String MIND_READER = "MindReader";
         public static final String MOONWALKING = "Moonwalking";
         public static final String NEUTRAL_AIR = "NeutralAir";
         public static final String NICE_BACK_AIR = "NiceBackAir";
@@ -49,9 +51,12 @@ public class Constants {
         public static final String PAUSE = "Pause";
         public static final String PHANTOM_HIT = "PhantomHit";
         public static final String POWER_SHIELD = "PowerShield";
+        public static final String RAMEN_NOODLES = "RamenNoodles";
+        public static final String RANDALL = "Randall";
         public static final String RAPID_JABS = "RapidJabs";
         public static final String RAPTOR_BOOST = "RaptorBoost";
         public static final String ROLL = "Roll";
+        public static final String SD_REMIX = "SDRemix";
         public static final String SHIELD = "Shield";
         public static final String SHIELD_DROP = "ShieldDrop";
         public static final String SHIELD_POKE = "ShieldPoke";
@@ -100,6 +105,7 @@ public class Constants {
         public static final String L_CANCELING = "LCanceling";
         public static final String L_CANCELED = "LCanceled";
         public static final String LOSE_BUFFER = "LoseBuffer";
+        public static final String MIND_READER = "MindReader";
         public static final String PERCENT = "Percent";
         public static final String POWER_SHIELDING = "PowerShielding";
         public static final String REMOVE_ARTIFACTS = "RemoveArtifacts";

@@ -131,7 +131,7 @@
     "DESCRIPTION": "Aerial NL Deal !D! damage. NL If the target has 0 combo-points: Combo NL Otherwise: Finisher NL Exhaust"
   },
   "L_Cancel": {
-    "NAME": "Learn to L-Cancel",
+    "NAME": "L-Cancel",
     "DESCRIPTION": "Whenever you use an Aerial, reduce the cost of your next card by 1 [E] if it's a non-Aerial"
   },
   "LoseStock": {
@@ -146,6 +146,10 @@
   "Mang0Fox": {
     "NAME": "Mang0 Fox",
     "DESCRIPTION": "Retain NL Gain !M! Dexterity that expires at the end of the turn. NL Exhaust"
+  },
+  "MindReader": {
+    "NAME": "Mind Reader",
+    "DESCRIPTION": "When the exact amount of incoming damage for a turn is Blocked, gain !M! Dexterity."
   },
   "NeutralAir": {
     "NAME": "Neutral Air",
