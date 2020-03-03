@@ -100,7 +100,7 @@ public class ComboPointPower extends AbstractPower {
 
     public static void initializeComboPointCosts(){
         for (AbstractMonster m: AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (!m.isDead && m.hasPower(COMBO_POINTS)){
+            if (!m.isDead && !m.isDying && m.hasPower(COMBO_POINTS)){
                 m.getPower(COMBO_POINTS).onInitialApplication();
             }
         }

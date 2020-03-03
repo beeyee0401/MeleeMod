@@ -34,17 +34,17 @@ public class ComboCardHelper {
         doBaseAction(player, monster, card, AbstractGameAction.AttackEffect.SLASH_DIAGONAL, 0);
     }
 
-    public static void doBaseAction(AbstractPlayer player, AbstractMonster monster, CustomCard card, int additionaComboPoints) {
-        doBaseAction(player, monster, card, AbstractGameAction.AttackEffect.SLASH_DIAGONAL, additionaComboPoints);
+    public static void doBaseAction(AbstractPlayer player, AbstractMonster monster, CustomCard card, AbstractGameAction.AttackEffect attackEffect) {
+        doBaseAction(player, monster, card.damage, card.magicNumber, card.damageTypeForTurn, card.tags, attackEffect, 0);
     }
 
-    public static void doBaseAction(AbstractPlayer player, AbstractMonster monster, CustomCard card, AbstractGameAction.AttackEffect attackEffect, int additionaComboPoints) {
-        doBaseAction(player, monster, card.damage, card.magicNumber, card.damageTypeForTurn, card.tags, attackEffect, additionaComboPoints);
+    public static void doBaseAction(AbstractPlayer player, AbstractMonster monster, CustomCard card, AbstractGameAction.AttackEffect attackEffect, int additionalComboPoints) {
+        doBaseAction(player, monster, card.damage, card.magicNumber, card.damageTypeForTurn, card.tags, attackEffect, additionalComboPoints);
     }
 
     public static void doBaseAction(AbstractPlayer player, AbstractMonster monster, int damage, int hitCount,
                                     DamageInfo.DamageType damageType, ArrayList<AbstractCard.CardTags> tagsList,
-                                    AbstractGameAction.AttackEffect attackEffect, int additionaComboPoints) {
+                                    AbstractGameAction.AttackEffect attackEffect, int additionalComboPoints) {
         boolean shouldAddComboPoint = true;
         if (player.hasPower(Constants.Powers.COMBO_FINISHER) && monster.hasPower(Constants.Powers.COMBO_POINTS)) {
             shouldAddComboPoint = false;
@@ -58,7 +58,7 @@ public class ComboCardHelper {
         }
 
         if (shouldAddComboPoint){
-            int points = 1 + additionaComboPoints;
+            int points = 1 + additionalComboPoints;
             if (player.hasPower(Constants.Powers.AIR_WOBBLING) && tagsList.contains(CustomTags.AERIAL)){
                 points++;
             }

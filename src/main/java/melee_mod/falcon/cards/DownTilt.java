@@ -52,7 +52,7 @@ public class DownTilt extends CustomCard {
     @Override
     public void use(AbstractPlayer player, AbstractMonster monster) {
         if (upgraded){
-            ComboCardHelper.doBaseAction(player, monster, this.damage, 1, this.damageTypeForTurn, this.tags, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+            ComboCardHelper.doBaseAction(player, monster, this.damage, 1, this.damageTypeForTurn, this.tags, AbstractGameAction.AttackEffect.BLUNT_LIGHT, 0);
         } else {
             DamageInfo info = new DamageInfo(player, damage, damageType);
             DamageAction action = new DamageAction(monster, info, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
