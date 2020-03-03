@@ -33,7 +33,7 @@ public class UpSmash extends CustomCard {
 
     @Override
     public AbstractCard makeCopy() {
-        return new DownSmash();
+        return new UpSmash();
     }
 
     @Override
