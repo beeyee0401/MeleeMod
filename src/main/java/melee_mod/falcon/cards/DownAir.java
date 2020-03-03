@@ -47,7 +47,6 @@ public class DownAir extends CustomCard {
 
     @Override
     public void use(AbstractPlayer player, AbstractMonster monster) {
-        ComboCardHelper.doBaseAction(player, monster, this, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        ComboCardHelper.addComboPoint(monster);
+        ComboCardHelper.doBaseAction(player, monster, this, AbstractGameAction.AttackEffect.BLUNT_HEAVY, 1);
     }
 }

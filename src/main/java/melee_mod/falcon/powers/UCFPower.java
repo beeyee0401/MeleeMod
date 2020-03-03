@@ -44,6 +44,7 @@ public class UCFPower extends AbstractPower {
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
         if (card.cardID.equals(Constants.CardNames.SHIELD_DROP)) {
+            this.flash();
             this.addToBot(new DrawCardAction(this.amount));
         }
     }

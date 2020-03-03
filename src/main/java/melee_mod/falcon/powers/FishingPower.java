@@ -38,6 +38,7 @@ public class FishingPower extends AbstractPower {
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer && !AbstractDungeon.player.hand.isEmpty() && !AbstractDungeon.player.hasRelic(RunicPyramid.ID) && !AbstractDungeon.player.hasPower("Equilibrium")) {
+            this.flash();
             this.addToBot(new RetainKeywordCardAction(this.owner, this.amount, Constants.Keywords.FINISHER));
         }
     }

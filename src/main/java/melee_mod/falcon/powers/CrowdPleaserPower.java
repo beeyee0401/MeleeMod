@@ -40,6 +40,7 @@ public class CrowdPleaserPower extends AbstractPower {
             boolean isComboCard = ComboCardHelper.isComboCard(card, action);
             if (action.target != null && action.target.hasPower(COMBO_POINTS) &&
                     (isFinisher || (hasComboFinisherPower && isComboCard))) {
+                this.flash();
                 this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount)));
             }
         }

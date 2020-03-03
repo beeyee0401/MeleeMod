@@ -19,24 +19,32 @@ import java.util.ArrayList;
 
 public class ComboCardHelper {
     public static void addComboPoint(AbstractCreature monster){
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, monster, new ComboPointPower(monster, 1, false), 1));
+        addComboPoint(monster, 1);
     }
 
-    public static void addComboPointByComboAndFinisher(AbstractCreature monster){
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, monster, new ComboPointPower(monster, 1, true), 1));
+    public static void addComboPoint(AbstractCreature monster, int num){
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, monster, new ComboPointPower(monster, num, false), 1));
+    }
+
+    public static void addComboPointByComboAndFinisher(AbstractCreature monster, int num){
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, monster, new ComboPointPower(monster, num, true), 1));
     }
 
     public static void doBaseAction(AbstractPlayer player, AbstractMonster monster, CustomCard card) {
-        doBaseAction(player, monster, card, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
+        doBaseAction(player, monster, card, AbstractGameAction.AttackEffect.SLASH_DIAGONAL, 0);
     }
 
-    public static void doBaseAction(AbstractPlayer player, AbstractMonster monster, CustomCard card, AbstractGameAction.AttackEffect attackEffect) {
-        doBaseAction(player, monster, card.damage, card.magicNumber, card.damageTypeForTurn, card.tags, attackEffect);
+    public static void doBaseAction(AbstractPlayer player, AbstractMonster monster, CustomCard card, int additionaComboPoints) {
+        doBaseAction(player, monster, card, AbstractGameAction.AttackEffect.SLASH_DIAGONAL, additionaComboPoints);
+    }
+
+    public static void doBaseAction(AbstractPlayer player, AbstractMonster monster, CustomCard card, AbstractGameAction.AttackEffect attackEffect, int additionaComboPoints) {
+        doBaseAction(player, monster, card.damage, card.magicNumber, card.damageTypeForTurn, card.tags, attackEffect, additionaComboPoints);
     }
 
     public static void doBaseAction(AbstractPlayer player, AbstractMonster monster, int damage, int hitCount,
                                     DamageInfo.DamageType damageType, ArrayList<AbstractCard.CardTags> tagsList,
-                                    AbstractGameAction.AttackEffect attackEffect) {
+                                    AbstractGameAction.AttackEffect attackEffect, int additionaComboPoints) {
         boolean shouldAddComboPoint = true;
         if (player.hasPower(Constants.Powers.COMBO_FINISHER) && monster.hasPower(Constants.Powers.COMBO_POINTS)) {
             shouldAddComboPoint = false;
@@ -50,10 +58,11 @@ public class ComboCardHelper {
         }
 
         if (shouldAddComboPoint){
-            addComboPoint(monster);
+            int points = 1 + additionaComboPoints;
             if (player.hasPower(Constants.Powers.AIR_WOBBLING) && tagsList.contains(CustomTags.AERIAL)){
-                addComboPoint(monster);
+                points++;
             }
+            addComboPoint(monster, points);
         }
     }
 

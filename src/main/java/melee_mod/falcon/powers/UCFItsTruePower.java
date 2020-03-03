@@ -37,6 +37,7 @@ public class UCFItsTruePower extends AbstractPower {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             for (AbstractMonster m: AbstractDungeon.getMonsters().monsters) {
                 if (!m.isDead && m.isDying){
+                    this.flash();
                     this.addToBot(new MakeTempCardInDrawPileAction(new PhantomHit(), 1, true, true));
                 }
             }

@@ -46,7 +46,7 @@ public class ClippedPower extends AbstractPower {
                 tmp.current_y = c.current_y;
                 tmp.target_x = (float) Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
                 tmp.target_y = (float) Settings.HEIGHT / 2.0F;
-                if (m != null && tmp.type == AbstractCard.CardType.ATTACK) {
+                if (tmp.type == AbstractCard.CardType.ATTACK) {
                     tmp.calculateCardDamage(m);
                 }
                 tmp.purgeOnUse = true;

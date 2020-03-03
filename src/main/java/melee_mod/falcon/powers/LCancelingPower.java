@@ -35,8 +35,8 @@ public class LCancelingPower extends AbstractPower {
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.tags.contains(CustomTags.AERIAL) &&
                 !this.owner.hasPower(L_CANCELED)){
-            AbstractPlayer p = AbstractDungeon.player;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LCanceledPower(p, this.amount)));
+            this.flash();
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new LCanceledPower(this.owner, this.amount)));
         }
     }
 }

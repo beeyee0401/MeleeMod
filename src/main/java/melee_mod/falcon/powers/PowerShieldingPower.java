@@ -35,6 +35,7 @@ public class PowerShieldingPower extends AbstractPower {
 
     @Override
     public void onGainedBlock(float blockAmount) {
+        this.flash();
         this.addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(this.amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE));
     }
 }

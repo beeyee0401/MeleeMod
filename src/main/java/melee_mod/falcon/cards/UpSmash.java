@@ -47,9 +47,6 @@ public class UpSmash extends CustomCard {
 
     @Override
     public void use(AbstractPlayer player, AbstractMonster monster) {
-        ComboCardHelper.doBaseAction(player, monster, this, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        if (upgraded){
-            ComboCardHelper.addComboPoint(monster);
-        }
+        ComboCardHelper.doBaseAction(player, monster, this, AbstractGameAction.AttackEffect.BLUNT_HEAVY, this.upgraded ? 1 : 0);
     }
 }

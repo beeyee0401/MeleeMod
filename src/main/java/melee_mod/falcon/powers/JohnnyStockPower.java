@@ -48,17 +48,18 @@ public class JohnnyStockPower extends AbstractPower implements ICostReducingBuff
         if (card.type == AbstractCard.CardType.ATTACK ){
             if (card.target == AbstractCard.CardTarget.ENEMY && action.target != null){
                 ComboCardHelper.addComboPoint(action.target);
+                this.flash();
             } else if (card.target == AbstractCard.CardTarget.ALL || card.target == AbstractCard.CardTarget.ALL_ENEMY){
                 for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
                     ComboCardHelper.addComboPoint(m);
                 }
+                this.flash();
             }
         }
     }
 
     @Override
     public void onRemove() {
-        AbstractPlayer p = AbstractDungeon.player;
         CardCostHelper.resetCardCost(this.cardsToChange);
         ComboPointPower.initializeComboPointCosts();
         CardCostHelper.initializeBuffCosts(this);

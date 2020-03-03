@@ -35,6 +35,7 @@ public class ComboFinisherPower extends AbstractPower {
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (ComboCardHelper.isComboCard(card, action) && card.type == AbstractCard.CardType.ATTACK &&
                 action.target != null && action.target.hasPower(Constants.Powers.COMBO_POINTS)){
+            this.flash();
             PercentCardHelper.applyPercent(action.source, action.target, 10 * this.amount);
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
             FinisherCardHelper.removeComboPoints(action.target);

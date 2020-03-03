@@ -40,6 +40,7 @@ public class BurnPower extends AbstractPower implements HealthBarRenderPower {
     @Override
     public void atStartOfTurn() {
         DamageInfo info = new DamageInfo(this.owner, this.amount * this.multiplier, DamageInfo.DamageType.HP_LOSS);
+        this.flash();
         this.addToBot(new DamageAction(this.owner, info, AbstractGameAction.AttackEffect.FIRE));
     }
 
@@ -47,12 +48,14 @@ public class BurnPower extends AbstractPower implements HealthBarRenderPower {
     public void atEndOfTurn(boolean isPlayer) {
         AbstractPlayer p = AbstractDungeon.player;
         if (p.hasPower(Constants.Powers.B_MOVE_SPECIALIST)){
-            for (int i = 0; i < p.getPower(Constants.Powers.B_MOVE_SPECIALIST).amount; i++) {
+            AbstractPower specialistPower = p.getPower(Constants.Powers.B_MOVE_SPECIALIST);
+            for (int i = 0; i < specialistPower.amount; i++) {
                 DamageInfo info = new DamageInfo(this.owner, this.amount * this.multiplier, DamageInfo.DamageType.HP_LOSS);
+                specialistPower.flash();
                 this.addToBot(new DamageAction(this.owner, info, AbstractGameAction.AttackEffect.FIRE));
             }
         }
-        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
+        this.addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
     }
 
     @Override
