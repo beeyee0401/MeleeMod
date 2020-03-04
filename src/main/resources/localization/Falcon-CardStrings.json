@@ -151,6 +151,10 @@
     "NAME": "Mind Reader",
     "DESCRIPTION": "When the exact amount of incoming damage for a turn is Blocked, gain !M! Dexterity."
   },
+  "Moonwalking": {
+    "NAME": "Moonwalking",
+    "DESCRIPTION": "At the start of your turn, gain [E] and !M! Percent."
+  },
   "NeutralAir": {
     "NAME": "Neutral Air",
     "DESCRIPTION": "Aerial NL Combo NL Deal !D! damage !M! times"

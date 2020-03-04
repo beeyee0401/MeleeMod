@@ -20,8 +20,8 @@ public class Taunt extends CustomCard {
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 2;
-    private static final int VULNERABLE = 3;
-    private static final int UPGRADED_VULNERABLE = -2;
+    private static final int VULNERABLE = 2;
+    private static final int UPGRADED_VULNERABLE = -1;
 
     public Taunt() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION, CardType.POWER,

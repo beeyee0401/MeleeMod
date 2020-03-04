@@ -155,6 +155,7 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new IKilledMufasa());
         cards.add(new LCancel());
         cards.add(new MindReader());
+        cards.add(new Moonwalking());
         cards.add(new PowerShield());
         cards.add(new Taunt());
         cards.add(new UCF());
