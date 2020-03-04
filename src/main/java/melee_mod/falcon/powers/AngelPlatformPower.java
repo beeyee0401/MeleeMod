@@ -31,7 +31,7 @@ public class AngelPlatformPower extends AbstractPower {
     }
 
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
+    public void atEndOfRound() {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new IntangiblePlayerPower(this.owner, this.amount)));
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, Constants.Powers.PERCENT));
