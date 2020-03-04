@@ -62,6 +62,10 @@
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Percent to the target.",
     "UPGRADE_DESCRIPTION": "Combo NL Deal !D! damage. NL Apply !M! Percent to the target."
   },
+  "DropZone": {
+    "NAME": "Drop Zone",
+    "DESCRIPTION": "Aerial NL Conclusive NL Deal !D! damage. NL Gain !M! Crowd Pleaser. NL Exhaust"
+  },
   "EdgeCancel": {
     "NAME": "Edge Cancel",
     "DESCRIPTION": "Your Aerials cost 1 less [E] this turn. NL Draw a card. NL Exhaust.",
@@ -117,6 +121,10 @@
   "HaxDash": {
     "NAME": "Hax Dash",
     "DESCRIPTION": "Gain 3 Dexterity that expires at the end of the turn. NL Draw 1 card."
+  },
+  "HomieStock": {
+    "NAME": "Homie Stock",
+    "DESCRIPTION": "Gain 150 Percent. NL Exhaust"
   },
   "IKilledMufasa": {
     "NAME": "I Killed Mufasa",
@@ -194,6 +202,11 @@
   "Roll": {
     "NAME": "Roll",
     "DESCRIPTION": "Gain !B! Block. Gain !M! Artifact that expires at the end of the turn."
+  },
+  "SDRemix": {
+    "NAME": "SD Remix",
+    "DESCRIPTION": "After a card is played this turn, upgrade it for the rest of combat. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "After a card is played this turn, upgrade it for the rest of combat."
   },
   "Shine": {
     "NAME": "Shine",

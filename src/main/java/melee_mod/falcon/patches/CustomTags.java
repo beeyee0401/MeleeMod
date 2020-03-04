@@ -6,4 +6,5 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 public class CustomTags {
     @SpireEnum
     public static AbstractCard.CardTags AERIAL;
+    public static AbstractCard.CardTags ONLY_FINISHER;
 }

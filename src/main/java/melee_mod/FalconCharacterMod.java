@@ -91,12 +91,13 @@ public class FalconCharacterMod implements CharacterMod {
         List<CustomCard> cards = new ArrayList<CustomCard>();
 
         // total 75 cards (21 common, 16 rare, 3 starter, 35 uncommon)
-        // my rarity dist (22 common, 11 rare, 2 starter, 26 uncommon)
-        // 28 attacks (20 atm)
+        // my rarity dist (22 common, 14 rare, 2 starter, 28 uncommon)
+        // 28 attacks (23 atm)
 
         // AERIALS
         cards.add(new BackAir());
         cards.add(new DownAir());
+        cards.add(new DropZone());
         cards.add(new Knee());
         cards.add(new NeutralAir());
         cards.add(new NippleSpike());
@@ -116,7 +117,7 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new ForwardSmash());
         cards.add(new RaptorBoost());
 
-        // SKILLS (36 for Silent)(28)
+        // SKILLS (36 for Silent)(30)
         cards.add(new AirDodge());
         cards.add(new AmsahTech());
         cards.add(new CommandGrab());
@@ -128,11 +129,13 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new FireFlower());
         cards.add(new Grab());
         cards.add(new HaxDash());
+        cards.add(new HomieStock());
         cards.add(new LoseStock());
         cards.add(new NoDI());
         cards.add(new Pause());
         cards.add(new PhantomHit());
         cards.add(new Roll());
+        cards.add(new SDRemix());
         cards.add(new Shield());
         cards.add(new ShieldDrop());
         cards.add(new SomebodyClipThat());
@@ -146,7 +149,7 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new WaveLand());
         cards.add(new Wildfire());
 
-        // POWERS (11 for Silent)(12)
+        // POWERS (11 for Silent)(13)
         cards.add(new BabActivated());
         cards.add(new BMoveSpecialist());
         cards.add(new Cautious());
@@ -193,6 +196,7 @@ public class FalconCharacterMod implements CharacterMod {
         logger.info("setting up custom keywords");
         BaseMod.addKeyword(new String[] { Constants.Keywords.FINISHER.toLowerCase(), Constants.Keywords.FINISHER }, "Add 25% additional damage for each combo-point consumed. Costs 1 less [E] for each active combo-point.");
         BaseMod.addKeyword(new String[] { Constants.Keywords.COMBO.toLowerCase(), Constants.Keywords.COMBO }, "Add a combo-point to the target");
+        BaseMod.addKeyword(new String[] { Constants.Keywords.CONCLUSIVE.toLowerCase(), Constants.Keywords.CONCLUSIVE }, "Only usable on targets with Combo-points. Consumes Combo-points.");
         BaseMod.addKeyword(new String[] { Constants.Keywords.BURN.toLowerCase(), Constants.Keywords.BURN }, "Take damage equal to two times the Burn stacks at the start of the turn. Burn decreases by 1 each turn.");
         BaseMod.addKeyword(new String[] { Constants.Keywords.PERCENT.toLowerCase(), Constants.Keywords.PERCENT }, "Take X% additional damage. At 100%, at the end of the turn, gain 1 Intangible and remove all %");
     }

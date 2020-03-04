@@ -34,6 +34,7 @@ public class Constants {
         public static final String GET_UP_ATTACK = "GetUpAttack";
         public static final String GRAB = "Grab";
         public static final String HAX_DASH = "HaxDash";
+        public static final String HOMIE_STOCK = "HomieStock";
         public static final String JAB = "Jab";
         public static final String KNEE = "Knee";
         public static final String I_KILLED_MUFASA = "IKilledMufasa";
@@ -83,6 +84,7 @@ public class Constants {
     public static class Keywords {
         public static final String BURN = "Burn";
         public static final String COMBO = "Combo";
+        public static final String CONCLUSIVE = "Conclusive";
         public static final String FINISHER = "Finisher";
         public static final String PERCENT = "Percent";
     }
@@ -111,6 +113,7 @@ public class Constants {
         public static final String PERCENT_PLUS = "PercentPlus";
         public static final String POWER_SHIELDING = "PowerShielding";
         public static final String REMOVE_ARTIFACTS = "RemoveArtifacts";
+        public static final String SD_REMIX = "SDRemix";
         public static final String UCF = "UCF";
         public static final String UCF_ITS_TRUE = "UCFItsTrue";
         public static final String WE_TECH_THOSE = "WeTechThose";

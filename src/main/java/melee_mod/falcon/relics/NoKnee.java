@@ -29,6 +29,7 @@ public class NoKnee extends CustomRelic {
 
     public void atBattleStart() {
         AbstractPlayer p = AbstractDungeon.player;
+        this.flash();
         this.addToBot(new ApplyPowerAction(p, p, new CrowdPleaserPower(p, 2)));
     }
 }

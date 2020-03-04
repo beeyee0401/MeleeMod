@@ -21,6 +21,7 @@ import java.util.ArrayList;
 
 import static globals.Constants.Powers.*;
 import static globals.Enums.CostAction.REDUCE;
+import static melee_mod.falcon.patches.CustomTags.ONLY_FINISHER;
 
 public class ComboPointPower extends AbstractPower {
     private static final String POWER_ID = COMBO_POINTS;
@@ -78,9 +79,10 @@ public class ComboPointPower extends AbstractPower {
 
     @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+        boolean isFinisher = card.keywords.contains(Constants.Keywords.FINISHER) || card.keywords.contains(Constants.Keywords.FINISHER.toLowerCase());
+        boolean isConclusive = card.keywords.contains(Constants.Keywords.CONCLUSIVE) || card.keywords.contains(Constants.Keywords.CONCLUSIVE.toLowerCase());
         if (action.target != null && action.target.hasPower(COMBO_POINTS) && card.type == AbstractCard.CardType.ATTACK &&
-                (card.keywords.contains(Constants.Keywords.FINISHER) || card.keywords.contains(Constants.Keywords.FINISHER.toLowerCase())) &&
-                !this.isStartedByComboAndFinisher){
+                ((isFinisher && !this.isStartedByComboAndFinisher) || isConclusive)){
             FinisherCardHelper.removeComboPoints(action.target);
         }
         this.isStartedByComboAndFinisher = false;
