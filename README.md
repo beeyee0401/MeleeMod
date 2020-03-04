@@ -11,14 +11,16 @@ Over 60 cards (that can be retrieved from combat finish) are implemented
 Much to be done still in terms of assets.
 
 ## Requirements
-### General Use
-* You can follow the steps found here to start Debugging and Building: https://github.com/daviscook477/BaseMod/wiki/Getting-Started-(For-Modders)
-* Java 8 (JRE). Currently only Java 8 should be used, issues with Java 9 are being looked into.
-* BaseMod v.1.8.0+ (https://github.com/daviscook477/BaseMod/releases)
-* ModTheSpire v2.3.0+ (https://github.com/kiooeht/ModTheSpire/releases)
-* StSLib, whatever version's on Steam workshop
+### For playing
+* Download the latest Release at https://github.com/brianyee/MeleeMod/releases
+* In Steam, go to the Workshop for Slay the Spire and download the following
+  * BaseMod
+  * StSLib
+  * ModTheSpire
+* Start Slay the Spire with Mods and select BaseMod, StSLib, and MeleeMod
 
 ## Installation (for development)
+1. You can follow the steps found here to start Debugging and Building: https://github.com/daviscook477/BaseMod/wiki/Getting-Started-(For-Modders)
 1. Create a folder `lib` in the folder parent to this project
 1. Copy `desktop-1.0.jar` from your Slay the Spire installation folder into the `lib` folder.
 1. Download `BaseMod.jar` from the latest release (https://github.com/daviscook477/BaseMod/releases) and save it in the `lib` folder.
