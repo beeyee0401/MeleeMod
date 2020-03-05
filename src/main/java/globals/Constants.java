@@ -56,6 +56,7 @@ public class Constants {
         public static final String RANDALL = "Randall";
         public static final String RAPID_JABS = "RapidJabs";
         public static final String RAPTOR_BOOST = "RaptorBoost";
+        public static final String ROCK_CROCK = "RockCrock";
         public static final String ROLL = "Roll";
         public static final String SD_REMIX = "SDRemix";
         public static final String SHIELD = "Shield";
@@ -70,6 +71,7 @@ public class Constants {
         public static final String TAUNT = "Taunt";
         public static final String TEAM_ATTACK_ON = "TeamAttackOn";
         public static final String UCF = "UCF";
+        public static final String UNCLE_PUNCH = "UnclePunch";
         public static final String UP_AIR = "UpAir";
         public static final String UP_SMASH = "UpSmash";
         public static final String UP_TILT = "UpTilt";
