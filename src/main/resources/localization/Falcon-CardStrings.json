@@ -191,6 +191,10 @@
     "NAME": "Power Shield",
     "DESCRIPTION": "Whenever you gain Block, deal !M! damage to ALL enemies."
   },
+  "Randall": {
+    "NAME": "Randall",
+    "DESCRIPTION": "Gain !B! Block. NL Permanently increase this card's Block by !M! . NL Exhaust"
+  },
   "RapidJabs": {
     "NAME": "Rapid Jabs",
     "DESCRIPTION": "Deal !D! damage (X x !M!) times"
