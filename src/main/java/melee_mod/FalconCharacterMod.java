@@ -146,6 +146,7 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new SuperSpicyCurry());
         cards.add(new SweetSpot());
         cards.add(new TeamAttackOn());
+        cards.add(new UnclePunch());
         cards.add(new VCancel());
         cards.add(new WallJump());
         cards.add(new WaveDash());

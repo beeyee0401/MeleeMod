@@ -268,6 +268,10 @@
     "DESCRIPTION": "At the start of each turn, add a Shield Drop with Ethereal to your hand.",
     "UPGRADE_DESCRIPTION": "At the start of each turn, add a Shield Drop with Ethereal to your hand. NL When an enemy dies, add a Phantom Hit to your Draw Pile"
   },
+  "UnclePunch": {
+    "NAME": "Uncle Punch",
+    "DESCRIPTION": "Upgrade a random Attack, Skill, and Power in your draw pile or hand for the rest of combat. NL Exhaust"
+  },
   "UpAir": {
     "NAME": "Up Air",
     "DESCRIPTION": "Aerial NL Combo NL Deal !D! damage.",
