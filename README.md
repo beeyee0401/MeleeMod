@@ -10,6 +10,9 @@ Over 60 cards (that can be retrieved from combat finish) are implemented
 
 Much to be done still in terms of assets.
 
+## Test Run Vods
+https://www.twitch.tv/collections/mB3sYAdL-RXLvA
+
 ## Requirements
 ### For playing
 * Download the latest Release at https://github.com/brianyee/MeleeMod/releases
