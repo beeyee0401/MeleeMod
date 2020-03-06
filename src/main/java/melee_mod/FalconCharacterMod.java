@@ -75,6 +75,7 @@ public class FalconCharacterMod implements CharacterMod {
         BaseMod.addRelicToCustomPool(new AutoLCanceling(), AbstractCardEnum.FALCON_BLUE);
         BaseMod.addRelicToCustomPool(new B0XX(), AbstractCardEnum.FALCON_BLUE);
         BaseMod.addRelicToCustomPool(new BMoveUser(), AbstractCardEnum.FALCON_BLUE);
+        BaseMod.addRelicToCustomPool(new EvidenceZip(), AbstractCardEnum.FALCON_BLUE);
         BaseMod.addRelicToCustomPool(new FourStock(), AbstractCardEnum.FALCON_BLUE);
         BaseMod.addRelicToCustomPool(new JohnnyStock(), AbstractCardEnum.FALCON_BLUE);
         BaseMod.addRelicToCustomPool(new LosersMang0(), AbstractCardEnum.FALCON_BLUE);
@@ -82,6 +83,7 @@ public class FalconCharacterMod implements CharacterMod {
         BaseMod.addRelicToCustomPool(new NoKnee(), AbstractCardEnum.FALCON_BLUE);
         BaseMod.addRelicToCustomPool(new PeoplesChamp(), AbstractCardEnum.FALCON_BLUE);
         BaseMod.addRelicToCustomPool(new PowerClipper(), AbstractCardEnum.FALCON_BLUE);
+        BaseMod.addRelicToCustomPool(new YearsOfResearch(), AbstractCardEnum.FALCON_BLUE);
     }
 
     @Override

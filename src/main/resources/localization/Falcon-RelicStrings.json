@@ -27,6 +27,13 @@
       "Whenever you apply #yBurn, apply an additional 1 #yBurn. #yBurn does one additional damage per stack."
     ]
   },
+  "EvidenceZip": {
+    "NAME": "Evidence.zip",
+    "FLAVOR": "GARGANTUAN Leff",
+    "DESCRIPTIONS": [
+      "Enemies in regular combat rooms have 25% less HP."
+    ]
+  },
   "FourStock": {
     "NAME": "Four Stock",
     "FLAVOR": "I suppose this relic is more like a JV 5, but this works.",
@@ -74,6 +81,13 @@
     "FLAVOR": "Basically Marcurial for Zain.",
     "DESCRIPTIONS": [
       "Every 10 turns, replay the cards you played this turn."
+    ]
+  },
+  "YearsOfResearch": {
+    "NAME": "Years of Research",
+    "FLAVOR": "Some of the most hilarious drama Melee has ever seen.",
+    "DESCRIPTIONS": [
+      "Draw a card when this relic is right-clicked, this can be done 3 times per combat."
     ]
   }
 }

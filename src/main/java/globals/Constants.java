@@ -126,6 +126,7 @@ public class Constants {
         public static final String AUTO_L_CANCELING = "AutoLCanceling";
         public static final String B_MOVE_USER = "BMoveUser";
         public static final String B0XX = "B0XX";
+        public static final String EVIDENCE_ZIP = "EvidenceZip";
         public static final String FOUR_STOCK = "FourStock";
         public static final String JOHNNY_STOCK = "JohnnyStock";
         public static final String LOSERS_MANG0 = "LosersMang0";
@@ -133,6 +134,7 @@ public class Constants {
         public static final String NO_KNEE = "NoKnee";
         public static final String PEOPLES_CHAMP = "PeoplesChamp";
         public static final String POWER_CLIPPER = "PowerClipper";
+        public static final String YEARS_OF_RESEARCH = "YearsOfResearch";
     }
 }
 
