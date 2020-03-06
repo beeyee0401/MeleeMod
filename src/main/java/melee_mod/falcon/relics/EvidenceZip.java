@@ -39,7 +39,7 @@ public class EvidenceZip extends CustomRelic {
 
         if (!AbstractDungeon.getCurrRoom().eliteTrigger && !isBossCombat) {
             this.flash();
-            float MODIFIER_AMT = 0.25F;
+            float MODIFIER_AMT = 0.2F;
             for (AbstractMonster m: AbstractDungeon.getCurrRoom().monsters.monsters) {
                 if (m.currentHealth > (int)((float)m.maxHealth * (1.0F - MODIFIER_AMT))) {
                     m.currentHealth = (int)((float)m.maxHealth * (1.0F - MODIFIER_AMT));

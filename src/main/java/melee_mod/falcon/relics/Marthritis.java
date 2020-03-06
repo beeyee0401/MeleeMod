@@ -16,7 +16,7 @@ public class Marthritis extends CustomRelic implements OnApplyPowerRelic {
     private static final String ID = MARTHRITIS;
 
     public Marthritis() {
-        super(ID, new Texture(FalconCharacterMod.makeRelicImagePath(ID)), RelicTier.UNCOMMON, AbstractRelic.LandingSound.FLAT);
+        super(ID, new Texture(FalconCharacterMod.makeRelicImagePath(ID)), RelicTier.UNCOMMON, LandingSound.FLAT);
     }
 
     @Override

@@ -33,8 +33,9 @@ public class LosersMang0 extends CustomRelic {
     @Override
     public void setCounter(int setCounter) {
         if (setCounter == -2) {
-            this.usedUp();
+            this.usedUp = true;
             this.description = "At the start of combat, gain +4 Strength and +4 Dexterity.";
+            this.flavorText = "Playing his best in Losers, that's the Mang0.";
             this.tips.clear();
             this.tips.add(new PowerTip("Loser's Mang0", this.description));
             this.initializeTips();
@@ -54,8 +55,9 @@ public class LosersMang0 extends CustomRelic {
 
     @Override
     public void atBattleStartPreDraw() {
-        AbstractPlayer p = AbstractDungeon.player;
+        this.flash();
         if (this.usedUp){
+            AbstractPlayer p = AbstractDungeon.player;
             this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, BASE_BUFFS)));
             this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, BASE_BUFFS)));
         } else {
@@ -67,7 +69,7 @@ public class LosersMang0 extends CustomRelic {
     @Override
     public void onLoseHp(int damageAmount) {
         // Seems like the player.isDying field takes into account Res effects. Or it's just wrong, it's False here
-        if (AbstractDungeon.player.currentHealth < damageAmount){
+        if (AbstractDungeon.player.currentHealth <= damageAmount){
             this.onTrigger();
         }
     }

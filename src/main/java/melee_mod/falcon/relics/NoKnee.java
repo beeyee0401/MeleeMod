@@ -11,6 +11,8 @@ import melee_mod.falcon.powers.CrowdPleaserPower;
 
 import static globals.Constants.Relics.NO_KNEE;
 
+// potentially change to if 3 combo points in a single turn, gain strength
+// potential bonus on if you Conclusive with more points than required, gain more str
 public class NoKnee extends CustomRelic {
     private static final String ID = NO_KNEE;
 

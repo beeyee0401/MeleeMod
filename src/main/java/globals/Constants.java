@@ -132,6 +132,7 @@ public class Constants {
         public static final String LOSERS_MANG0 = "LosersMang0";
         public static final String MARTHRITIS = "Marthritis";
         public static final String NO_KNEE = "NoKnee";
+        public static final String NON_NEUTRAL_START = "NonNeutralStart";
         public static final String PEOPLES_CHAMP = "PeoplesChamp";
         public static final String POWER_CLIPPER = "PowerClipper";
         public static final String YEARS_OF_RESEARCH = "YearsOfResearch";

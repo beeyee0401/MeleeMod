@@ -31,7 +31,7 @@
     "NAME": "Evidence.zip",
     "FLAVOR": "GARGANTUAN Leff",
     "DESCRIPTIONS": [
-      "Enemies in regular combat rooms have 25% less HP."
+      "Enemies in regular combat rooms have 20% less HP."
     ]
   },
   "FourStock": {
@@ -50,9 +50,9 @@
   },
   "LosersMang0": {
     "NAME": "Team Beer Mang0",
-    "FLAVOR": "And now, he will try.",
+    "FLAVOR": "Just wait until Mother's Day",
     "DESCRIPTIONS": [
-      "At the start of combat, add a Mang0 Fox and Falco to your hand. If you die and resurrect, this effect changes."
+      "At the start of each combat, add a Mang0 Fox and Falco to your hand. If you die and resurrect, this effect changes."
     ]
   },
   "Marthritis": {
@@ -67,6 +67,13 @@
     "FLAVOR": "Subscribe to twitch.tv/n0ne.",
     "DESCRIPTIONS": [
       "When a #yFinisher is used on a target that has #yCombo-points, gain 2 Strength."
+    ]
+  },
+  "NonNeutralStart": {
+    "NAME": "Non-neutral Start",
+    "FLAVOR": "No port combination is perfect for all legal stages, just mod it in or agree to it.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, apply 15 Percent to ALL enemies"
     ]
   },
   "PeoplesChamp": {
