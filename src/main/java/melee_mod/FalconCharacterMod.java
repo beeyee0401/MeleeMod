@@ -84,6 +84,7 @@ public class FalconCharacterMod implements CharacterMod {
         BaseMod.addRelicToCustomPool(new NonNeutralStart(), AbstractCardEnum.FALCON_BLUE);
         BaseMod.addRelicToCustomPool(new PeoplesChamp(), AbstractCardEnum.FALCON_BLUE);
         BaseMod.addRelicToCustomPool(new PowerClipper(), AbstractCardEnum.FALCON_BLUE);
+        BaseMod.addRelicToCustomPool(new TeamBeerMang0(), AbstractCardEnum.FALCON_BLUE);
         BaseMod.addRelicToCustomPool(new YearsOfResearch(), AbstractCardEnum.FALCON_BLUE);
     }
 

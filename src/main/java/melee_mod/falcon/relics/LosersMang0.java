@@ -3,17 +3,12 @@ package melee_mod.falcon.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import melee_mod.FalconCharacterMod;
-import melee_mod.falcon.cards.Mang0Falco;
-import melee_mod.falcon.cards.Mang0Fox;
 
 import static globals.Constants.Relics.LOSERS_MANG0;
 
@@ -22,7 +17,7 @@ public class LosersMang0 extends CustomRelic {
     private static final int BASE_BUFFS = 4;
 
     public LosersMang0() {
-        super(ID, new Texture(FalconCharacterMod.makeRelicImagePath(ID)), RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        super(ID, new Texture(FalconCharacterMod.makeRelicImagePath(ID)), RelicTier.SPECIAL, LandingSound.MAGICAL);
     }
 
     @Override
@@ -31,51 +26,29 @@ public class LosersMang0 extends CustomRelic {
     }
 
     @Override
-    public void setCounter(int setCounter) {
-        if (setCounter == -2) {
-            this.usedUp = true;
-            this.description = "At the start of combat, gain +4 Strength and +4 Dexterity.";
-            this.flavorText = "Playing his best in Losers, that's the Mang0.";
-            this.tips.clear();
-            this.tips.add(new PowerTip("Loser's Mang0", this.description));
-            this.initializeTips();
-            this.counter = -2;
-        }
-    }
-
-    @Override
-    public void onTrigger() {
-        AbstractPlayer p = AbstractDungeon.player;
-        this.flash();
-        this.addToTop(new RelicAboveCreatureAction(p, this));
-        this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, BASE_BUFFS)));
-        this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, BASE_BUFFS)));
-        this.setCounter(-2);
+    public void onEquip() {
+        mainActions();
     }
 
     @Override
     public void atBattleStartPreDraw() {
-        this.flash();
-        if (this.usedUp){
-            AbstractPlayer p = AbstractDungeon.player;
-            this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, BASE_BUFFS)));
-            this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, BASE_BUFFS)));
-        } else {
-            this.addToBot(new MakeTempCardInHandAction(new Mang0Falco(), 1, false));
-            this.addToBot(new MakeTempCardInHandAction(new Mang0Fox(), 1, false));
-        }
+        mainActions();
     }
 
     @Override
-    public void onLoseHp(int damageAmount) {
-        // Seems like the player.isDying field takes into account Res effects. Or it's just wrong, it's False here
-        if (AbstractDungeon.player.currentHealth <= damageAmount){
-            this.onTrigger();
-        }
+    public boolean canSpawn() {
+        return false;
     }
 
     @Override
     public AbstractRelic makeCopy() {
         return new LosersMang0();
+    }
+
+    private void mainActions(){
+        this.flash();
+        AbstractPlayer p = AbstractDungeon.player;
+        this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, BASE_BUFFS)));
+        this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, BASE_BUFFS)));
     }
 }

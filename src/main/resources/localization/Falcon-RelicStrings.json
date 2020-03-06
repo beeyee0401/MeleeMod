@@ -49,10 +49,10 @@
     ]
   },
   "LosersMang0": {
-    "NAME": "Team Beer Mang0",
-    "FLAVOR": "Just wait until Mother's Day",
+    "NAME": "Losers Mang0",
+    "FLAVOR": "Still weaker than Mother's Day Mang0",
     "DESCRIPTIONS": [
-      "At the start of each combat, add a Mang0 Fox and Falco to your hand. If you die and resurrect, this effect changes."
+      "At the start of each combat, gain +4 Strength and +4 Dexterity."
     ]
   },
   "Marthritis": {
@@ -88,6 +88,13 @@
     "FLAVOR": "Basically Marcurial for Zain.",
     "DESCRIPTIONS": [
       "Every 10 turns, replay the cards you played this turn."
+    ]
+  },
+  "TeamBeerMang0": {
+    "NAME": "Team Beer Mang0",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "At the start of each combat, add a Mang0 Fox and Falco to your hand. If you die and resurrect, this effect changes."
     ]
   },
   "YearsOfResearch": {
