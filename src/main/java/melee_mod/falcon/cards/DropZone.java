@@ -17,9 +17,6 @@ import melee_mod.falcon.cards.keyword_card_helpers.ConclusiveCard;
 import melee_mod.falcon.patches.AbstractCardEnum;
 import melee_mod.falcon.powers.CrowdPleaserPower;
 
-import static melee_mod.falcon.patches.CustomTags.AERIAL;
-import static melee_mod.falcon.patches.CustomTags.ONLY_FINISHER;
-
 public class DropZone extends ConclusiveCard {
     private static final String ID = Constants.CardNames.DROP_ZONE;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -29,15 +26,13 @@ public class DropZone extends ConclusiveCard {
     private static final int BASE_DAMAGE = 9;
     private static final int CROWD_PLEASER = 1;
     private static final int UPGRADE_CROWD_PLEASER = 1;
+    private static final int REQUIRED_COMBO_POINTS = 1;
 
     public DropZone() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
-                CardType.ATTACK, AbstractCardEnum.FALCON_BLUE, CardRarity.RARE, CardTarget.ENEMY);
+                CardType.ATTACK, AbstractCardEnum.FALCON_BLUE, CardRarity.RARE, CardTarget.ENEMY, REQUIRED_COMBO_POINTS);
         this.damage = this.baseDamage = BASE_DAMAGE;
         this.magicNumber = this.baseMagicNumber = CROWD_PLEASER;
-        this.tags.add(AERIAL);
-        this.tags.add(ONLY_FINISHER);
-        this.exhaust = true;
     }
 
     @Override
@@ -56,7 +51,7 @@ public class DropZone extends ConclusiveCard {
     @Override
     public void use(AbstractPlayer player, AbstractMonster monster) {
         DamageInfo info = new DamageInfo(player, this.damage, this.damageTypeForTurn);
-        DamageAction action = new DamageAction(monster, info, AbstractGameAction.AttackEffect.SMASH);
+        DamageAction action = new DamageAction(monster, info, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         AbstractDungeon.actionManager.addToBottom(action);
         this.addToBot(new ApplyPowerAction(player, player, new CrowdPleaserPower(player, this.magicNumber)));
     }

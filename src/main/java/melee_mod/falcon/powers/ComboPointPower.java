@@ -21,7 +21,6 @@ import java.util.ArrayList;
 
 import static globals.Constants.Powers.*;
 import static globals.Enums.CostAction.REDUCE;
-import static melee_mod.falcon.patches.CustomTags.ONLY_FINISHER;
 
 public class ComboPointPower extends AbstractPower {
     private static final String POWER_ID = COMBO_POINTS;

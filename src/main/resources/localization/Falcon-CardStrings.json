@@ -64,7 +64,7 @@
   },
   "DropZone": {
     "NAME": "Drop Zone",
-    "DESCRIPTION": "Aerial NL Conclusive NL Deal !D! damage. NL Gain !M! Crowd Pleaser. NL Exhaust"
+    "DESCRIPTION": "Conclusive : !melee:C! NL Deal !D! damage. NL Gain !M! Crowd Pleaser. NL Purge"
   },
   "EdgeCancel": {
     "NAME": "Edge Cancel",
@@ -202,6 +202,11 @@
   "RaptorBoost": {
     "NAME": "Raptor Boost",
     "DESCRIPTION": "Combo NL Deal !D! damage. Apply !M! Burn. NL Gain 1 Vulnerable."
+  },
+  "RockCrock": {
+    "NAME": "RockCrock",
+    "DESCRIPTION": "Conclusive : !melee:C! NL Deal !D! damage. NL At the start of your turn, draw !M! additional card. NL Purge",
+    "UPGRADE_DESCRIPTION": "Conclusive : !melee:C! NL Deal !D! damage. NL At the start of your turn, draw !M! additional cards. NL Purge"
   },
   "Roll": {
     "NAME": "Roll",

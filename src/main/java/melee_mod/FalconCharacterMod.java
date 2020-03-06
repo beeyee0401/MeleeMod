@@ -15,10 +15,10 @@ import melee_mod.falcon.patches.AbstractCardEnum;
 import melee_mod.falcon.patches.FalconEnum;
 import melee_mod.falcon.relics.*;
 import globals.Constants;
+import melee_mod.variables.Conclusive;
 import melee_mod.variables.DamagePlusTwo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.core.tools.picocli.CommandLine;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -90,6 +90,7 @@ public class FalconCharacterMod implements CharacterMod {
     public void receiveEditCards() {
         logger.info("add cards for " + FalconEnum.FALCON.toString());
         BaseMod.addDynamicVariable(new DamagePlusTwo());
+        BaseMod.addDynamicVariable(new Conclusive());
         List<CustomCard> cards = new ArrayList<CustomCard>();
 
         // total 75 cards (21 common, 16 rare, 3 starter, 35 uncommon)
@@ -99,7 +100,6 @@ public class FalconCharacterMod implements CharacterMod {
         // AERIALS
         cards.add(new BackAir());
         cards.add(new DownAir());
-        cards.add(new DropZone());
         cards.add(new Knee());
         cards.add(new NeutralAir());
         cards.add(new NippleSpike());
@@ -169,8 +169,10 @@ public class FalconCharacterMod implements CharacterMod {
 
         cards.add(new Jab());
         cards.add(new DownSmash());
+        cards.add(new DropZone());
         cards.add(new Gentleman());
         cards.add(new RapidJabs());
+        cards.add(new RockCrock());
         cards.add(new ShieldPoke());
         cards.add(new UpSmash());
 
@@ -199,7 +201,7 @@ public class FalconCharacterMod implements CharacterMod {
         logger.info("setting up custom keywords");
         BaseMod.addKeyword(new String[] { Constants.Keywords.FINISHER.toLowerCase(), Constants.Keywords.FINISHER }, "Add 25% additional damage for each combo-point consumed. Costs 1 less [E] for each active combo-point.");
         BaseMod.addKeyword(new String[] { Constants.Keywords.COMBO.toLowerCase(), Constants.Keywords.COMBO }, "Add a combo-point to the target");
-        BaseMod.addKeyword(new String[] { Constants.Keywords.CONCLUSIVE.toLowerCase(), Constants.Keywords.CONCLUSIVE }, "Only usable on targets with Combo-points. Consumes Combo-points.");
+        BaseMod.addKeyword(new String[] { Constants.Keywords.CONCLUSIVE.toLowerCase(), Constants.Keywords.CONCLUSIVE }, "Only usable on targets with at least the required number of Combo-points. Consumes Combo-points.");
         BaseMod.addKeyword(new String[] { Constants.Keywords.BURN.toLowerCase(), Constants.Keywords.BURN }, "Take damage equal to two times the Burn stacks at the start of the turn. Burn decreases by 1 each turn.");
         BaseMod.addKeyword(new String[] { Constants.Keywords.PERCENT.toLowerCase(), Constants.Keywords.PERCENT }, "Take X% additional damage. At 100%, at the end of the turn, gain 1 Intangible and remove all %");
     }
