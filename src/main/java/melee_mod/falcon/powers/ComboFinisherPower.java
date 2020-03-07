@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.cards.keyword_card_helpers.ComboCardHelper;
 import globals.Constants;
-import melee_mod.falcon.cards.keyword_card_helpers.FinisherCardHelper;
+import melee_mod.falcon.cards.keyword_card_helpers.FinisherCard;
 import melee_mod.falcon.cards.keyword_card_helpers.PercentCardHelper;
 
 public class ComboFinisherPower extends AbstractPower {
@@ -38,7 +38,7 @@ public class ComboFinisherPower extends AbstractPower {
             this.flash();
             PercentCardHelper.applyPercent(action.source, action.target, 10 * this.amount);
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-            FinisherCardHelper.removeComboPoints(action.target);
+            FinisherCard.removeComboPoints(action.target);
         }
     }
 }

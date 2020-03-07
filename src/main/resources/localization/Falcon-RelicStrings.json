@@ -1,7 +1,7 @@
 {
   "AirWobbling": {
     "NAME": "Air Wobbling",
-    "FLAVOR": "Falcon's OP and wobbles you into a Rest.",
+    "FLAVOR": "Falcon wobbles you into a Rest.",
     "DESCRIPTIONS": [
       "Your #yAerial cards that add #yCombo-Points add one additional #yCombo-Point."
     ]
@@ -45,7 +45,7 @@
     "NAME": "Johnny Stock",
     "FLAVOR": "When he's on his last stock is when he comes alive.",
     "DESCRIPTIONS": [
-      "While you have 20% or less of your max health, gain 5 #yStrength and ALL attack cards add an additional combo-point and cost 1 less [E]"
+      "While you have 20% or less of your max health, gain 5 #yStrength and ALL Attacks cards add an additional #yCombo-point and cost 1 less [E] ."
     ]
   },
   "LosersMang0": {
@@ -59,7 +59,7 @@
     "NAME": "Marthritis",
     "FLAVOR": "Side-B -> Up-Tilt",
     "DESCRIPTIONS": [
-      "Double the #yPercent you apply to enemies"
+      "Double the #yPercent you apply to enemies."
     ]
   },
   "NoKnee": {

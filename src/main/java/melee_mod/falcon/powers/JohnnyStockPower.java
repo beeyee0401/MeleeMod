@@ -3,7 +3,6 @@ package melee_mod.falcon.powers;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -21,7 +20,6 @@ import static globals.Enums.CostAction.REDUCE;
 public class JohnnyStockPower extends AbstractPower implements ICostReducingBuff {
     private static final String POWER_ID = Constants.Powers.JOHNNY_STOCK;
     private static final String NAME = "Johnny Stock";
-    private ArrayList<AbstractCard> cardsToChange = new ArrayList<>();
 
     public JohnnyStockPower(AbstractCreature owner, int amount) {
         this.name = NAME;
@@ -40,7 +38,7 @@ public class JohnnyStockPower extends AbstractPower implements ICostReducingBuff
 
     @Override
     public void onInitialApplication() {
-        reduceCardCosts(this.amount);
+        CardCostHelper.setCardCosts(this.cardsToChange, REDUCE, this.amount);
     }
 
     @Override
@@ -65,6 +63,13 @@ public class JohnnyStockPower extends AbstractPower implements ICostReducingBuff
         CardCostHelper.initializeBuffCosts(this);
     }
 
+    @Override
+    public void onCardDraw(AbstractCard c) {
+        if (c.type == AbstractCard.CardType.ATTACK && !c.isCostModifiedForTurn) {
+            CardCostHelper.initializeBuffCostsForCard(c);
+        }
+    }
+
     private void setCardGroup(){
         ArrayList<AbstractCard> allCards = new ArrayList<>();
         allCards.addAll(AbstractDungeon.player.hand.group);
@@ -78,7 +83,8 @@ public class JohnnyStockPower extends AbstractPower implements ICostReducingBuff
         }
     }
 
-    private void reduceCardCosts(int reduction){
-        CardCostHelper.setCardCosts(this.cardsToChange, REDUCE, reduction);
+    @Override
+    public int getReduction(){
+        return this.amount;
     }
 }

@@ -20,7 +20,6 @@ public class CautiousPower extends AbstractPower {
         this.amount = amount;
         this.updateDescription();
         this.img = new Texture(FalconCharacterMod.makePowerImagePath(POWER_ID));
-        this.type = PowerType.DEBUFF;
     }
 
     @Override

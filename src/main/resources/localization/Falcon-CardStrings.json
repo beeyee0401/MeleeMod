@@ -64,7 +64,7 @@
   },
   "DropZone": {
     "NAME": "Drop Zone",
-    "DESCRIPTION": "Conclusive : !melee:C! NL Deal !D! damage. NL Gain !M! Crowd Pleaser. NL Exhaust"
+    "DESCRIPTION": "Conclusive: !melee:C! NL Deal !D! damage. NL Gain !M! Crowd Pleaser. NL Exhaust"
   },
   "EdgeCancel": {
     "NAME": "Edge Cancel",
@@ -157,7 +157,7 @@
   },
   "MindReader": {
     "NAME": "Mind Reader",
-    "DESCRIPTION": "When you block ALL incoming damage, gain !M! Dexterity."
+    "DESCRIPTION": "When you Block ALL incoming damage, gain !M! Dexterity."
   },
   "Moonwalking": {
     "NAME": "Moonwalking",
@@ -205,8 +205,8 @@
   },
   "RockCrock": {
     "NAME": "RockCrock",
-    "DESCRIPTION": "Conclusive : !melee:C! NL Deal !D! damage. NL At the start of your turn, draw !M! additional card. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Conclusive : !melee:C! NL Deal !D! damage. NL At the start of your turn, draw !M! additional cards. NL Exhaust"
+    "DESCRIPTION": "Conclusive: !melee:C! NL Deal !D! damage. NL At the start of your turn, draw !M! additional card. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Conclusive: !melee:C! NL Deal !D! damage. NL At the start of your turn, draw !M! additional cards. NL Exhaust"
   },
   "Roll": {
     "NAME": "Roll",

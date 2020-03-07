@@ -4,11 +4,9 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import globals.Enums;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.patches.CustomTags;
 import melee_mod.falcon.powers.helpers.CardCostHelper;
@@ -17,12 +15,11 @@ import melee_mod.falcon.powers.interfaces.ICostReducingBuff;
 import java.util.ArrayList;
 
 import static globals.Constants.Powers.*;
-import static melee_mod.falcon.powers.interfaces.ICostReducingBuff.*;
+import static globals.Enums.CostAction.REDUCE;
 
 public class LCanceledPower extends AbstractPower implements ICostReducingBuff {
     private static final String POWER_ID = L_CANCELED;
     private static final String NAME = "Just L-Canceled";
-    private ArrayList<AbstractCard> cardsToChange = new ArrayList<>();
 
     public LCanceledPower(AbstractCreature owner, int amount) {
         this.name = NAME;
@@ -55,8 +52,14 @@ public class LCanceledPower extends AbstractPower implements ICostReducingBuff {
 
     @Override
     public void onInitialApplication() {
-        int reduction = this.amount;
-        CardCostHelper.setCardCosts(this.cardsToChange, Enums.CostAction.REDUCE, reduction);
+        CardCostHelper.setCardCosts(this.cardsToChange, REDUCE, this.amount);
+    }
+
+    @Override
+    public void onCardDraw(AbstractCard c) {
+        if (!c.tags.contains(CustomTags.AERIAL) && !c.isCostModifiedForTurn) {
+            CardCostHelper.initializeBuffCostsForCard(c);
+        }
     }
 
     private void setCardGroup(){
@@ -70,5 +73,10 @@ public class LCanceledPower extends AbstractPower implements ICostReducingBuff {
                 this.cardsToChange.add(c);
             }
         }
+    }
+
+    @Override
+    public int getReduction(){
+        return this.amount;
     }
 }

@@ -3,11 +3,9 @@ package melee_mod.falcon.powers;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import globals.Enums;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.patches.CustomTags;
 import melee_mod.falcon.powers.helpers.CardCostHelper;
@@ -16,11 +14,11 @@ import melee_mod.falcon.powers.interfaces.ICostReducingBuff;
 import java.util.ArrayList;
 
 import static globals.Constants.Powers.*;
+import static globals.Enums.CostAction.REDUCE;
 
 public class EdgeCancelingPower extends AbstractPower implements ICostReducingBuff {
     private static final String POWER_ID = EDGE_CANCELING;
     private static final String NAME = "Edge Canceling";
-    private ArrayList<AbstractCard> cardsToChange = new ArrayList<>();
 
     public EdgeCancelingPower(AbstractCreature owner, int amount) {
         this.name = NAME;
@@ -46,7 +44,6 @@ public class EdgeCancelingPower extends AbstractPower implements ICostReducingBu
 
     @Override
     public void onRemove() {
-        AbstractPlayer p = AbstractDungeon.player;
         CardCostHelper.resetCardCost(this.cardsToChange);
         ComboPointPower.initializeComboPointCosts();
         CardCostHelper.initializeBuffCosts(this);
@@ -54,8 +51,14 @@ public class EdgeCancelingPower extends AbstractPower implements ICostReducingBu
 
     @Override
     public void onInitialApplication() {
-        int reduction = 1;
-        CardCostHelper.setCardCosts(this.cardsToChange, Enums.CostAction.REDUCE, reduction);
+        CardCostHelper.setCardCosts(this.cardsToChange, REDUCE, 1);
+    }
+
+    @Override
+    public void onCardDraw(AbstractCard c) {
+        if (c.tags.contains(CustomTags.AERIAL) && !c.isCostModifiedForTurn) {
+            CardCostHelper.initializeBuffCostsForCard(c);
+        }
     }
 
     private void setCardGroup(){
@@ -69,5 +72,9 @@ public class EdgeCancelingPower extends AbstractPower implements ICostReducingBu
                 this.cardsToChange.add(c);
             }
         }
+    }
+
+    public int getReduction(){
+        return 1;
     }
 }

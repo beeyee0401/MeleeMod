@@ -10,16 +10,14 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import basemod.abstracts.CustomCard;
 import melee_mod.FalconCharacterMod;
-import melee_mod.falcon.cards.keyword_card_helpers.ComboCardHelper;
-import melee_mod.falcon.cards.keyword_card_helpers.FinisherCardHelper;
+import melee_mod.falcon.cards.keyword_card_helpers.FinisherCard;
 import melee_mod.falcon.patches.AbstractCardEnum;
 import globals.Constants;
 
 import static melee_mod.falcon.patches.CustomTags.AERIAL;
 
-public class BackAir extends CustomCard {
+public class BackAir extends FinisherCard {
     private static final String ID = Constants.CardNames.BACK_AIR;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;

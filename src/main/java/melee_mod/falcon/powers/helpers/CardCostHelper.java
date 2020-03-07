@@ -9,6 +9,8 @@ import melee_mod.falcon.powers.interfaces.ICostReducingBuff;
 
 import java.util.ArrayList;
 
+import static globals.Enums.CostAction.REDUCE;
+
 public class CardCostHelper {
     public static void setCardCosts(ArrayList<AbstractCard> cards, Enums.CostAction action, int difference){
         for (AbstractCard c : cards) {
@@ -23,7 +25,7 @@ public class CardCostHelper {
     }
 
     // I bet at the moment this overwrites Mummified hand and Enchiridion
-    private static void setCardCost(AbstractCard c, Enums.CostAction action, int difference){
+    public static void setCardCost(AbstractCard c, Enums.CostAction action, int difference){
         if (action == Enums.CostAction.REDUCE){
             c.setCostForTurn(c.costForTurn - difference);
         } else if (action == Enums.CostAction.INCREASE) {
@@ -43,6 +45,23 @@ public class CardCostHelper {
         for (AbstractPower power: p.powers) {
             if (power != currentPower && power instanceof ICostReducingBuff) {
                 power.onInitialApplication();
+            }
+        }
+    }
+
+    public static void initializeBuffCostsForCard(AbstractCard card){
+        AbstractPlayer player = AbstractDungeon.player;
+        int reductionTotal = 0;
+        for (AbstractPower power: player.powers) {
+            if (power instanceof ICostReducingBuff) {
+                ICostReducingBuff p = (ICostReducingBuff) power;
+                if (!p.cardsToChange.contains(card)){
+                    p.cardsToChange.add(card);
+                }
+                reductionTotal += p.getReduction();
+            }
+            if (reductionTotal > 0){
+                CardCostHelper.setCardCost(card, REDUCE, reductionTotal);
             }
         }
     }

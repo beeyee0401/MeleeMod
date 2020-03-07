@@ -1,12 +1,10 @@
 package melee_mod.falcon.powers;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -14,7 +12,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import melee_mod.FalconCharacterMod;
 import globals.Constants;
-import melee_mod.falcon.cards.keyword_card_helpers.FinisherCardHelper;
+import melee_mod.falcon.cards.keyword_card_helpers.FinisherCard;
 import melee_mod.falcon.powers.helpers.CardCostHelper;
 
 import java.util.ArrayList;
@@ -25,7 +23,7 @@ import static globals.Enums.CostAction.REDUCE;
 public class ComboPointPower extends AbstractPower {
     private static final String POWER_ID = COMBO_POINTS;
     private static final String NAME = "Combo-Points";
-    private ArrayList<AbstractCard> cardsToChange = new ArrayList<>();
+    public ArrayList<AbstractCard> cardsToChange = new ArrayList<>();
     private boolean isStartedByComboAndFinisher;
 
     public ComboPointPower(AbstractCreature owner, int amount, boolean isStartedByComboAndFinisher) {
@@ -78,9 +76,22 @@ public class ComboPointPower extends AbstractPower {
         boolean isConclusive = card.keywords.contains(Constants.Keywords.CONCLUSIVE) || card.keywords.contains(Constants.Keywords.CONCLUSIVE.toLowerCase());
         if (action.target != null && action.target.hasPower(COMBO_POINTS) && card.type == AbstractCard.CardType.ATTACK &&
                 ((isFinisher && !this.isStartedByComboAndFinisher) || isConclusive)){
-            FinisherCardHelper.removeComboPoints(action.target);
+            FinisherCard.removeComboPoints(action.target);
         }
         this.isStartedByComboAndFinisher = false;
+    }
+
+    @Override
+    public void onCardDraw(AbstractCard c) {
+        boolean isFinisher = c.type == AbstractCard.CardType.ATTACK && (c.keywords.contains(Constants.Keywords.FINISHER) || c.keywords.contains(Constants.Keywords.FINISHER.toLowerCase()));
+        if (isFinisher && !c.isCostModifiedForTurn) {
+            if (!this.cardsToChange.contains(c)){
+                this.cardsToChange.add(c);
+            }
+            ArrayList<AbstractCard> cardList = new ArrayList<>();
+            cardList.add(c);
+            CardCostHelper.setCardCosts(cardList, REDUCE, this.amount);
+        }
     }
 
     @Override
@@ -100,6 +111,22 @@ public class ComboPointPower extends AbstractPower {
             if (!m.isDead && !m.isDying && m.hasPower(COMBO_POINTS)){
                 m.getPower(COMBO_POINTS).onInitialApplication();
             }
+        }
+    }
+
+    public static void initializeComboPointCostForCard(AbstractCard c){
+        int reduction = 0;
+        for (AbstractMonster m: AbstractDungeon.getCurrRoom().monsters.monsters) {
+            if (!m.isDead && !m.isDying && m.hasPower(COMBO_POINTS)){
+                ComboPointPower comboPointPower = (ComboPointPower) m.getPower(COMBO_POINTS);
+                reduction += comboPointPower.amount;
+                if (!comboPointPower.cardsToChange.contains(c)){
+                    comboPointPower.cardsToChange.add(c);
+                }
+            }
+        }
+        if (reduction > 0) {
+            CardCostHelper.setCardCost(c, REDUCE, reduction);
         }
     }
 
