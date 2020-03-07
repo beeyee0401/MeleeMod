@@ -47,12 +47,14 @@ public class TeamAttackOn extends CustomCard {
     @Override
     public void use(AbstractPlayer player, AbstractMonster monster) {
         ArrayList<AbstractMonster> monsters = AbstractDungeon.getCurrRoom().monsters.monsters;
-        if (this.upgraded){
-            for (AbstractMonster m : monsters) {
-                friendlyFireAttack(m);
+        if (monsters.size() > 1) {
+            if (this.upgraded) {
+                for (AbstractMonster m : monsters) {
+                    friendlyFireAttack(m);
+                }
+            } else {
+                friendlyFireAttack(monster);
             }
-        } else {
-            friendlyFireAttack(monster);
         }
     }
 

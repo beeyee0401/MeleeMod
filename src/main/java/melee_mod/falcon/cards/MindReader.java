@@ -18,12 +18,12 @@ public class MindReader extends CustomCard {
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int DEX_AMOUNT = 2;
+    private static final int DEX_AMOUNT = 1;
     private static final int UPGRADE_DEX = 1;
 
     public MindReader() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION, CardType.POWER,
-                AbstractCardEnum.FALCON_BLUE, CardRarity.UNCOMMON, CardTarget.NONE);
+                AbstractCardEnum.FALCON_BLUE, CardRarity.RARE, CardTarget.NONE);
         this.magicNumber = this.baseMagicNumber = DEX_AMOUNT;
     }
 

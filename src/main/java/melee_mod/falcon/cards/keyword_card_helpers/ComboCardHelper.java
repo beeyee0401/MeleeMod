@@ -23,11 +23,11 @@ public class ComboCardHelper {
     }
 
     public static void addComboPoint(AbstractCreature monster, int num){
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, monster, new ComboPointPower(monster, num, false), num));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, AbstractDungeon.player, new ComboPointPower(monster, num, false)));
     }
 
     public static void addComboPointByComboAndFinisher(AbstractCreature monster, int num){
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, monster, new ComboPointPower(monster, num, true), num));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, AbstractDungeon.player, new ComboPointPower(monster, num, true)));
     }
 
     public static void doBaseAction(AbstractPlayer player, AbstractMonster monster, CustomCard card) {

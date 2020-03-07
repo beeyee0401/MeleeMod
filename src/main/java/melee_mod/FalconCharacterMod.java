@@ -178,6 +178,7 @@ public class FalconCharacterMod implements CharacterMod {
         cards.add(new RockCrock());
         cards.add(new ShieldPoke());
         cards.add(new UpSmash());
+        cards.add(new Shine());
 
         for(CustomCard card : cards) {
             BaseMod.addCard(card);

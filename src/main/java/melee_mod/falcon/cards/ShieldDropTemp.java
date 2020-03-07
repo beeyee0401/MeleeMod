@@ -21,7 +21,7 @@ public class ShieldDropTemp extends CustomCard {
     private static final int COST = 1;
     private static final int BLOCK_AMT = 6;
     private static final int BASE_DEX = 2;
-    private static final int UPGRADE_DEX = 1;
+    private static final int UPGRADE_BLOCK = 3;
 
     public ShieldDropTemp() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
@@ -48,7 +48,7 @@ public class ShieldDropTemp extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(UPGRADE_DEX);
+            this.upgradeBlock(UPGRADE_BLOCK);
         }
     }
 }

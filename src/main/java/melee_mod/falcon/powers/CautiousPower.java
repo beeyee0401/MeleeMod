@@ -32,7 +32,7 @@ public class CautiousPower extends AbstractPower {
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
         if (power.ID.equals(Constants.Powers.COMBO_POINTS)){
             this.flash();
-            this.addToBot(new GainBlockAction(this.owner, this.amount));
+            this.addToBot(new GainBlockAction(this.owner, this.amount * power.amount));
         }
     }
 }

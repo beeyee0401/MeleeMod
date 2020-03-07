@@ -38,10 +38,6 @@ public class ComboPointPower extends AbstractPower {
         this.type = PowerType.DEBUFF;
         // this is super jank, but not sure how to make sure the points don't get consumed immediately since Knee is both a finisher and a combo
         this.isStartedByComboAndFinisher = isStartedByComboAndFinisher;
-        AbstractPlayer p = AbstractDungeon.player;
-        if (p.hasPower(CAUTIOUS)){
-            this.addToBot(new GainBlockAction(p, p.getPower(CAUTIOUS).amount));
-        }
         setCardGroup();
     }
 

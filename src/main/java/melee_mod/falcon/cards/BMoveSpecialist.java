@@ -23,7 +23,7 @@ public class BMoveSpecialist extends CustomCard {
 
     public BMoveSpecialist() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
-                CardType.POWER, AbstractCardEnum.FALCON_BLUE, CardRarity.UNCOMMON, CardTarget.NONE);
+                CardType.POWER, AbstractCardEnum.FALCON_BLUE, CardRarity.RARE, CardTarget.NONE);
     }
 
     @Override

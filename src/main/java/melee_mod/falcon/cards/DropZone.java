@@ -24,7 +24,7 @@ public class DropZone extends ConclusiveCard {
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int BASE_DAMAGE = 9;
-    private static final int CROWD_PLEASER = 1;
+    private static final int CROWD_PLEASER = 2;
     private static final int UPGRADE_CROWD_PLEASER = 1;
     private static final int REQUIRED_COMBO_POINTS = 1;
 
@@ -33,6 +33,7 @@ public class DropZone extends ConclusiveCard {
                 CardType.ATTACK, AbstractCardEnum.FALCON_BLUE, CardRarity.RARE, CardTarget.ENEMY, REQUIRED_COMBO_POINTS);
         this.damage = this.baseDamage = BASE_DAMAGE;
         this.magicNumber = this.baseMagicNumber = CROWD_PLEASER;
+        this.exhaust = true;
     }
 
     @Override

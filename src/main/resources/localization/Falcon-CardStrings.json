@@ -55,7 +55,7 @@
   },
   "DownSmash": {
     "NAME": "Down Smash",
-    "DESCRIPTION": "Deal !D! damage !M! times."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Apply !M! Weak."
   },
   "DownTilt": {
     "NAME": "Down Tilt",
@@ -64,7 +64,7 @@
   },
   "DropZone": {
     "NAME": "Drop Zone",
-    "DESCRIPTION": "Conclusive : !melee:C! NL Deal !D! damage. NL Gain !M! Crowd Pleaser. NL Purge"
+    "DESCRIPTION": "Conclusive : !melee:C! NL Deal !D! damage. NL Gain !M! Crowd Pleaser. NL Exhaust"
   },
   "EdgeCancel": {
     "NAME": "Edge Cancel",
@@ -157,7 +157,7 @@
   },
   "MindReader": {
     "NAME": "Mind Reader",
-    "DESCRIPTION": "When the exact amount of incoming damage for a turn is Blocked, gain !M! Dexterity."
+    "DESCRIPTION": "When you block ALL incoming damage, gain !M! Dexterity."
   },
   "Moonwalking": {
     "NAME": "Moonwalking",
@@ -205,8 +205,8 @@
   },
   "RockCrock": {
     "NAME": "RockCrock",
-    "DESCRIPTION": "Conclusive : !melee:C! NL Deal !D! damage. NL At the start of your turn, draw !M! additional card. NL Purge",
-    "UPGRADE_DESCRIPTION": "Conclusive : !melee:C! NL Deal !D! damage. NL At the start of your turn, draw !M! additional cards. NL Purge"
+    "DESCRIPTION": "Conclusive : !melee:C! NL Deal !D! damage. NL At the start of your turn, draw !M! additional card. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Conclusive : !melee:C! NL Deal !D! damage. NL At the start of your turn, draw !M! additional cards. NL Exhaust"
   },
   "Roll": {
     "NAME": "Roll",
@@ -302,8 +302,7 @@
   },
   "WaveLand": {
     "NAME": "Wave Land",
-    "DESCRIPTION": "Gain !B! Block. NL Choose up to !M! card to Retain.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Choose up to !M! cards to Retain."
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak."
   },
   "WeTechThose": {
     "NAME": "We Tech Those",

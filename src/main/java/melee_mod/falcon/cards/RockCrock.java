@@ -31,6 +31,7 @@ public class RockCrock extends ConclusiveCard {
                 CardType.ATTACK, AbstractCardEnum.FALCON_BLUE, CardRarity.RARE, CardTarget.ENEMY, REQUIRED_COMBO_POINTS);
         this.damage = this.baseDamage = BASE_DAMAGE;
         this.magicNumber = this.baseMagicNumber = DRAW_POWER;
+        this.exhaust = true;
     }
 
     @Override
