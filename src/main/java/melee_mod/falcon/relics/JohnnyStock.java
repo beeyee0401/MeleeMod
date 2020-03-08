@@ -17,8 +17,9 @@ import static globals.Constants.Relics.JOHNNY_STOCK;
 
 public class JohnnyStock extends CustomRelic {
     private static final String ID = JOHNNY_STOCK;
-    private static final int STRENGTH_BUFF = 5;
-    private static final int JOHNNY_STOCK_BUFF = 1;
+    private final int STRENGTH_BUFF = 5;
+    private final int JOHNNY_STOCK_BUFF = 1;
+    private boolean alreadyApplied;
 
     public JohnnyStock() {
         super(ID, new Texture(FalconCharacterMod.makeRelicImagePath(ID)), RelicTier.UNCOMMON, LandingSound.MAGICAL);
@@ -35,26 +36,27 @@ public class JohnnyStock extends CustomRelic {
         if (!isAboveTwentyPercentHealth(p.currentHealth)){
             this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, STRENGTH_BUFF)));
             this.addToBot(new ApplyPowerAction(p, p, new JohnnyStockPower(p, JOHNNY_STOCK_BUFF)));
+            alreadyApplied = true;
         }
     }
 
     @Override
     public void onLoseHp(int damageAmount) {
         AbstractPlayer p = AbstractDungeon.player;
-        if (!isAboveTwentyPercentHealth(Math.max(p.currentHealth - damageAmount, 0)) &&
-                !p.hasPower(Constants.Powers.JOHNNY_STOCK)){
+        if (!alreadyApplied && !isAboveTwentyPercentHealth(Math.max(p.currentHealth - damageAmount, 0))){
             this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, STRENGTH_BUFF)));
-            this.addToBot(new ApplyPowerAction(p, p, new JohnnyStockPower(p, JOHNNY_STOCK_BUFF)));
+            this.addToBot(new ApplyPowerAction(p, p, new JohnnyStockPower(p, JOHNNY_STOCK_BUFF), JOHNNY_STOCK_BUFF));
+            alreadyApplied = true;
         }
     }
 
     @Override
     public int onPlayerHeal(int healAmount) {
         AbstractPlayer p = AbstractDungeon.player;
-        if (isAboveTwentyPercentHealth(p.currentHealth + healAmount) &&
-                p.hasPower(Constants.Powers.JOHNNY_STOCK)){
+        if (alreadyApplied && isAboveTwentyPercentHealth(p.currentHealth + healAmount)){
             this.addToBot(new RemoveSpecificPowerAction(p, p, Constants.Powers.JOHNNY_STOCK));
             this.addToBot(new ReducePowerAction(p, p, StrengthPower.POWER_ID, STRENGTH_BUFF));
+            alreadyApplied = false;
         }
         return healAmount;
     }

@@ -25,7 +25,6 @@ public class PercentPower extends AbstractPower {
         this.updateDescription();
         this.img = new Texture(FalconCharacterMod.makePowerImagePath(POWER_ID));
         this.type = PowerType.DEBUFF;
-        checkAmount();
     }
 
     @Override
@@ -43,12 +42,7 @@ public class PercentPower extends AbstractPower {
     }
 
     @Override
-    public void stackPower(int stackAmount) {
-        super.stackPower(stackAmount);
-        checkAmount();
-    }
-
-    private void checkAmount(){
+    public void atEndOfTurn(boolean isPlayer) {
         if (this.amount >= 100 && !this.owner.hasPower(ANGEL_PLATFORM)) {
             this.addToBot(new ApplyPowerAction(this.owner, this.owner, new AngelPlatformPower(this.owner, 1)));
         }
