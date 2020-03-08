@@ -17,7 +17,7 @@ public class TeamBeerMang0 extends CustomRelic {
     private static final String ID = TEAM_BEER_MANG0;
 
     public TeamBeerMang0() {
-        super(ID, new Texture(FalconCharacterMod.makeRelicImagePath(ID)), RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        super(ID, new Texture(FalconCharacterMod.makeRelicImagePath(ID)), RelicTier.STARTER, LandingSound.MAGICAL);
     }
 
     @Override

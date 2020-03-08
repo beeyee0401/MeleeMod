@@ -2,6 +2,7 @@ package melee_mod.falcon.relics;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
@@ -16,12 +17,13 @@ public class AirWobbling extends CustomRelic {
 
     public AirWobbling() {
         super(ID, new Texture(FalconCharacterMod.makeRelicImagePath(ID)),
-                RelicTier.STARTER, LandingSound.MAGICAL);
+                RelicTier.COMMON, LandingSound.MAGICAL);
     }
 
     @Override
     public void atBattleStart() {
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AirWobblingPower(AbstractDungeon.player, COMBO_TO_ADD)));
+        AbstractPlayer p = AbstractDungeon.player;
+        this.addToBot(new ApplyPowerAction(p, p, new AirWobblingPower(p, COMBO_TO_ADD)));
     }
 
     @Override
