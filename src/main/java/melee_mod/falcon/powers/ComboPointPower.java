@@ -102,7 +102,7 @@ public class ComboPointPower extends AbstractPower {
 
     @Override
     public void onRemove() {
-        CardCostHelper.resetCardCost(this.cardsToChange);
+        CardCostHelper.resetAllCardCosts();
         CardCostHelper.initializeBuffCosts(this);
     }
 

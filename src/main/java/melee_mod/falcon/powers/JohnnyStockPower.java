@@ -1,6 +1,7 @@
 package melee_mod.falcon.powers;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -17,9 +18,10 @@ import java.util.ArrayList;
 
 import static globals.Enums.CostAction.REDUCE;
 
-public class JohnnyStockPower extends AbstractPower implements ICostReducingBuff {
+public class JohnnyStockPower extends AbstractPower implements ICostReducingBuff, NonStackablePower {
     private static final String POWER_ID = Constants.Powers.JOHNNY_STOCK;
     private static final String NAME = "Johnny Stock";
+    private ArrayList<AbstractCard> cardsToChange = new ArrayList<>();
 
     public JohnnyStockPower(AbstractCreature owner, int amount) {
         this.name = NAME;
@@ -28,12 +30,12 @@ public class JohnnyStockPower extends AbstractPower implements ICostReducingBuff
         this.amount = amount;
         this.updateDescription();
         this.img = new Texture(FalconCharacterMod.makePowerImagePath(POWER_ID));
-        setCardGroup();
+        this.setCardGroup();
     }
 
     @Override
     public void updateDescription() {
-        this.description = "While you have 20% or less of your max health, ALL attack cards add an additional combo-point to enemies and cost " + this.amount + " less [E].";
+        this.description = "While you have 20% or less of your max health, ALL attack cards add an additional combo-point to enemies and cost " + this.amount + " less [E]";
     }
 
     @Override
@@ -70,21 +72,18 @@ public class JohnnyStockPower extends AbstractPower implements ICostReducingBuff
         }
     }
 
-    private void setCardGroup(){
-        ArrayList<AbstractCard> allCards = new ArrayList<>();
-        allCards.addAll(AbstractDungeon.player.hand.group);
-        allCards.addAll(AbstractDungeon.player.drawPile.group);
-        allCards.addAll(AbstractDungeon.player.discardPile.group);
-        allCards.addAll(AbstractDungeon.player.exhaustPile.group);
-        for (AbstractCard c : allCards) {
-            if (c.type == AbstractCard.CardType.ATTACK) {
-                this.cardsToChange.add(c);
-            }
-        }
+    @Override
+    public boolean shouldAddToCardGroup(AbstractCard c){
+        return c.type == AbstractCard.CardType.ATTACK;
     }
 
     @Override
     public int getReduction(){
         return this.amount;
+    }
+
+    @Override
+    public ArrayList<AbstractCard> getCardsToChange() {
+        return this.cardsToChange;
     }
 }

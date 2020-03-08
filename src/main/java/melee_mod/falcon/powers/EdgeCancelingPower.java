@@ -19,6 +19,7 @@ import static globals.Enums.CostAction.REDUCE;
 public class EdgeCancelingPower extends AbstractPower implements ICostReducingBuff {
     private static final String POWER_ID = EDGE_CANCELING;
     private static final String NAME = "Edge Canceling";
+    private ArrayList<AbstractCard> cardsToChange = new ArrayList<>();
 
     public EdgeCancelingPower(AbstractCreature owner, int amount) {
         this.name = NAME;
@@ -29,7 +30,7 @@ public class EdgeCancelingPower extends AbstractPower implements ICostReducingBu
         this.img = new Texture(FalconCharacterMod.makePowerImagePath(POWER_ID));
         this.isTurnBased = true;
         this.canGoNegative = false;
-        setCardGroup();
+        this.setCardGroup();
     }
 
     @Override
@@ -61,20 +62,18 @@ public class EdgeCancelingPower extends AbstractPower implements ICostReducingBu
         }
     }
 
-    private void setCardGroup(){
-        ArrayList<AbstractCard> allCards = new ArrayList<>();
-        allCards.addAll(AbstractDungeon.player.hand.group);
-        allCards.addAll(AbstractDungeon.player.drawPile.group);
-        allCards.addAll(AbstractDungeon.player.discardPile.group);
-        allCards.addAll(AbstractDungeon.player.exhaustPile.group);
-        for (AbstractCard c : allCards) {
-            if (c.tags.contains(CustomTags.AERIAL)){
-                this.cardsToChange.add(c);
-            }
-        }
+    @Override
+    public boolean shouldAddToCardGroup(AbstractCard c){
+        return c.tags.contains(CustomTags.AERIAL);
     }
 
+    @Override
     public int getReduction(){
         return 1;
+    }
+
+    @Override
+    public ArrayList<AbstractCard> getCardsToChange() {
+        return this.cardsToChange;
     }
 }

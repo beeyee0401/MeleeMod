@@ -40,6 +40,17 @@ public class CardCostHelper {
         c.isCostModifiedForTurn = false;
     }
 
+    public static void resetAllCardCosts(){
+        ArrayList<AbstractCard> allCards = new ArrayList<>();
+        allCards.addAll(AbstractDungeon.player.hand.group);
+        allCards.addAll(AbstractDungeon.player.drawPile.group);
+        allCards.addAll(AbstractDungeon.player.discardPile.group);
+        allCards.addAll(AbstractDungeon.player.exhaustPile.group);
+        for (AbstractCard c : allCards) {
+            resetCardCost(c);
+        }
+    }
+
     public static void initializeBuffCosts(AbstractPower currentPower){
         AbstractPlayer p = AbstractDungeon.player;
         for (AbstractPower power: p.powers) {
@@ -55,8 +66,9 @@ public class CardCostHelper {
         for (AbstractPower power: player.powers) {
             if (power instanceof ICostReducingBuff) {
                 ICostReducingBuff p = (ICostReducingBuff) power;
-                if (!p.cardsToChange.contains(card)){
-                    p.cardsToChange.add(card);
+                ArrayList<AbstractCard> cardsToChange = p.getCardsToChange();
+                if (!cardsToChange.contains(card)){
+                    cardsToChange.add(card);
                 }
                 reductionTotal += p.getReduction();
             }

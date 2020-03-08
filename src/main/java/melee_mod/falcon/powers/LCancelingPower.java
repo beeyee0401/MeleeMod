@@ -4,7 +4,6 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -17,6 +16,7 @@ import static globals.Constants.Powers.L_CANCELING;
 public class LCancelingPower extends AbstractPower {
     private static final String POWER_ID = L_CANCELING;
     private static final String NAME = "Learned to L-Cancel";
+
     public LCancelingPower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
@@ -36,7 +36,7 @@ public class LCancelingPower extends AbstractPower {
         if (card.tags.contains(CustomTags.AERIAL) &&
                 !this.owner.hasPower(L_CANCELED)){
             this.flash();
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new LCanceledPower(this.owner, this.amount)));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, null, new LCanceledPower(this.owner, this.amount)));
         }
     }
 }
