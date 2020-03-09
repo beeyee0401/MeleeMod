@@ -36,21 +36,21 @@
   },
   "FourStock": {
     "NAME": "Four Stock",
-    "FLAVOR": "I suppose this relic is more like a JV 5, but this works.",
+    "FLAVOR": "I suppose this relic is more like a JV5, but this works.",
     "DESCRIPTIONS": [
       "When a battle is finished without taking damage, #yUpgrade a card."
     ]
   },
   "JohnnyStock": {
     "NAME": "Johnny Stock",
-    "FLAVOR": "When he's on his last stock is when he comes alive.",
+    "FLAVOR": "S2J vs Lucky UCI 16 Grand Finals last stock.",
     "DESCRIPTIONS": [
       "While you have 20% or less of your max health, gain 5 #yStrength and ALL Attacks cards add an additional #yCombo-point and cost 1 less [E]"
     ]
   },
   "LosersMang0": {
     "NAME": "Losers Mang0",
-    "FLAVOR": "Still weaker than Mother's Day Mang0",
+    "FLAVOR": "Still weaker than Mother's Day Mang0.",
     "DESCRIPTIONS": [
       "At the start of each combat, gain +4 Strength and +4 Dexterity."
     ]

@@ -24,7 +24,7 @@ public class IKilledMufasa extends CustomCard {
 
     public IKilledMufasa() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION, CardType.POWER,
-                AbstractCardEnum.FALCON_BLUE, CardRarity.UNCOMMON, CardTarget.NONE);
+                AbstractCardEnum.FALCON_BLUE, CardRarity.RARE, CardTarget.NONE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.patches.AbstractCardEnum;
 import melee_mod.falcon.powers.BurnPower;
@@ -45,8 +44,6 @@ public class FalconDive extends CustomCard {
             this.upgradeName();
             this.upgradeBlock(UPGRADE_BLOCK);
             this.upgradeMagicNumber(UPGRADE_BURN);
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            this.initializeDescription();
         }
     }
 
@@ -55,8 +52,5 @@ public class FalconDive extends CustomCard {
         GainBlockAction action = new GainBlockAction(player, this.block);
         AbstractDungeon.actionManager.addToBottom(action);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, player, new BurnPower(monster, this.magicNumber)));
-        if (!this.upgraded){
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new WeakPower(player, 1, false)));
-        }
     }
 }

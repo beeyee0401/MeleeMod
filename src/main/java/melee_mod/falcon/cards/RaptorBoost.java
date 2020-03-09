@@ -11,12 +11,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.cards.keyword_card_helpers.ComboCardHelper;
 import melee_mod.falcon.patches.AbstractCardEnum;
 import melee_mod.falcon.powers.BurnPower;
 import globals.Constants;
+import melee_mod.falcon.powers.PercentPower;
 
 public class RaptorBoost extends CustomCard {
     private static final String ID = Constants.CardNames.RAPTOR_BOOST;
@@ -28,7 +28,7 @@ public class RaptorBoost extends CustomCard {
     private static final int BASE_BURN = 1;
     private static final int UPGRADE_DAMAGE = 2;
     private static final int UPGRADE_BURN = 1;
-    private static final int VULNERABLE = 1;
+    private static final int PERCENT = 15;
 
     public RaptorBoost() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
@@ -57,7 +57,7 @@ public class RaptorBoost extends CustomCard {
         DamageAction action = new DamageAction(monster, info, AbstractGameAction.AttackEffect.FIRE);
         AbstractDungeon.actionManager.addToBottom(action);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, player, new BurnPower(monster, this.magicNumber)));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new VulnerablePower(player, VULNERABLE, false)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new PercentPower(player, PERCENT)));
         ComboCardHelper.addComboPoint(monster);
     }
 }

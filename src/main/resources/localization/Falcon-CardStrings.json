@@ -78,8 +78,7 @@
   },
   "FalconDive": {
     "NAME": "Falcon Dive",
-    "DESCRIPTION": "Gain !B! Block. Apply !M! Burn to the target. NL Gain 1 Weak.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Apply !M! Burn to the target"
+    "DESCRIPTION": "Gain !B! Block. Apply !M! Burn to the target."
   },
   "FalconKick": {
     "NAME": "Falcon Kick",
@@ -201,7 +200,7 @@
   },
   "RaptorBoost": {
     "NAME": "Raptor Boost",
-    "DESCRIPTION": "Combo NL Deal !D! damage. Apply !M! Burn. NL Gain 1 Vulnerable."
+    "DESCRIPTION": "Combo NL Deal !D! damage. Apply !M! Burn. NL Gain 15 Percent."
   },
   "RockCrock": {
     "NAME": "RockCrock",

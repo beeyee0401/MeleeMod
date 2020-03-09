@@ -47,7 +47,13 @@ public class TeamAttackOn extends CustomCard {
     @Override
     public void use(AbstractPlayer player, AbstractMonster monster) {
         ArrayList<AbstractMonster> monsters = AbstractDungeon.getCurrRoom().monsters.monsters;
-        if (monsters.size() > 1) {
+        int alive = 0;
+        for (AbstractMonster m: monsters) {
+            if (!m.isDead && !m.isDying){
+                alive++;
+            }
+        }
+        if (alive > 1) {
             if (this.upgraded) {
                 for (AbstractMonster m : monsters) {
                     friendlyFireAttack(m);
@@ -62,7 +68,7 @@ public class TeamAttackOn extends CustomCard {
         if (attacker.getIntentBaseDmg() > 0) {
             AbstractMonster target = AbstractDungeon.getRandomMonster(attacker);
             int damage = attacker.getIntentDmg();
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(target, new DamageInfo(attacker, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+            this.addToBot(new DamageAction(target, new DamageInfo(attacker, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
     }
 }

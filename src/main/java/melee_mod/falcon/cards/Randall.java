@@ -18,7 +18,7 @@ public class Randall extends CustomCard {
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 2;
-    private static final int BASE_BLOCK = 15;
+    private static final int BASE_BLOCK = 7;
     private static final int ADD_BLOCK = 4;
     private static final int UPGRADE_BLOCK = 2;
 
