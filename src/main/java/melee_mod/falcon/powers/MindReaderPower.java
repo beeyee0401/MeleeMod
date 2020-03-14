@@ -16,8 +16,8 @@ import static globals.Constants.Powers.MIND_READER;
 public class MindReaderPower extends AbstractPower implements OnLoseBlockPower {
     private static final String POWER_ID = MIND_READER;
     private static final String NAME = "Mind Reader";
-    private boolean lostBlockThisTurn = false;
-    private boolean damagedThisTurn = false;
+    private boolean lostExcessBlock = false;
+    private boolean lostBlock = false;
 
     public MindReaderPower(AbstractCreature owner, int amount) {
         this.name = NAME;
@@ -30,29 +30,25 @@ public class MindReaderPower extends AbstractPower implements OnLoseBlockPower {
 
     @Override
     public void updateDescription() {
-        this.description = "When you block all incoming damage, gain " + this.amount + " Dexterity.";
+        this.description = "When you Block ALL incoming damage, gain " + this.amount + " Dexterity.";
     }
 
     @Override
     public void atEndOfRound() {
         AbstractPlayer p = AbstractDungeon.player;
-        if (this.lostBlockThisTurn && !this.damagedThisTurn){
+        if (!this.lostExcessBlock && this.lostBlock){
             this.flash();
             this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, this.amount)));
         }
-        this.lostBlockThisTurn = false;
-        this.damagedThisTurn = false;
-    }
-
-    @Override
-    public int onLoseHp(int damageAmount) {
-        damagedThisTurn = true;
-        return damageAmount;
+        this.lostExcessBlock = false;
+        this.lostBlock = false;
     }
 
     @Override
     public int onLoseBlock(DamageInfo damageInfo, int i) {
-        this.lostBlockThisTurn = true;
+        AbstractPlayer p = AbstractDungeon.player;
+        this.lostExcessBlock = (i > p.currentBlock && damageInfo.owner != p);
+        this.lostBlock = true;
         return i;
     }
 }
