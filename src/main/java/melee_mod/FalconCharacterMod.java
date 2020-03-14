@@ -47,9 +47,9 @@ public class FalconCharacterMod implements CharacterMod {
     // falcon assets
     private static final String FALCON_BUTTON = "charSelect/falcon_select_button.png";
     private static final String FALCON_PORTRAIT = "charSelect/falconPortraitBG.png";
-    public static final String FALCON_SHOULDER_1 = "char/shoulder.png";
-    public static final String FALCON_SHOULDER_2 = "char/shoulder2.png";
-    public static final String FALCON_CORPSE = "char/corpse.png";
+    public static final String FALCON_SHOULDER_1 = "char/falcon_shoulder.png";
+    public static final String FALCON_SHOULDER_2 = "char/falcon_shoulder2.png";
+    public static final String FALCON_CORPSE = "char/falcon_corpse.png";
 
     public FalconCharacterMod() {
         logger.info("creating the color " + AbstractCardEnum.FALCON_BLUE.toString());
