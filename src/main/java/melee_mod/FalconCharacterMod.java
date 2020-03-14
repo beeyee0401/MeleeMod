@@ -96,7 +96,7 @@ public class FalconCharacterMod implements CharacterMod {
         List<CustomCard> cards = new ArrayList<CustomCard>();
 
         // total 75 cards (21 common, 16 rare, 3 starter, 35 uncommon)
-        // my rarity dist (21 common, 18 rare, 2 starter, 28 uncommon)
+        // my rarity dist (21 common, 15 rare, 2 starter, 31 uncommon)
         // 28 attacks (23 atm)
 
         // AERIALS

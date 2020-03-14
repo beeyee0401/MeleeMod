@@ -25,7 +25,7 @@ public class HomieStock extends CustomCard {
 
     public HomieStock() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
-                CardType.SKILL, AbstractCardEnum.FALCON_BLUE, CardRarity.UNCOMMON, CardTarget.SELF);
+                CardType.SKILL, AbstractCardEnum.FALCON_BLUE, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
     }
 

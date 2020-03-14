@@ -23,7 +23,7 @@ public class BabActivated extends CustomCard {
 
     public BabActivated() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
-                CardType.POWER, AbstractCardEnum.FALCON_BLUE, CardRarity.RARE, CardTarget.SELF);
+                CardType.POWER, AbstractCardEnum.FALCON_BLUE, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = BASE_CROWDPLEASER;
     }
 

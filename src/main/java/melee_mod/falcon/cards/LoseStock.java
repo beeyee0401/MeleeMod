@@ -22,7 +22,7 @@ public class LoseStock extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    private static final int COST = 2;
+    private static final int COST = 3;
     private static final int BASE_ENERGY_GAIN = 1;
     private static final int UPGRADE_ENERGY_GAIN = 1;
 
@@ -34,7 +34,7 @@ public class LoseStock extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        DamageInfo info = new DamageInfo(p, 6, DamageInfo.DamageType.HP_LOSS);
+        DamageInfo info = new DamageInfo(p, 11, DamageInfo.DamageType.HP_LOSS);
         AbstractDungeon.actionManager.addToBottom(new DamageAction(p, info));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, 1)));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedPower(p, this.magicNumber)));

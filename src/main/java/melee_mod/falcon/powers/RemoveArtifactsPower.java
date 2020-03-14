@@ -21,12 +21,11 @@ public class RemoveArtifactsPower extends AbstractPower {
         this.amount = amount;
         this.updateDescription();
         this.img = new Texture(FalconCharacterMod.makePowerImagePath(POWER_ID));
-        this.type = PowerType.DEBUFF;
     }
 
     @Override
     public void updateDescription() {
-        this.description = "Lose " + this.amount + " Artifact(s) at the end of the turn";
+        this.description = "Lose " + this.amount + " Artifact(s) at the end of the turn. Cannot be negated by Artifact.";
     }
 
     public void atEndOfRound() {

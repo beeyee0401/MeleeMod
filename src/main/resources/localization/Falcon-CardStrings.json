@@ -143,8 +143,8 @@
   },
   "LoseStock": {
     "NAME": "Lose Stock",
-    "DESCRIPTION": "Lose 6 health. Gain 1 Intangibility. NL Gain [E] next turn. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Lose 6 health. Gain 1 Intangibility. NL Gain [E] [E] next turn. NL Exhaust"
+    "DESCRIPTION": "Lose 11 health. Gain 1 Intangibility. NL Gain [E] next turn. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Lose 11 health. Gain 1 Intangibility. NL Gain [E] [E] next turn. NL Exhaust"
   },
   "Mang0Falco": {
     "NAME": "Mang0 Falco",
