@@ -29,7 +29,7 @@ public class Roll extends CustomCard {
     public Roll() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.FALCON_BLUE,
-                CardRarity.UNCOMMON, CardTarget.SELF);
+                CardRarity.RARE, CardTarget.SELF);
         this.baseBlock = BASE_BLOCK;
         this.magicNumber = this.baseMagicNumber = DEBUFFS_AVOIDED;
     }

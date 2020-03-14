@@ -30,7 +30,7 @@
   },
   "CommandGrab": {
     "NAME": "Command Grab",
-    "DESCRIPTION": "Apply !M! Burn. If the target has Block, apply 3 additional Burn."
+    "DESCRIPTION": "Apply !M! Burn. If the target has Block, apply 2 additional Burn."
   },
   "CommentatorsCurse": {
     "NAME": "Commentator's Curse",
@@ -180,7 +180,7 @@
   },
   "Pause": {
     "NAME": "Pause",
-    "DESCRIPTION": "Apply !M! Weaken to ALL enemies"
+    "DESCRIPTION": "Apply !M! Weak to ALL enemies"
   },
   "PhantomHit": {
     "NAME": "Phantom Hit",
@@ -213,8 +213,7 @@
   },
   "SDRemix": {
     "NAME": "SD Remix",
-    "DESCRIPTION": "After a card is played this turn, upgrade it for the rest of combat. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "After a card is played this turn, upgrade it for the rest of combat."
+    "DESCRIPTION": "After a card is played this turn, upgrade it for the rest of combat. NL Exhaust"
   },
   "Shine": {
     "NAME": "Shine",
@@ -259,8 +258,8 @@
   },
   "TeamAttackOn": {
     "NAME": "Team Attack On",
-    "DESCRIPTION": "If the target has attacking intent, it attacks another random enemy.",
-    "UPGRADE_DESCRIPTION": "ALL enemies with attack intent attack another random enemy."
+    "DESCRIPTION": "If the target has attacking intent, it attacks another random enemy and applies Percent equal to the damage done.",
+    "UPGRADE_DESCRIPTION": "ALL enemies with attack intent attack another random enemy and apply Percent equal to the damage done."
   },
   "UCF": {
     "NAME": "UCF",
@@ -269,7 +268,8 @@
   },
   "UnclePunch": {
     "NAME": "Uncle Punch",
-    "DESCRIPTION": "Upgrade a random Attack, Skill, and Power in your draw pile or hand for the rest of combat. NL Exhaust"
+    "DESCRIPTION": "Upgrade a random Attack, Skill, and Power in your draw pile or hand for the rest of combat. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Upgrade a random Attack, Skill, and Power in your draw pile or hand for the rest of combat."
   },
   "UpAir": {
     "NAME": "Up Air",

@@ -25,7 +25,7 @@ public class Moonwalking extends CustomCard {
 
     public Moonwalking() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION, CardType.POWER,
-                AbstractCardEnum.FALCON_BLUE, CardRarity.RARE, CardTarget.NONE);
+                AbstractCardEnum.FALCON_BLUE, CardRarity.UNCOMMON, CardTarget.NONE);
         this.baseMagicNumber = this.magicNumber = BASE_PERCENT;
     }
 

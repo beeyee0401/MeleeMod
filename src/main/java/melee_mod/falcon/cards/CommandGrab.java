@@ -18,7 +18,7 @@ public class CommandGrab extends CustomCard {
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int BASE_BURN = 3;
+    private static final int BASE_BURN = 2;
     private static final int UPGRADE_BURN = 2;
 
     public CommandGrab() {
@@ -45,7 +45,7 @@ public class CommandGrab extends CustomCard {
     public void use(AbstractPlayer player, AbstractMonster monster) {
         int burn = this.magicNumber;
         if (monster.currentBlock > 0){
-            burn += 3;
+            burn += 2;
         }
         this.addToBot(new ApplyPowerAction(monster, player, new BurnPower(monster, burn)));
     }

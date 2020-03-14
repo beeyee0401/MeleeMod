@@ -30,7 +30,7 @@ public class DropZone extends ConclusiveCard {
 
     public DropZone() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
-                CardType.ATTACK, AbstractCardEnum.FALCON_BLUE, CardRarity.RARE, CardTarget.ENEMY, REQUIRED_COMBO_POINTS);
+                CardType.ATTACK, AbstractCardEnum.FALCON_BLUE, CardRarity.UNCOMMON, CardTarget.ENEMY, REQUIRED_COMBO_POINTS);
         this.damage = this.baseDamage = BASE_DAMAGE;
         this.magicNumber = this.baseMagicNumber = CROWD_PLEASER;
         this.exhaust = true;

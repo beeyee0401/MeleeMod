@@ -18,12 +18,13 @@ public class SDRemix extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    private static final int COST = 0;
+    private static final int COST = 1;
+    private static final int UPGRADE_COST = 0;
 
     public SDRemix() {
         super(ID, NAME, FalconCharacterMod.makeCardImagePath(ID), COST, DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.FALCON_BLUE,
-                CardRarity.RARE, CardTarget.SELF);
+                CardRarity.RARE, CardTarget.NONE);
         this.exhaust = true;
     }
 
@@ -36,9 +37,7 @@ public class SDRemix extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.exhaust = false;
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            this.initializeDescription();
+            this.upgradeBaseCost(UPGRADE_COST);
         }
     }
 

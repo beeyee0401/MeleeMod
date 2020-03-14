@@ -2,6 +2,7 @@ package melee_mod.falcon.cards;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import melee_mod.FalconCharacterMod;
 import melee_mod.falcon.patches.AbstractCardEnum;
 import globals.Constants;
+import melee_mod.falcon.powers.PercentPower;
 
 import java.util.ArrayList;
 
@@ -69,6 +71,7 @@ public class TeamAttackOn extends CustomCard {
             AbstractMonster target = AbstractDungeon.getRandomMonster(attacker);
             int damage = attacker.getIntentDmg();
             this.addToBot(new DamageAction(target, new DamageInfo(attacker, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+            this.addToBot(new ApplyPowerAction(target, attacker, new PercentPower(target, damage)));
         }
     }
 }

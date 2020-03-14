@@ -3,6 +3,7 @@ package melee_mod.falcon.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.relics.OnApplyPowerRelic;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -26,7 +27,8 @@ public class Marthritis extends CustomRelic implements OnApplyPowerRelic {
 
     @Override
     public int onApplyPowerStacks(AbstractPower power, AbstractCreature target, AbstractCreature source, int stackAmount) {
-        if (target != AbstractDungeon.player && power.ID.equals(Constants.Powers.PERCENT)){
+        AbstractPlayer p = AbstractDungeon.player;
+        if (target != p && source == p && power.ID.equals(Constants.Powers.PERCENT)){
             this.flash();
             power.amount*=2;
             stackAmount*=2;
