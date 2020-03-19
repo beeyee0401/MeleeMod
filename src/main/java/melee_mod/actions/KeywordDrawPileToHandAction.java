@@ -41,7 +41,7 @@ public class KeywordDrawPileToHandAction extends AbstractGameAction {
     public void update() {
         if (this.duration == this.startDuration) {
             if (!this.player.drawPile.isEmpty() && this.numberOfCards > 0) {
-                ArrayList<AbstractCard> cardsThatMeetCriteria = new ArrayList();
+                ArrayList<AbstractCard> cardsThatMeetCriteria = new ArrayList<>();
                 AbstractCard card;
                 Iterator var6;
                 for (AbstractCard c: this.player.drawPile.group) {
@@ -51,7 +51,7 @@ public class KeywordDrawPileToHandAction extends AbstractGameAction {
                     }
                 }
                 if (cardsThatMeetCriteria.size() <= this.numberOfCards && !this.optional) {
-                    ArrayList<AbstractCard> cardsToMove = new ArrayList();
+                    ArrayList<AbstractCard> cardsToMove = new ArrayList<>();
                     var6 = cardsThatMeetCriteria.iterator();
 
                     while(var6.hasNext()) {
@@ -102,10 +102,8 @@ public class KeywordDrawPileToHandAction extends AbstractGameAction {
             }
         } else {
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-                Iterator var1 = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
 
-                while(var1.hasNext()) {
-                    AbstractCard c = (AbstractCard)var1.next();
+                for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
                     if (this.player.hand.size() == 10) {
                         this.player.drawPile.moveToDiscardPile(c);
                         this.player.createHandIsFullDialog();
