@@ -1,313 +1,313 @@
 {
-  "AirDodge": {
+  "meleeMod_AirDodge": {
     "NAME": "Air Dodge",
     "DESCRIPTION": "The next time you would take damage this turn does no damage. NL Gain !M! Percent."
   },
-  "AmsahTech": {
+  "meleeMod_AmsahTech": {
     "NAME": "Amsah Tech",
     "DESCRIPTION": "Gain [E] NL Draw 2 cards. NL Exhaust",
     "UPGRADE_DESCRIPTION": "Gain [E] [E] NL Draw 2 cards. NL Exhaust"
   },
-  "BabActivated": {
+  "meleeMod_BabActivated": {
     "NAME": "Bab Activated",
     "DESCRIPTION": "When a Finisher is used on a target with Combo-points, gain !M! Strength."
   },
-  "BackAir": {
+  "meleeMod_BackAir": {
     "NAME": "Back Air",
     "DESCRIPTION": "Aerial NL Finisher NL Deal !D! damage."
   },
-  "BMoveSpecialist": {
+  "meleeMod_BMoveSpecialist": {
     "NAME": "B Move Specialist",
     "DESCRIPTION": "For the rest of combat, Burn triggers again at the end of the turn."
   },
-  "BlueFalcon": {
+  "meleeMod_BlueFalcon": {
     "NAME": "Blue Falcon",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! Percent to ALL enemies. NL Exhaust"
   },
-  "Cautious": {
+  "meleeMod_Cautious": {
     "NAME": "Cautious",
     "DESCRIPTION": "Whenever you apply a combo-point, gain !M! Block."
   },
-  "CommandGrab": {
+  "meleeMod_CommandGrab": {
     "NAME": "Command Grab",
     "DESCRIPTION": "Apply !M! Burn. If the target has Block, apply 2 additional Burn."
   },
-  "CommentatorsCurse": {
+  "meleeMod_CommentatorsCurse": {
     "NAME": "Commentator's Curse",
     "DESCRIPTION": "Retain NL Randomize the intent of the target. Does not work on enemies with set patterns."
   },
-  "CrouchCancel": {
+  "meleeMod_CrouchCancel": {
     "NAME": "Crouch Cancel",
     "DESCRIPTION": "When attacked, apply !M! Percent back to the attacker."
   },
-  "DashDance": {
+  "meleeMod_DashDance": {
     "NAME": "Dash Dance",
     "DESCRIPTION": "Gain !B! Block. NL Draw !M! cards."
   },
-  "DIMixUp": {
+  "meleeMod_DIMixUp": {
     "NAME": "DI Mix Up",
     "DESCRIPTION": "Your next Combo card does the damage of a Finisher, removes Combo-points, and applies Percent. NL Apply !M! Vulnerable to ALL enemies."
   },
-  "DownAir": {
+  "meleeMod_DownAir": {
     "NAME": "Down Air",
     "DESCRIPTION": "Aerial NL Combo NL Deal !D! damage. Add additional combo-point. NL Exhaust",
     "UPGRADE_DESCRIPTION": "Aerial NL Combo NL Deal !D! damage. Add additional combo-point."
   },
-  "DownSmash": {
+  "meleeMod_DownSmash": {
     "NAME": "Down Smash",
     "DESCRIPTION": "Deal !D! damage !M! times. NL Apply !M! Weak."
   },
-  "DownTilt": {
+  "meleeMod_DownTilt": {
     "NAME": "Down Tilt",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Percent to the target.",
     "UPGRADE_DESCRIPTION": "Combo NL Deal !D! damage. NL Apply !M! Percent to the target."
   },
-  "DropZone": {
+  "meleeMod_DropZone": {
     "NAME": "Drop Zone",
     "DESCRIPTION": "Conclusive: !melee:C! NL Deal !D! damage. NL Gain !M! Crowd Pleaser. NL Exhaust"
   },
-  "EdgeCancel": {
+  "meleeMod_EdgeCancel": {
     "NAME": "Edge Cancel",
     "DESCRIPTION": "Your Aerials cost 1 less [E] this turn. NL Draw a card. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Your Aerials cost !M! less [E] this turn. NL Draw a card. NL Gain [E]. NL Exhaust"
   },
-  "EdgeGuard": {
+  "meleeMod_EdgeGuard": {
     "NAME": "Edge Guard",
     "DESCRIPTION": "Kill a non-Elite/non-Boss enemy if it has 50% or less health. NL Exhaust",
     "UPGRADE_DESCRIPTION": "Kill a non-Elite enemy if it has 50% or less health or an Elite with 35% or less health. NL Exhaust"
   },
-  "FalconDive": {
+  "meleeMod_FalconDive": {
     "NAME": "Falcon Dive",
     "DESCRIPTION": "Gain !B! Block. Apply !M! Burn to the target."
   },
-  "FalconKick": {
+  "meleeMod_FalconKick": {
     "NAME": "Falcon Kick",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. Apply !M! Burn to the target."
   },
-  "FalconPunch": {
+  "meleeMod_FalconPunch": {
     "NAME": "Falcon Punch",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Burn to the target. NL Exhaust."
   },
-  "FireFlower": {
+  "meleeMod_FireFlower": {
     "NAME": "Fire Flower",
     "DESCRIPTION": "Apply !M! Burn to ALL enemies."
   },
-  "Fishing": {
+  "meleeMod_Fishing": {
     "NAME": "Fishing",
     "DESCRIPTION": "At the end of your turn, Retain up to !M! Finisher card."
   },
-  "ForwardSmash": {
+  "meleeMod_ForwardSmash": {
     "NAME": "Forward Smash",
     "DESCRIPTION": "Finisher NL Deal !D! damage. NL Apply !M! Burn to the target."
   },
-  "ForwardTilt": {
+  "meleeMod_ForwardTilt": {
     "NAME": "Forward Tilt",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Percent to the target."
   },
-  "Gentleman": {
+  "meleeMod_Gentleman": {
     "NAME": "Gentleman",
     "DESCRIPTION": "Deal !D! damage 2 times, then deal !melee:D+2! damage."
   },
-  "GetUpAttack": {
+  "meleeMod_GetUpAttack": {
     "NAME": "Get Up Attack",
     "DESCRIPTION": "Deal !D! damage !M! times. NL Gain !D! Percent."
   },
-  "Grab": {
+  "meleeMod_Grab": {
     "NAME": "Grab",
     "DESCRIPTION": "Combo",
     "UPGRADE_DESCRIPTION": "Combo NL Choose a Finisher card from your draw pile and place it into your hand."
   },
-  "HaxDash": {
+  "meleeMod_HaxDash": {
     "NAME": "Hax Dash",
     "DESCRIPTION": "Gain 3 Dexterity that expires at the end of the turn. NL Draw 1 card."
   },
-  "HomieStock": {
+  "meleeMod_HomieStock": {
     "NAME": "Homie Stock",
     "DESCRIPTION": "Gain 150 Percent. NL Exhaust"
   },
-  "IKilledMufasa": {
+  "meleeMod_IKilledMufasa": {
     "NAME": "I Killed Mufasa",
     "DESCRIPTION": "For each enemy, add a card to your hand that applies 99 Vulnerable to the target."
   },
-  "Jab": {
+  "meleeMod_Jab": {
     "NAME": "Jab",
     "DESCRIPTION": "Deal !D! damage."
   },
-  "Knee": {
+  "meleeMod_Knee": {
     "NAME": "Knee",
     "DESCRIPTION": "Aerial NL Deal !D! damage. NL If the target has 0 combo-points: Combo NL Otherwise: Finisher NL Exhaust"
   },
-  "L_Cancel": {
+  "meleeMod_L_Cancel": {
     "NAME": "L-Cancel",
     "DESCRIPTION": "Whenever you use an Aerial, reduce the cost of your next card by 1 [E] if it's a non-Aerial"
   },
-  "LoseStock": {
+  "meleeMod_LoseStock": {
     "NAME": "Lose Stock",
     "DESCRIPTION": "Lose 11 health. Gain 1 Intangibility. NL Gain [E] next turn. NL Exhaust",
     "UPGRADE_DESCRIPTION": "Lose 11 health. Gain 1 Intangibility. NL Gain [E] [E] next turn. NL Exhaust"
   },
-  "Mang0Falco": {
+  "meleeMod_Mang0Falco": {
     "NAME": "Mang0 Falco",
     "DESCRIPTION": "Retain NL Gain !M! Strength that expires at the end of the turn. NL Exhaust"
   },
-  "Mang0Fox": {
+  "meleeMod_Mang0Fox": {
     "NAME": "Mang0 Fox",
     "DESCRIPTION": "Retain NL Gain !M! Dexterity that expires at the end of the turn. NL Exhaust"
   },
-  "MindReader": {
+  "meleeMod_MindReader": {
     "NAME": "Mind Reader",
     "DESCRIPTION": "When you Block ALL incoming damage, gain !M! Dexterity."
   },
-  "Moonwalking": {
+  "meleeMod_Moonwalking": {
     "NAME": "Moonwalking",
     "DESCRIPTION": "At the start of your turn, gain [E] and !M! Percent."
   },
-  "NeutralAir": {
+  "meleeMod_NeutralAir": {
     "NAME": "Neutral Air",
     "DESCRIPTION": "Aerial NL Combo NL Deal !D! damage !M! times"
   },
-  "NippleSpike": {
+  "meleeMod_NippleSpike": {
     "NAME": "Nipple Spike",
     "DESCRIPTION": "Aerial NL Finisher NL Deal !D! damage"
   },
-  "NoDI": {
+  "meleeMod_NoDI": {
     "NAME": "No DI",
     "DESCRIPTION": "Apply !M! Vulnerable to the target"
   },
-  "NoDITemp": {
+  "meleeMod_NoDITemp": {
     "NAME": "2007 DI",
     "DESCRIPTION": "Apply !M! Vulnerable to the target NL Exhaust"
   },
-  "Pause": {
+  "meleeMod_Pause": {
     "NAME": "Pause",
     "DESCRIPTION": "Apply !M! Weak to ALL enemies"
   },
-  "PhantomHit": {
+  "meleeMod_PhantomHit": {
     "NAME": "Phantom Hit",
     "DESCRIPTION": "Gain !M! Intangibility. NL ALL enemies gain 1 Intangibility. NL Exhaust"
   },
-  "PowerShield": {
+  "meleeMod_PowerShield": {
     "NAME": "Power Shield",
     "DESCRIPTION": "Whenever you gain Block, deal !M! damage to ALL enemies."
   },
-  "Randall": {
+  "meleeMod_Randall": {
     "NAME": "Randall",
     "DESCRIPTION": "Gain !B! Block. NL Permanently increase this card's Block by !M! . NL Exhaust"
   },
-  "RapidJabs": {
+  "meleeMod_RapidJabs": {
     "NAME": "Rapid Jabs",
     "DESCRIPTION": "Deal !D! damage (X x !M!) times"
   },
-  "RaptorBoost": {
+  "meleeMod_RaptorBoost": {
     "NAME": "Raptor Boost",
     "DESCRIPTION": "Combo NL Deal !D! damage. Apply !M! Burn. NL Gain 15 Percent."
   },
-  "RockCrock": {
+  "meleeMod_RockCrock": {
     "NAME": "RockCrock",
     "DESCRIPTION": "Conclusive: !melee:C! NL Deal !D! damage. NL At the start of your turn, draw !M! additional card. NL Exhaust",
     "UPGRADE_DESCRIPTION": "Conclusive: !melee:C! NL Deal !D! damage. NL At the start of your turn, draw !M! additional cards. NL Exhaust"
   },
-  "Roll": {
+  "meleeMod_Roll": {
     "NAME": "Roll",
     "DESCRIPTION": "Gain !B! Block. Gain !M! Artifact that expires at the end of the turn."
   },
-  "SDRemix": {
+  "meleeMod_SDRemix": {
     "NAME": "SD Remix",
     "DESCRIPTION": "After a card is played this turn, upgrade it for the rest of combat. NL Exhaust"
   },
-  "Shine": {
+  "meleeMod_Shine": {
     "NAME": "Shine",
     "DESCRIPTION": "Combo NL Deal !D! damage."
   },
-  "Shield": {
+  "meleeMod_Shield": {
     "NAME": "Shield",
     "DESCRIPTION": "Gain !B! Block."
   },
-  "ShieldDrop": {
+  "meleeMod_ShieldDrop": {
     "NAME": "Shield Drop",
     "DESCRIPTION": "Gain !B! Block. Gain !M! Dexterity that expires at the end of this turn."
   },
-  "ShieldPoke": {
+  "meleeMod_ShieldPoke": {
     "NAME": "Shield Poke",
     "DESCRIPTION": "Deal !D! damage that goes through Block. NL Apply !M! Vulnerable."
   },
-  "SoftKnee": {
+  "meleeMod_SoftKnee": {
     "NAME": "Soft Knee",
     "DESCRIPTION": "Aerial NL Combo NL Deal !D! damage."
   },
-  "SomebodyClipThat": {
+  "meleeMod_SomebodyClipThat": {
     "NAME": "Somebody Clip That",
     "DESCRIPTION": "Replay the cards played for this turn. All Attacks target one random monster. NL Exhaust NL Ethereal",
     "UPGRADE_DESCRIPTION": "Replay the cards played for this turn. All Attacks target one random monster. NL Exhaust"
   },
-  "SuperMushroom": {
+  "meleeMod_SuperMushroom": {
     "NAME": "Super Mushroom",
     "DESCRIPTION": "Gain !M! Strength that expires at the end of the turn. NL Gain -1 Dexterity that expires at the end of the turn."
   },
-  "SuperSpicyCurry": {
+  "meleeMod_SuperSpicyCurry": {
     "NAME": "Super Spicy Curry",
     "DESCRIPTION": "Apply !M! Burn and add Strength and Dexterity in additional Burn."
   },
-  "SweetSpot": {
+  "meleeMod_SweetSpot": {
     "NAME": "Sweet Spot",
     "DESCRIPTION": "Gain !B! Block. Draw !M! cards."
   },
-  "Taunt": {
+  "meleeMod_Taunt": {
     "NAME": "Taunt",
     "DESCRIPTION": "Gain !M! Vulnerable. NL Gain 4 Strength. NL ALL enemies lose 1 Strength."
   },
-  "TeamAttackOn": {
+  "meleeMod_TeamAttackOn": {
     "NAME": "Team Attack On",
     "DESCRIPTION": "If the target has attacking intent, it attacks another random enemy and applies Percent equal to the damage done.",
     "UPGRADE_DESCRIPTION": "ALL enemies with attack intent attack another random enemy and apply Percent equal to the damage done."
   },
-  "UCF": {
+  "meleeMod_UCF": {
     "NAME": "UCF",
     "DESCRIPTION": "At the start of each turn, add a Shield Drop with Ethereal to your hand.",
     "UPGRADE_DESCRIPTION": "At the start of each turn, add a Shield Drop with Ethereal to your hand. NL When an enemy dies, add a Phantom Hit to your Draw Pile"
   },
-  "UnclePunch": {
+  "meleeMod_UnclePunch": {
     "NAME": "Uncle Punch",
     "DESCRIPTION": "Upgrade a random Attack, Skill, and Power in your draw pile or hand for the rest of combat. NL Exhaust",
     "UPGRADE_DESCRIPTION": "Upgrade a random Attack, Skill, and Power in your draw pile or hand for the rest of combat."
   },
-  "UpAir": {
+  "meleeMod_UpAir": {
     "NAME": "Up Air",
     "DESCRIPTION": "Aerial NL Combo NL Deal !D! damage.",
     "UPGRADE_DESCRIPTION": "Aerial NL Combo NL Deal !D! damage. NL Apply 10 Percent."
   },
-  "UpSmash": {
+  "meleeMod_UpSmash": {
     "NAME": "Up Smash",
     "DESCRIPTION": "Combo NL Deal !D! damage twice.",
     "UPGRADE_DESCRIPTION": "Combo NL Add an additional combo-point. NL Deal !D! damage twice."
   },
-  "UpTilt": {
+  "meleeMod_UpTilt": {
     "NAME": "Up Tilt",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Percent to the target."
   },
-  "VCancel": {
+  "meleeMod_VCancel": {
     "NAME": "V Cancel",
     "DESCRIPTION": "Draw !M! card. Draw an extra card if you draw a Skill.",
     "UPGRADE_DESCRIPTION": "Draw !M! card. Draw an extra card if you draw a Skill or Attack."
   },
-  "WallJump": {
+  "meleeMod_WallJump": {
     "NAME": "Wall Jump",
     "DESCRIPTION": "Gain !B! Block. NL Gain [E] next turn."
   },
-  "WaveDash": {
+  "meleeMod_WaveDash": {
     "NAME": "Wave Dash",
     "DESCRIPTION": "Gain !B! Block. NL Exhaust a card from your hand.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Exhaust up to !M! cards from your hand."
   },
-  "WaveLand": {
+  "meleeMod_WaveLand": {
     "NAME": "Wave Land",
     "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak."
   },
-  "WeTechThose": {
+  "meleeMod_WeTechThose": {
     "NAME": "We Tech Those",
     "DESCRIPTION": "If you take 5 or more damage, gain Dexterity equal to 20% of the damage that expires at the end of the next turn."
   },
-  "Wildfire": {
+  "meleeMod_Wildfire": {
     "NAME": "Wildfire",
     "DESCRIPTION": "Reduce the target's Burn by !M! and apply the result to ALL enemies. NL Exhaust"
   }
