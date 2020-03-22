@@ -1,103 +1,103 @@
 {
-  "AirWobbling": {
+  "meleeMod_AirWobbling": {
     "NAME": "Air Wobbling",
     "FLAVOR": "Falcon wobbles you into a Rest.",
     "DESCRIPTIONS": [
       "Your #yAerial cards that add #yCombo-Points add one additional #yCombo-Point."
     ]
   },
-  "AutoLCanceling": {
+  "meleeMod_AutoLCanceling": {
     "NAME": "Auto L Canceling",
     "FLAVOR": "Everyone misses them, sometimes it's nice to turn it on.",
     "DESCRIPTIONS": [
       "After using an #yAerial, reduce the cost of your next card by 1 [E] if it's a non-Aerial."
     ]
   },
-  "B0XX": {
+  "meleeMod_B0XX": {
     "NAME": "B0XX",
     "FLAVOR": "L+R+A+Start, Choose Fox.",
     "DESCRIPTIONS": [
       "On pickup, remove all #yJabs. Receive 5 #yShines."
     ]
   },
-  "BMoveUser": {
+  "meleeMod_BMoveUser": {
     "NAME": "B Move User",
     "FLAVOR": "Raptor Boost is lame in Neutral.",
     "DESCRIPTIONS": [
       "Whenever you apply #yBurn, apply an additional 1 #yBurn. #yBurn does one additional damage per stack."
     ]
   },
-  "EvidenceZip": {
+  "meleeMod_EvidenceZip": {
     "NAME": "Evidence.zip",
     "FLAVOR": "GARGANTUAN Leff",
     "DESCRIPTIONS": [
       "Enemies in regular combat rooms have 20% less HP."
     ]
   },
-  "FourStock": {
+  "meleeMod_FourStock": {
     "NAME": "Four Stock",
     "FLAVOR": "I suppose this relic is more like a JV5, but this works.",
     "DESCRIPTIONS": [
       "When a battle is finished without taking damage, #yUpgrade a card."
     ]
   },
-  "JohnnyStock": {
+  "meleeMod_JohnnyStock": {
     "NAME": "Johnny Stock",
     "FLAVOR": "S2J vs Lucky UCI 16 Grand Finals last stock.",
     "DESCRIPTIONS": [
       "While you have 20% or less of your max health, gain 5 #yStrength and ALL Attacks cards add an additional #yCombo-point and cost 1 less [E]"
     ]
   },
-  "LosersMang0": {
+  "meleeMod_LosersMang0": {
     "NAME": "Losers Mang0",
     "FLAVOR": "Still weaker than Mother's Day Mang0.",
     "DESCRIPTIONS": [
       "At the start of each combat, gain +4 Strength and +4 Dexterity."
     ]
   },
-  "Marthritis": {
+  "meleeMod_Marthritis": {
     "NAME": "Marthritis",
     "FLAVOR": "Side-B -> Up-Tilt",
     "DESCRIPTIONS": [
       "Double the #yPercent you apply to enemies."
     ]
   },
-  "NoKnee": {
+  "meleeMod_NoKnee": {
     "NAME": "No Knee",
     "FLAVOR": "Subscribe to twitch.tv/n0ne.",
     "DESCRIPTIONS": [
       "When a #yFinisher is used on a target that has #yCombo-points, gain 2 Strength."
     ]
   },
-  "NonNeutralStart": {
+  "meleeMod_NonNeutralStart": {
     "NAME": "Non-neutral Start",
     "FLAVOR": "No port combination is perfect for all legal stages, just mod it in or agree to it.",
     "DESCRIPTIONS": [
       "At the start of each combat, apply 15 Percent to ALL enemies."
     ]
   },
-  "PeoplesChamp": {
+  "meleeMod_PeoplesChamp": {
     "NAME": "People's Champ",
     "FLAVOR": "I lost to Scarth in bracket at The Big House 6, my shame is immeasurable.",
     "DESCRIPTIONS": [
       "Every 6 turns, add a Commentator Curse that can change the intent of the target to your hand."
     ]
   },
-  "PowerClipper": {
+  "meleeMod_PowerClipper": {
     "NAME": "Power Clipper",
     "FLAVOR": "Basically Marcurial for Zain.",
     "DESCRIPTIONS": [
       "Every 10 turns, replay the cards you played this turn."
     ]
   },
-  "TeamBeerMang0": {
+  "meleeMod_TeamBeerMang0": {
     "NAME": "Team Beer Mang0",
     "FLAVOR": "This is what got him suspended on Twitch in 2019.",
     "DESCRIPTIONS": [
       "At the start of each combat, add a Mang0 Fox and Falco to your hand. If you die and resurrect, this effect changes."
     ]
   },
-  "YearsOfResearch": {
+  "meleeMod_YearsOfResearch": {
     "NAME": "Years of Research",
     "FLAVOR": "Some of the most hilarious drama Melee has ever seen.",
     "DESCRIPTIONS": [
