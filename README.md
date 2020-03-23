@@ -3,12 +3,7 @@ A Slay the Spire mod to add Super Smash Bros. Melee mechanics as cards and chara
 
 Many references to top players and memes. Be sure to check out flavor text for the Relics!
 
-## Progress
-Over 60 cards (that can be retrieved from combat finish) are implemented
-
-11 relics are implemented
-
-Much to be done still in terms of assets.
+**At this time, this mod is only supported for the Steam version.**
 
 ## Test Run Vods
 https://www.twitch.tv/collections/mB3sYAdL-RXLvA
