@@ -159,7 +159,7 @@ public class CaptainFalcon extends CustomPlayer {
 
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo("Captain Falcon", "Show him your moves.",
-                85, 85, 0, 99, 5,
+                70, 70, 0, 99, 5,
                 this, getStartingRelics(), getStartingDeck(), false);
     }
 

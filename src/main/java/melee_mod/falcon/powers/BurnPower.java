@@ -4,8 +4,8 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -17,7 +17,7 @@ import globals.Constants;
 public class BurnPower extends AbstractPower implements HealthBarRenderPower {
     private static final String POWER_ID = Constants.Powers.BURN;
     private static final String NAME = "Burn";
-    private static final String DESCRIPTION = "Take damage equal to two times the Burn stacks at the end of the turn. Reduce Burn by 1 each turn.";
+    private static final String DESCRIPTION = "Take damage equal to two times the Burn stacks at the end of the turn. Increase Burn by 1 each turn.";
     private final int multiplier;
 
     public BurnPower(AbstractCreature owner, int amount) {
@@ -55,7 +55,7 @@ public class BurnPower extends AbstractPower implements HealthBarRenderPower {
                 this.addToBot(new DamageAction(this.owner, info, AbstractGameAction.AttackEffect.FIRE));
             }
         }
-        this.addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
+        this.addToBot(new ApplyPowerAction(this.owner, this.owner, new BurnPower(this.owner, 1)));
     }
 
     @Override
