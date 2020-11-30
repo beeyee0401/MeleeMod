@@ -32,6 +32,7 @@ public class Roll extends CustomCard {
                 CardRarity.RARE, CardTarget.SELF);
         this.baseBlock = BASE_BLOCK;
         this.magicNumber = this.baseMagicNumber = DEBUFFS_AVOIDED;
+        this.exhaust = true;
     }
 
     @Override

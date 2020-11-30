@@ -209,7 +209,7 @@
   },
   "meleeMod_Roll": {
     "NAME": "Roll",
-    "DESCRIPTION": "Gain !B! Block. Gain !M! Artifact that expires at the end of the turn."
+    "DESCRIPTION": "Gain !B! Block. Gain !M! Artifact that expires at the end of the turn. NL Exhaust"
   },
   "meleeMod_SDRemix": {
     "NAME": "SD Remix",
